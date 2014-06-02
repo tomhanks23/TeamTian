@@ -4,6 +4,10 @@
 		{
 			"follow_symlinks": true,
 			"path": "."
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/Library/WebServer/Documents/cart_backend"
 		}
 	]
 }

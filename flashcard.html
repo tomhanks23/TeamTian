@@ -5,42 +5,53 @@
     
   </title>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="main.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="fcStyle.css">
 </head>
 <body>
-
-    <div class="front">
-        <h1>
-            Dog
-        </h1>
-    </div>
-
-    <div class="back">
-        <h1>
-            Woof
-        </h1>
-    </div>
     
-    <div class="container">
-        
-    </div>
+    <div class="cardContainer"> 
 
-    <div class="cardCreator">
         <h1>
-            Cart Creator
+            Name the animals!
         </h1>
-        <form>
-            <div>
-                <textarea id="fc-front" rows="4" cols="50" placeholder="Front text."></textarea>
-                
-                <textarea id="fc-back" rows="4" cols="50" placeholder="Back text."></textarea>
 
+        <div id="1" class="cards">
+            <div class="front">
+                <img class="imgFront" src="img/hyena.jpg">
             </div>
-            <button class="add">Add New Card</button>
-            <button class="submit">Done</button>
-        </form>
+            <div class="back">
+                <h2>hyena</h2>
+                <img class="imgBack" src="img/hyena.jpg">
+            </div>
+        </div>
+
+        <div id="2" class="cards">
+            <div class="">
+                <img class="imgFront" src="img/lynx.jpg">
+            </div>
+            <div class="">
+                <h2>lynx</h2>
+                <img class="imgBack" src="img/lynx.jpg">
+            </div>
+        </div>
+
+        <div id="3" class="cards">
+            <div class="">
+                <img class="imgFront" src="img/platypus.jpg">
+            </div>
+            <div class="">
+                <h2>platypus</h2>
+                <img class="imgBack" src="img/platypus.jpg">
+            </div>
+        </div>
+
+
+        <div class="badge">
+            You earned the Wild Animal Explorer Badge!
+        </div>
+    
     </div>
 
 </body>
+    <script src="flashcard.js"></script>
 </html>

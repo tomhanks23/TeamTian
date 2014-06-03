@@ -1,0 +1,6 @@
+div .container {
+    border : solid 2px black;
+    float : right;
+    width: 500px;
+    min-height: 500px;
+}

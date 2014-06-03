@@ -4,28 +4,38 @@
   <title>
     
   </title>
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="main.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="fc_overview.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="fc_overview.css">
 </head>
 <body>
 
-link to flashcard.html
+<!-- link to flashcard.html -->
 
     <div class="cardCreator">
         <h1>
             Cart Creator
         </h1>
-        <form>
+        <div>
+
+            <div class="container">
+                <h1>
+                    Container
+                </h1>
+            </div>
+
             <div>
-                <textarea id="fc-front" rows="4" cols="50" placeholder="Front text."></textarea>
-                
-                <textarea id="fc-back" rows="4" cols="50" placeholder="Back text."></textarea>
+                <textarea class="fc_front" rows="4" cols="50" placeholder="Front text."></textarea>
+                <br>
+                <textarea class="fc_back" rows="4" cols="50" placeholder="Back text."></textarea>
 
             </div>
+
             <button class="add">Add New Card</button>
             <button class="submit">Done</button>
-        </form>
+            
+        </div>
     </div>
 
 </body>

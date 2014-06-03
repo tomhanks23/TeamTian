@@ -1,6 +1,12 @@
+body {
+    background-image: url("congruent_pentagon.png");
+
+}
+
 div .container {
     border : solid 2px black;
     float : right;
     width: 500px;
     min-height: 500px;
+    background-color: rgba(255, 255, 255, .7);
 }

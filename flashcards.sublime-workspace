@@ -1,0 +1,467 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"def",
+				"defaultSettings"
+			],
+			[
+				"setting",
+				"settings"
+			],
+			[
+				"de",
+				"defaultSettings"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"s",
+				"sql"
+			],
+			[
+				"qu",
+				"queryString"
+			],
+			[
+				"game",
+				"gameDetail"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"listy",
+				"list-style"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"msa",
+				"MSA_City"
+			],
+			[
+				"M",
+				"MSA_City"
+			],
+			[
+				"medi",
+				"medianAge"
+			],
+			[
+				"med",
+				"medianPrice"
+			],
+			[
+				"Media",
+				"MedianAge"
+			],
+			[
+				"me",
+				"MedianPrice"
+			],
+			[
+				"prev",
+				"PrevMonthRank"
+			],
+			[
+				"lowe",
+				"lowestcity"
+			],
+			[
+				"C",
+				"CurMonthRank"
+			],
+			[
+				"Me",
+				"MedianAge_MM"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"fon",
+				"font-style"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"h",
+				"h1	Tag"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"unse",
+				"unset"
+			],
+			[
+				"m",
+				"myFriends"
+			],
+			[
+				"cl",
+				"click"
+			],
+			[
+				"re",
+				"renderView"
+			],
+			[
+				"item",
+				"itemName"
+			],
+			[
+				"pro",
+				"productLI"
+			],
+			[
+				"this",
+				"this"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"remove",
+				"removeItem"
+			],
+			[
+				"d",
+				"deleteItem"
+			],
+			[
+				"prod",
+				"productLI"
+			],
+			[
+				"productLI",
+				"productLI"
+			],
+			[
+				"add",
+				"addItem"
+			],
+			[
+				"cart",
+				"cartElement"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"per",
+				"person1"
+			],
+			[
+				"person",
+				"person0"
+			],
+			[
+				"ds",
+				"deserae"
+			],
+			[
+				"dele",
+				"deleteButton"
+			],
+			[
+				"del",
+				"deleteButton"
+			],
+			[
+				"delete",
+				"deleteTask"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"char",
+				"charCode"
+			],
+			[
+				"on",
+				"onButtonPress"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"tas",
+				"taskToDelete"
+			],
+			[
+				"to",
+				"todoItems"
+			],
+			[
+				"new",
+				"newTask"
+			],
+			[
+				"addNew",
+				"addNewTaskOnly"
+			],
+			[
+				"get",
+				"getAreaOfCircle"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 277,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 360.0,
+		"selected_items":
+		[
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 380.0
+	},
+	"console":
+	{
+		"height": 174.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/deserae/TeamTian/styles.css",
+		"/home/deserae/TeamTian/main.js",
+		"/home/deserae/TeamTian/index.html",
+		"/home/deserae/Documents/Practice/JSPatterns/index.html",
+		"/home/deserae/Documents/Practice/JSPatterns/main.js",
+		"/home/deserae/Documents/JavaScript-Object-Instances/main.js",
+		"/home/deserae/Documents/JavaScript-Object-Instances/index.html",
+		"/home/deserae/www/databasePractice/insert.php",
+		"/home/deserae/www/databasePractice/select.php",
+		"/home/deserae/www/standards/php/games/model.php",
+		"/home/deserae/www/standards/php/games/gameDetail.php",
+		"/home/deserae/www/standards/php/games/singleGame.php",
+		"/home/deserae/www/standards/php/games/index.php",
+		"/home/deserae/Documents/Practice/PracticeFloats/index.html",
+		"/home/deserae/Documents/Projects/myCart/index.html",
+		"/home/deserae/Documents/Projects/myCart/style.css",
+		"/home/deserae/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/deserae/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/deserae/Documents/Projects/myCart/main.js",
+		"/home/deserae/Documents/Practice/PracticeFloats/styles.css",
+		"/home/deserae/Documents/Practice-JS-Loops/index.html",
+		"/home/deserae/Documents/Practice-JS-Loops/main.js",
+		"/var/www/deserae/htdocs/realestate_loops/realestate_loops.php",
+		"/home/deserae/Documents/myCart/style.css",
+		"/var/www/deserae/htdocs/realestate_loops/realestate_data_clean.json",
+		"/var/www/deserae/htdocs/realestate_loops/realestate_hw.php",
+		"/home/deserae/Documents/myCart/main.js",
+		"/home/deserae/Documents/myCart/index.html",
+		"/home/deserae/Documents/myCart/style2.css",
+		"/var/www/deserae/htdocs/test.php",
+		"/home/deserae/Documents/Cart/main.js",
+		"/home/deserae/Documents/practice-jquery/setup.css",
+		"/home/deserae/Documents/practice-jquery/main2.js",
+		"/home/deserae/Documents/practice-jquery/index.html",
+		"/home/deserae/Documents/cart-brig/main.js",
+		"/home/deserae/Documents/xss.php",
+		"/home/deserae/Documents/practice-jquery/main.js",
+		"/home/deserae/Documents/todoList-JQuery/todoListJQuery.html",
+		"/home/deserae/Documents/Cart/index.html",
+		"/home/deserae/Documents/cart-brig/cart.html",
+		"/home/deserae/Documents/5-6work/jQueryrealPractise5-6.html",
+		"/home/deserae/Documents/5-6work/main.js",
+		"/home/deserae/Documents/5-6work/jQueryPractice5-6.html",
+		"/home/deserae/Documents/jQueryrealPractise5-6.html",
+		"/home/deserae/Documents/main.js",
+		"/home/deserae/Documents/jQueryPractice5-6.html",
+		"/home/deserae/Documents/todoList/mytodolist.html",
+		"/home/deserae/Documents/todoList/todoList.html",
+		"/home/deserae/Documents/todoList-JQuery/README.md",
+		"/home/deserae/Documents/function getAreaOfCircle(radius){.html",
+		"/home/deserae/Documents/shoppingCart/index.html",
+		"/home/deserae/Documents/shoppingCart/main.js",
+		"/home/deserae/Documents/shoppingCart/untitled.sublime-project",
+		"/home/deserae/Documents/shoppingCart/shoppingCart.sublime-project"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"function",
+			"\n"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 277,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								154,
+								154
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 330.0,
+	"status_bar_visible": true
+}

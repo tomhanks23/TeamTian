@@ -1,8 +1,8 @@
 $(function(){
 
-    //linking homepage (index.html) to flashcard-overview.html
-    // $('button').on('click', function(){
-    //     window.location.replace(flashcard-overview.html) 
+    //homepage card flip demo
+    // $("#flipbox").flip({
+    // direction:'tb'
     // })
 
 

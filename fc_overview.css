@@ -23,3 +23,25 @@ div .container {
 .left {
     float: left;
 }
+
+textarea {
+    padding-top: 90px;
+    font-size: 30pt;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Coming Soon', cursive;
+}
+
+.fc_front {
+    background-image: ; 
+    background-color: lightblue;
+}
+
+.fc_back {
+    background-image: ; 
+    background-color: #F75454;
+}
+
+.hidden {
+    display: none;
+}

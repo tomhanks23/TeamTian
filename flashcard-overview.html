@@ -12,29 +12,39 @@
 <body>
 
 <!-- link to flashcard.html -->
-
+     <!--     Title  -->
     <div class="cardCreator">
         <h1>
-            Cart Creator
+            Card Creator
         </h1>
-        <div>
+    </div>
 
-            <div class="container">
-                <h1>
-                    Container
-                </h1>
+    <!-- Card Creator Section with Drop Down Menu -->
+    <div class="left">
+        <form class="deckdd" name="cardDeck" method="POST">
+            <div align="center">
+                <select name="cardDeck">
+                <option value="choose">Choose A Deck</option>
+                <option value="colors">Colors</option>
+                <option value="shapes">Shapes</option>
+                <option value="numbers">Numbers</option>
+                </select>
             </div>
-
-            <div>
-                <textarea class="fc_front" rows="4" cols="50" placeholder="Front text."></textarea>
-                <br>
-                <textarea class="fc_back" rows="4" cols="50" placeholder="Back text."></textarea>
-
-            </div>
-
-            <button class="add">Add New Card</button>
-            <button class="submit">Done</button>
-            
+        </form>
+<!-- Text Area Card Content -->
+        <textarea class="fc_front" rows="4" cols="50" placeholder="Front text."></textarea>
+        <button class="img">Add Image</button><br>
+        <textarea class="fc_back" rows="4" cols="50" placeholder="Back text."></textarea>
+        <button class="img">Add Image</button><br>
+        <button class="add">Add New Card</button>
+        <button class="submit">Done</button>
+    </div>
+        <!-- Card Deck-->
+    <div>
+        <div class="container">
+            <h1>
+                Your Deck
+            </h1>
         </div>
     </div>
 

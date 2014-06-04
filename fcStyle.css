@@ -1,5 +1,5 @@
 body * {
-    margin: 10px;
+    margin: 4px;
     /*background-color: #ccc;*/
     border: solid black 1px;
 }
@@ -12,13 +12,14 @@ body {
 .page-container {}
 
 .title {
+  margin-left: 100px;
   float: left;
 }
 
 .nav {
   margin-top: 40px;
   float: right;
-  margin-right: 40px;
+  margin-right: 100px;
 }
 
 .clear {
@@ -26,14 +27,45 @@ body {
 }
 
 .flashcard {
-  background-color: white;
-  border-radius: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 700px;
-  height: 400px;  
+
 }
 
 .flashcard-content {
-  /*background-image: url(img/lynx.jpg);*/
+  background-color: white;
+  border-radius: 40px;
+  margin-left: auto;
+  margin-right: auto; 
+  width: 700px; 
 }
+
+.side1, .side2 {
+  border-radius: 35px;
+  margin: 20px;
+  width: 660px;
+  height: 350px;
+  text-align: center;
+}
+
+.answer-block{
+  width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.answer1, .answer2, .motivation {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  margin-left: 60px
+}
+.answer1 {
+  background-color: white;
+  float: left;
+}
+.motivation {
+  float: left;
+}
+.answer2 {
+  background-color: white;
+  float: left;
+}
+

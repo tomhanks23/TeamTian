@@ -1,26 +1,21 @@
 // hide all flashcards except the first one
 $(function() {
-  
-  $('.back').hide();
 
-  $('body').on('click', '.back', function() {
-    $(this).hide(200);
-    $('.front').show(200);
-  }); 
+  $('.side2').hide();
 
-  $('body').on('click', '.front', function() {
+  $('body').on('click', '.side1', function() {
       $(this).hide(200);
-      $('.back').show(200);
+      $('.side2').show(200);
   })
   
-
-
+  $('body').on('click', '.side2', function() {
+    $(this).hide(200);
+    $('.side1').show(200);
+  }); 
 
   for (var i = 1; i < 4; i++) {
     console.log(i);
     
   };
-
-  $('.badge').hide();
 
 });

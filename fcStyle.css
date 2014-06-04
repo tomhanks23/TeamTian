@@ -1,7 +1,8 @@
 body * {
-    margin: 4px;
     /*background-color: #ccc;*/
     /*border: solid black 1px;*/
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -11,19 +12,65 @@ body {
 
 .page-container {}
 
-body .navigation {
-  background-color: white;
+.navigation {
+  background-color: rgba(255, 255, 255, .7);
+  padding: 15px;
 }
 
 .title {
-  margin-left: 100px;
-  float: left;
+  font-family: 'Unkempt', cursive;
+  text-align: center;
 }
 
 .nav {
-  margin-top: 40px;
-  float: right;
-  margin-right: 100px;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  -moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+  box-shadow:inset 0px 1px 0px 0px #fce2c1;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25) );
+  background:-moz-linear-gradient( center top, #ffc477 5%, #fb9e25 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25');
+  background-color:#ffc477;
+  -webkit-border-top-left-radius:20px;
+  -moz-border-radius-topleft:20px;
+  border-top-left-radius:20px;
+  -webkit-border-top-right-radius:20px;
+  -moz-border-radius-topright:20px;
+  border-top-right-radius:20px;
+  -webkit-border-bottom-right-radius:20px;
+  -moz-border-radius-bottomright:20px;
+  border-bottom-right-radius:20px;
+  -webkit-border-bottom-left-radius:20px;
+  -moz-border-radius-bottomleft:20px;
+  border-bottom-left-radius:20px;
+  text-indent:0;
+  border:1px solid #eeb44f;
+  display:inline-block;
+  color:#ffffff;
+  font-family:Verdana;
+  font-size:15px;
+  font-weight:bold;
+  font-style:normal;
+  height:40px;
+  line-height:40px;
+  width:86px;
+  text-decoration:none;
+  text-align:center;
+  text-shadow:2px 2px 0px #cc9f52;
+}
+
+.home:hover {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffc477) );
+  background:-moz-linear-gradient( center top, #fb9e25 5%, #ffc477 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffc477');
+  background-color:#fb9e25;
+}
+
+.home:active {
+  position:relative;
+  top:1px;
 }
 
 .clear {
@@ -64,7 +111,7 @@ body .navigation {
   border-radius: 20px;
 }
 
-.side2-text" {
+.side2-text {
   margin-top: 50px;
 }
 
@@ -76,7 +123,7 @@ body .navigation {
 .answer1, .answer2, .motivation {
   padding-top: 50px;
   width: 150px;
-  height: 100px;
+  height: 60px;
   border-radius: 20px;
   margin-left: 30px;
   text-align: center;

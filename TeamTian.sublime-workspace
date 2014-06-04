@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"bord",
+				"border-radius"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"r",
+				"rgba()"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
 				"st",
 				"startTime"
 			],
@@ -91,6 +111,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 1614,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "styles.css",
+			"settings":
+			{
+				"buffer_size": 427,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -107,11 +143,7 @@
 	},
 	"console":
 	{
-		"height": 146.0,
-		"history":
-		[
-			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
-		]
+		"height": 146.0
 	},
 	"distraction_free":
 	{
@@ -144,7 +176,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 		]
@@ -173,8 +205,65 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 1614,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1614,
+								1614
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 240.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "styles.css",
+					"settings":
+					{
+						"buffer_size": 427,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								328,
+								328
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -213,7 +302,6 @@
 	{
 		"height": 0.0
 	},
-	"project": "TeamTian.sublime-project",
 	"replace":
 	{
 		"height": 48.0
@@ -235,24 +323,10 @@
 		],
 		"width": 380.0
 	},
-	"select_symbol":
-	{
-		"height": 0.0,
-		"selected_items":
-		[
-		],
-		"width": 0.0
-	},
-	"settings":
-	{
-	},
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 199.0,
-	"status_bar_visible": true,
-	"template_settings":
-	{
-	}
+	"side_bar_width": 175.0,
+	"status_bar_visible": true
 }

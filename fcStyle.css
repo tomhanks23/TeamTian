@@ -1,7 +1,7 @@
 body * {
     margin: 4px;
     /*background-color: #ccc;*/
-    border: solid black 1px;
+    /*border: solid black 1px;*/
 }
 
 
@@ -10,6 +10,10 @@ body {
 }
 
 .page-container {}
+
+body .navigation {
+  background-color: white;
+}
 
 .title {
   margin-left: 100px;
@@ -35,27 +39,47 @@ body {
   border-radius: 40px;
   margin-left: auto;
   margin-right: auto; 
-  width: 700px; 
+  width: 600px; 
 }
 
 .side1, .side2 {
   border-radius: 35px;
   margin: 20px;
-  width: 660px;
+  width: 560px;
   height: 350px;
   text-align: center;
 }
 
+.big {
+  margin-top: 30px;
+  width: 450px;
+  height: auto;
+  border-radius: 30px;
+}
+
+.small {
+  margin-top: 30px;
+  width: 250px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.side2-text" {
+  margin-top: 50px;
+}
+
 .answer-block{
-  width: 700px;
+  width: 600px;
   margin-right: auto;
   margin-left: auto;
 }
 .answer1, .answer2, .motivation {
+  padding-top: 50px;
   width: 150px;
-  height: 150px;
+  height: 100px;
   border-radius: 20px;
-  margin-left: 60px
+  margin-left: 30px;
+  text-align: center;
 }
 .answer1 {
   background-color: white;

@@ -1,4 +1,11 @@
 $(function(){
+
+    //linking homepage (index.html) to flashcard-overview.html
+    // $('button').on('click', function(){
+    //     window.location.replace(flashcard-overview.html) 
+    // })
+
+
     // you're hiding the flash card.
     $('.back').hide();
 

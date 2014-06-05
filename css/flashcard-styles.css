@@ -91,6 +91,7 @@ body {
 }
 
 .side1, .side2 {
+  padding: 20px;
   border-radius: 35px;
   margin: 20px;
   width: 560px;
@@ -99,16 +100,16 @@ body {
 }
 
 .big {
-  margin-top: 30px;
-  width: 450px;
-  height: auto;
+  margin-top: 10px;
+  max-width: 300px;
+  max-height: 300px;
   border-radius: 30px;
 }
 
 .small {
   margin-top: 30px;
-  width: 250px;
-  height: auto;
+  max-width: 250px;
+  max-height: 150px;
   border-radius: 20px;
 }
 

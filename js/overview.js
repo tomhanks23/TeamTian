@@ -9,8 +9,8 @@ $(function() {
     // GET the class='fc_front' value
     // GET the class='.fc_back Value'
   $(".add").on("click", function() {
-    $(".fc_front").val();
-    $(".fc_back").val();
+    $(".fc_front").val("");
+    $(".fc_back").val("");
   });
 
 

@@ -1,14 +1,15 @@
 body {
     background-image: url("congruent_pentagon.png");
-
+    font-family: 'Unkempt', cursive;
 }
 
 div .container {
-    border : solid 2px black;
     float : right;
     width: 500px;
     min-height: 500px;
-    background-color: rgba(255, 255, 255, .7);
+    margin-right: 50px;
+    background-color: white;
+    border-radius: 30px;
     float: right;
 }
 
@@ -22,6 +23,7 @@ div .container {
 
 .left {
     float: left;
+    margin-left: 30px;
 }
 
 textarea {
@@ -29,7 +31,7 @@ textarea {
     font-size: 30pt;
     font-weight: bold;
     text-align: center;
-    font-family: 'Coming Soon', cursive;
+    font-family: 'Unkempt', cursive;
 }
 
 .fc_front {

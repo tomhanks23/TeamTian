@@ -13,7 +13,8 @@ body {
 .page-container {}
 
 .navigation {
-  background-color: rgba(255, 255, 255, .7);
+  background: url(img/greenSmall.jpg);
+  /*background-color: rgba(255, 255, 255, .7);*/
   padding: 15px;
 }
 

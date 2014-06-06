@@ -18,7 +18,7 @@
           FUN FLASH!
         </h1>
       </div>
-      <a class="nav" href="overview.html">HOME</a>
+      <a class="nav" href="overview.php">HOME</a>
       <div class="clear"></div>
     </div>
 

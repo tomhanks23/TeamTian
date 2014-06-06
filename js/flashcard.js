@@ -9,11 +9,14 @@ $(function() {
 //     console.log(card[property]);
 //    };
 // };
+
+console.log(jsObj);
+
 var count = 0;
   var nextCard = function (count) {
         var newCount = count + 1;
         var card = deck["card"+newCount];
-        console.log(newCount);
+        // console.log(newCount);
 
         $('.side2').hide();
         $('.side1').show();

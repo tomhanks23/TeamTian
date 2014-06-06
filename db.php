@@ -12,7 +12,11 @@ class DB {
 
     // Connect to the database
 
-    $this->link = new mysqli('IP', 'USER', 'PASS', 'DB');
+    // host: rockit.ccyd2ljjwzet.us-east-1.rds.amazonaws.com
+    // username: YOUR-TEAM-NAME
+    // password: THE-SAME-OLE-ONE
+
+    $this->link = new mysqli('rockit.ccyd2ljjwzet.us-east-1.rds.amazonaws.com', 'teamtian', 'THE-SAME-OLE-ONE', '');
 
     // If the connection had problem, output that now
     if ($this->link->connect_errno) {

@@ -6,6 +6,58 @@ $(function(){
     // })
 
 
+//-----------------Register Validation----------
+    function validate(form){
+        var firstName = $("[name='firstName']").val();
+        var lastName = document.register.lastName.value;
+        var email = document.register.email.value;
+        var password = document.register.password.value;
+        var errors = [];
+
+        if(!checkLength(firstName)){
+            errors.push("You must enter a first name.");
+        }
+        if(!checkLength(lastName)){
+            errors.push("You must enter a last name.");
+        }
+        if(!checkLength(email)){
+            errors.push("You must enter an email.");
+        }
+        if(!checkLength(password)){
+            errors.push("You must enter a password.");
+        }
+
+        if(errors.length > 0){
+            reportErrors(errors);
+            return false;
+        }
+
+        function checkLength(text, min, max){
+            min = min || 1;
+            max = max || 50;
+            if (text.length < min || text.length > max){
+                return false;
+            }
+            return true;
+        }
+
+        function reportErrors(errors){
+            var msg = "There were some problems...\n";
+            var numError;
+            for(var i=0; i<errors.length; i++){
+                numError = i + 1;
+                msg +="\n" + numError + "." + errors[i];
+            }
+            alert(msg);
+        }
+    }
+
+    $(".submit").on('click', function(){
+        validate(this);
+    });
+//-----------------End Reigster Validation------    
+
+
     // you're hiding the flash card.
     $('.back').hide();
 

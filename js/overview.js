@@ -4,18 +4,11 @@ $(function() {
   var card = {};
 
 
-  // select class-'add' and run this function
-    // GET the class='fc_front' value
-    // GET the class='.fc_back Value'
+  // set variables and collect their values
   $(".add").on("click", function() {
     $(".fc_front").val("");
     $(".fc_back").val("");
-  });
 
-
-  // select class='submit' and run this function
-    // set variables and collect their values
-  $(".submit").on("click", function() {
     var fc_front_text = $(".fc_front").val();
     var fc_back_text = $(".fc_back").val();
 
@@ -23,15 +16,16 @@ $(function() {
     // Print a list item with the following text and variables
       // make a PLAY button and stick it on the ass-end of the class='container'
     $("<li>").text("Front: [" + fc_front_text + "] " + "Back: [" + fc_back_text + "] ")
-      .append("<button>Play</button")
       .appendTo(".container");
-    });
+
+  });
 
 
 
-    //When you click on the list item button run this function
+
+    //When you click on the button run this function
       //open the linked page (flashcard.html)
-    $(".container").on("click", "li button", function() {
+    $(".container").on("click", "button", function() {
         window.location.href = "flashcard.html";
     });
 

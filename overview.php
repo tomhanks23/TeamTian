@@ -63,13 +63,14 @@
     <textarea class="fc_back" rows="2" cols="20" placeholder="Back text."></textarea>
     <button class="addImg_back">Add Image</button><br>
     <button class="add">Add New Card</button>
-    <button class="submit">Done</button>
+    <!-- <button class="submit">Done</button> -->
   </div>
   <!-- Card Deck-->
   <div>
     <div class="container">
       <h1>
         Your Deck
+        <button>PLAY</button>
       </h1>
     </div>
   </div>

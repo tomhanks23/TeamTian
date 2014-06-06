@@ -6,3 +6,8 @@ CREATE TABLE `user` (
  PRIMARY KEY (`user_id`)
 );
 
+
+-- cat dumps a file
+cat /Users/FMD/Sites/TeamTian/sql/flashcardDB.sql | mysql -h rockit.ccyd2ljjwzet.us-east-1.rds.amazonaws.com -u teamtian -p teamtian
+
+-h rockit.ccyd2ljjwzet.us-east-1.rds.amazonaws.com -u teamtian -p

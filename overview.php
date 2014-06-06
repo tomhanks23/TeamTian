@@ -1,3 +1,23 @@
+<?php
+  
+include('upload.php');
+
+// connect to the database
+
+// do an SQL statement for the files you want
+$file_id = 1;
+
+// build <img> tags with references to those files
+$img = '<img src="user_files/' . $file_id . '.gif">';
+
+//　echo those image tags below
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +31,6 @@
 </head>
 
 <body>
-  <?php include 'upload.php';?>
   <!-- link to flashcard.html -->
   <!--     Title  -->
   <div class="cardCreator">
@@ -40,7 +59,8 @@
 
     <div class="fc_front">
 
-      <img id="uploadPreview" style="width: 200px; height: 100px;">
+      
+      <?php echo $img; ?>
       <textarea rows="2" cols="20" placeholder="Front text."></textarea>
     </div>
 
@@ -48,7 +68,7 @@
     
 
 
-    <form action="" method="post"
+    <form action="upload.php" method="post"
       enctype="multipart/form-data">
       <label for="file">Filename:</label>
       <input type="file" name="file" id="file"><br>

@@ -1,12 +1,3 @@
-
-<?php 
-  $arr = array ('deckName'=>'animals','b'=>2,'c'=>3,'d'=>4,'e'=>5);
-?>
-
-<script>
-  var jsObj = <?php  echo json_encode($arr); ?>
-</script>
-
 <!DOCTYPE html>
 <html>
 <head>

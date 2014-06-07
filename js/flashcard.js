@@ -1,18 +1,11 @@
 // hide all flashcards except the first one
 $(function() {
-//  display each card side 1 first, one after the next. 
-// console.log(deck.card1.side2_text);
 
-// for ( var key in deck) {
-//     var card = deck[key];
-//    for ( var property in card) {
-//     console.log(card[property]);
-//    };
-// };
+  // the count value represents the first flashcard
+  var count = 0;
 
-console.log(jsObj);
-
-var count = 0;
+  // The nextCard function takes the parameter count, adds 1
+  // to the card count and selects the appropriate card. 
   var nextCard = function (count) {
         var newCount = count + 1;
         var card = deck["card"+newCount];

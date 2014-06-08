@@ -19,9 +19,9 @@ $(function() {
         });
 
         $('body').on('click', '.answer1', function() {
-            $('.side1').hide(200);
-            $('.side2').show(200);
-        })
+          $('.side1').hide(200);
+          $('.side2').show(200);
+        });
 
         $('  .side1   ').html(
            '   <p class="side1-text">   '
@@ -46,6 +46,7 @@ $(function() {
   $('body').on('click', '.go', function() {
     count++;
     nextCard(count);
+
   });
 
   nextCard(0);

@@ -1,3 +1,10 @@
+<?php 
+
+  
+
+
+ ?>
+ 
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,9 +31,11 @@
 
     <div class="flashcard">
       <div class="flashcard-content">
-        <div class="side1">
-        </div>
-        <div class="side2">
+        <div class="indexCard">
+          <div class="side1">
+          </div>
+          <div class="side2">
+          </div>
         </div>
       </div>
     </div>

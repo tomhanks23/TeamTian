@@ -79,14 +79,24 @@ body {
 }
 
 .flashcard {
+  border: solid 2px green;
+  width: 600px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.indexCard {
+  background-image: url(../img/indexCard.jpg);
+  width: 50%;
+  top: 0;
+  left: 0;
 }
 
 .flashcard-content {
-  background-color: white;
+  /*background-color: white;*/
   border-radius: 40px;
   margin-left: auto;
   margin-right: auto; 
-  width: 600px; 
 }
 
 .side1, .side2 {

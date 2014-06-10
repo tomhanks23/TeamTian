@@ -1,6 +1,7 @@
 // hide all flashcards except the first one
 $(function() {
 
+  // console.log(jsonObj);
   // the count value represents the first flashcard
   var count = 0;
 
@@ -50,5 +51,6 @@ $(function() {
   });
 
   nextCard(0);
+
 
 });

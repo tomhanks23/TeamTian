@@ -11,16 +11,13 @@ class DB {
   public function __construct() {
 
     // Connect to the database
-
-    // host: rockit.ccyd2ljjwzet.us-east-1.rds.amazonaws.com
-    // username: YOUR-TEAM-NAME
-    // password: THE-SAME-OLE-ONE
-
-    $this->link = new mysqli('rockit.ccyd2ljjwzet.us-east-1.rds.amazonaws.com', 'teamtian', 'THE-SAME-OLE-ONE', '');
+    $this->link = new mysqli('rockit.ccyd2ljjwzet.us-east-1.rds.amazonaws.com', 'teamtian', 'rockit', 'teamtian');
 
     // If the connection had problem, output that now
     if ($this->link->connect_errno) {
         die('Connection Error: ' . $link->connect_error);
+    } else {
+      echo "YOU CONNECTED TO AMAZON, YAY!";
     }
 
   }

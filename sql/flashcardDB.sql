@@ -20,8 +20,8 @@ CREATE TABLE flashcard (
  flashcard_deck_id int(11) DEFAULT NULL,
  front_text varchar(100) DEFAULT NULL,
  back_text varchar(100) DEFAULT NULL,
- front_image LONGBLOB NOT NULL, 
- back_image LONGBLOB NOT NULL, 
+ front_image TEXT NULL, 
+ back_image TEXT NULL, 
  PRIMARY KEY (flashcard_id)
 );
 

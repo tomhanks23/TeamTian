@@ -11,11 +11,12 @@ function db_connect() {
   // Try and connect to the db, if a connection has not been established yet
   if(!isset($connection)) {
     // load config as an array. Use the actual location of your config file
-    $config = parse_ini_file('../config.ini');
-    $connection = mysqli_connect('rockit.ccyd2ljjwzet.us-east-1.rds.amazonaws.com',
-        $config['username'],
-        $config['password'],
-        $config['dbname']);
+    // $config = parse_ini_file('../local_config.ini');
+    // $connection = mysqli_connect('rockit.ccyd2ljjwzet.us-east-1.rds.amazonaws.com',
+        // $config['username'],
+        // $config['password'],
+        // $config['dbname']);
+    $connection = mysqli_connect('localhost', 'root','','teamtian');
   }
 
   if($connection === false) {

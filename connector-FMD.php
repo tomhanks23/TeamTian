@@ -13,8 +13,9 @@ class Db {
     if ( !isset (self::$connection) ) {
       //Load configuration as an array. Use the actual location of your
       // configuration file
-      $config = parse_ini_file('../config.ini');
-      self::$connection = new mysqli_connect('rockit.ccyd2ljjwzet.us-east-1.rds.amazonaws.com',
+      $config = parse_ini_file('../local_config.ini');
+      // self::$connection = new mysqli_connect('rockit.ccyd2ljjwzet.us-east-1.rds.amazonaws.com',
+      self::$connection = new mysqli_connect('localhost',
         $config['username'],
         $config['password'],
         $config['dbname']);

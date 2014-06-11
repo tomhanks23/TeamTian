@@ -11,11 +11,9 @@
 
     <script type="text/javascript">
       var deck =  <?php echo $jsonDoc; ?> ;
-      console.log(deck);
+      // console.log(deck);
     </script>
     <script src="js/flashcard.js"></script>
-
-
 
 </head>
 

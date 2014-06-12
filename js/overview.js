@@ -66,20 +66,43 @@ $(function() {
       $(".fc_front").css("background-color", "#" + this.color.toString());
     });
 
-    // $(".add").on("click", function() {
-    //   // get the item info prepared
-    //   var flashcard_deck_id = 1;
-    //   var front_text = $(".fc_front textarea").val();
-    //   var back_text = $(".fc_back").val();
-    //   var front_image =$(".fc_front img").prop('src');
-    //   var back_image = $(".fc_front img").prop('src');
-    //   var front_bg_color = $(".fc_front").css("background-color");
-    //   var back_bg_color = $(".fc_back").css("background-color");
+    $(".add").on("click", function() {
+      // get the item info prepared
+      var flashcard_deck_id = 1;
+      var front_text = $(".fc_front textarea").val();
+      var back_text = $(".fc_back").val();
+      var front_image =$(".fc_front img").prop('src');
+      var back_image = $(".fc_front img").prop('src');
+      var front_bg_color = $(".fc_front").css("background-color");
+      var back_bg_color = $(".fc_back").css("background-color");
 
 
+      $.ajax({
+          url: "./savecard.php",
+          type: "POST",
+          dataType: "json",
+          cache: false,
+          data: {
+            flashcard_deck_id: flashcard_deck_id,
+            front_text: front_text,
+            back_text: back_text,
+            front_image: front_image,
+            back_image: back_image,
+            front_bg_color: front_bg_color,
+            back_bg_color: back_bg_color
+          },
+          success: function(data) {
+             alert(JSON.stringify(data));
+          },
+          error: function(a, b, c) {
+            alert(a);
+            alert(b);
+            alert(c);
+          }
+      });
 
-      
+      return false;
 
-    // })
+    })
 
 });

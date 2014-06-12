@@ -17,7 +17,8 @@ class DB {
     if ($this->link->connect_errno) {
         die('Connection Error: ' . $link->connect_error);
     } else {
-      echo "YOU CONNECTED TO AMAZON, YAY!";
+      1;
+      // echo "YOU CONNECTED TO AMAZON, YAY!";
     }
 
   }

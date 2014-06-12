@@ -30,16 +30,14 @@ include('upload.php');
 
   <!-- Card Creator Section with Drop Down Menu -->
   <div class="left">
-    <form class="deckdd" name="cardDeck" method="POST">
-      <div align="center">
+      <div>
+      Choose your deck:
         <select name="cardDeck">
-          <option value="choose">Choose A Deck</option>
-          <option value="colors">Colors</option>
-          <option value="shapes">Shapes</option>
-          <option value="numbers">Numbers</option>
+          <?php 
+            include ('getdeck.php');
+           ?>
         </select>
       </div>
-    </form>
   <!-- Text Area Card Content -->
     <!-- <textarea class="fc_front" rows="2" cols="20" placeholder="Front text."></textarea>
     <canvas id="canvas" style="border:1px solid black; height: 0px; width: 0px;"></canvas> -->
@@ -48,6 +46,7 @@ include('upload.php');
     <div class="fc_front">
 
       
+
       <?php echo $img; ?>
       <textarea rows="2" cols="20" placeholder="Front text." name="fc_front_text"></textarea>
     </div>

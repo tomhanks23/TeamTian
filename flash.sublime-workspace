@@ -1,0 +1,487 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pas",
+				"password"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"connect",
+				"connect_errno"
+			],
+			[
+				"password",
+				"password2"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"bak",
+				"background-color"
+			],
+			[
+				"fli",
+				"flipContainer"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"j",
+				"jquery"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"bo",
+				"border-radius"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"flash",
+				"flashcard-overview"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"bord",
+				"border-radius"
+			],
+			[
+				"r",
+				"rgba()"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"st",
+				"startTime"
+			],
+			[
+				"pa",
+				"participantCount"
+			],
+			[
+				"g",
+				"grasshopper"
+			],
+			[
+				"e",
+				"extend"
+			],
+			[
+				"de",
+				"default_settings"
+			],
+			[
+				"ite",
+				"item"
+			],
+			[
+				"it",
+				"items"
+			],
+			[
+				"my",
+				"myCart"
+			],
+			[
+				"get",
+				"getName"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"lo",
+				"localStorage"
+			],
+			[
+				"l",
+				"lunch"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"ma",
+				"mustang"
+			],
+			[
+				"c",
+				"custom_settings"
+			],
+			[
+				"pro",
+				"product1"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"pur",
+				"purchase"
+			],
+			[
+				"product",
+				"product_id"
+			],
+			[
+				"insert",
+				"insert_line_item"
+			],
+			[
+				"a",
+				"action	Attr"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 2105,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/index-styles.css",
+			"settings":
+			{
+				"buffer_size": 2297,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/deserae/flip.css",
+			"settings":
+			{
+				"buffer_size": 1927,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/deserae/flip.html",
+			"settings":
+			{
+				"buffer_size": 412,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"syntax html",
+				"Set Syntax: HTML"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 146.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/deserae/www/TeamTian/css/index-styles.css",
+		"/home/deserae/www/TeamTian/flip/flip.html",
+		"/home/deserae/www/php-db-forms/index.php",
+		"/home/deserae/www/php-db-forms/table.sql",
+		"/home/deserae/www/TeamTian/index.html",
+		"/home/deserae/flip.html",
+		"/home/deserae/flip.css",
+		"/home/deserae/TeamTian/css/index-styles.css",
+		"/home/deserae/TeamTian/flip.html",
+		"/home/deserae/TeamTian/css/flip.css",
+		"/home/deserae/TeamTian/index.html",
+		"/home/deserae/TeamTian/css/overview-styles.css",
+		"/home/deserae/TeamTian/flashcard.html",
+		"/home/deserae/TeamTian/main.js",
+		"/home/deserae/TeamTian/styles.css",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Library/WebServer/Documents/JavaScript-Object-Instances/main.js",
+		"/Library/WebServer/Documents/JavaScript-Object-Instances/index.html",
+		"/Library/WebServer/Documents/javascript0530/main.js",
+		"/Library/WebServer/Documents/javascript0530/index.html",
+		"/Users/tom/Desktop/MYSQL_PASSWORD",
+		"/Library/WebServer/Documents/cart_backend/index.php",
+		"/Library/WebServer/Documents/cart_backend/tables.sql",
+		"/Library/WebServer/Documents/cart_backend/main.js",
+		"/Users/tom/Downloads/index.php",
+		"/Library/WebServer/Documents/cart_backend/index.html",
+		"/Library/WebServer/Documents/mysql_practice0529/index.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"auto",
+			"file",
+			"scroll"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 2105,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								764,
+								764
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 792.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "css/index-styles.css",
+					"settings":
+					{
+						"buffer_size": 2297,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								901,
+								761
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 457.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "/home/deserae/flip.css",
+					"settings":
+					{
+						"buffer_size": 1927,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								737,
+								737
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 858.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/deserae/flip.html",
+					"settings":
+					{
+						"buffer_size": 412,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 220.0,
+	"status_bar_visible": true
+}

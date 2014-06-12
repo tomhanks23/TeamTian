@@ -20,9 +20,6 @@ $(function() {
 
   });
 
-
-
-
     //When you click on the button run this function
       //open the linked page (flashcard.html)
     $(".container").on("click", "button", function() {
@@ -53,30 +50,59 @@ $(function() {
     $( document ).ready(function() {
       // Handler for .ready() called.
 
-      try {
-        $("#uploadPreview").css("background-image", 'url(' + "user_files/foo.gif" + ')');
-      } catch(err) {
-        console.log(err);
-      }
-
-      console.log("%cThank you!"," text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);font-size:10em");
+      console.log("%cThank you!"," text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);font-size:5em");
 
     });
 
-    // $('[name="submit"]').on("click", function() {
-    //     $.ajax({
-    //           type: "POST",
-    //           url: "upload.php"
-    //       })
-    //       .done(function( msg ) {
-    //         alert( "Data Saved: " + msg );
-            
-    //       });
-    // })
+
+    $('[name="submit"]').on("click", function() {
+
+        // return false;
+
+    })
 
 
     $(".color").on("change", function() {
       $(".fc_front").css("background-color", "#" + this.color.toString());
+    });
+
+    $(".add").on("click", function() {
+      // get the item info prepared
+      var flashcard_deck_id = 1;
+      var front_text = $(".fc_front textarea").val();
+      var back_text = $(".fc_back").val();
+      var front_image =$(".fc_front img").prop('src');
+      var back_image = $(".fc_front img").prop('src');
+      var front_bg_color = $(".fc_front").css("background-color");
+      var back_bg_color = $(".fc_back").css("background-color");
+
+
+      $.ajax({
+          url: "./savecard.php",
+          type: "POST",
+          dataType: "json",
+          cache: false,
+          data: {
+            flashcard_deck_id: flashcard_deck_id,
+            front_text: front_text,
+            back_text: back_text,
+            front_image: front_image,
+            back_image: back_image,
+            front_bg_color: front_bg_color,
+            back_bg_color: back_bg_color
+          },
+          success: function(data) {
+             alert(JSON.stringify(data));
+          },
+          error: function(a, b, c) {
+            alert(a);
+            alert(b);
+            alert(c);
+          }
+      });
+
+      return false;
+
     })
 
 });

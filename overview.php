@@ -2,19 +2,6 @@
   
 include('upload.php');
 
-// connect to the database
-
-// do an SQL statement for the files you want
-$file_id = 1;
-
-// build <img> tags with references to those files
-$img = '<img src="user_files/' . $file_id . '.gif">';
-
-//　echo those image tags below
-
-
-
-
 ?>
 
 
@@ -43,46 +30,50 @@ $img = '<img src="user_files/' . $file_id . '.gif">';
 
   <!-- Card Creator Section with Drop Down Menu -->
   <div class="left">
-    <form class="deckdd" name="cardDeck" method="POST">
-      <div align="center">
+      <div>
+      Choose your deck:
         <select name="cardDeck">
-          <option value="choose">Choose A Deck</option>
-          <option value="colors">Colors</option>
-          <option value="shapes">Shapes</option>
-          <option value="numbers">Numbers</option>
+          <?php 
+            include ('getdeck.php');
+           ?>
         </select>
       </div>
-    </form>
   <!-- Text Area Card Content -->
     <!-- <textarea class="fc_front" rows="2" cols="20" placeholder="Front text."></textarea>
     <canvas id="canvas" style="border:1px solid black; height: 0px; width: 0px;"></canvas> -->
 
+    <form action="" method="post" enctype="multipart/form-data">
     <div class="fc_front">
 
       
+
       <?php echo $img; ?>
-      <textarea rows="2" cols="20" placeholder="Front text."></textarea>
+      <textarea rows="2" cols="20" placeholder="Front text." name="fc_front_text"></textarea>
     </div>
 
     <input class="color" value=""><br>
     
 
 
-    <form action="upload.php" method="post"
-      enctype="multipart/form-data">
       <label for="file">Filename:</label>
       <input type="file" name="file" id="file"><br>
       <input type="submit" name="submit" value="Submit">
-    </form>
 
 
     <!-- <button class="addImg_front">Add Image</button> -->
     <br>
     <!-- <a href="#" class="test">update image</a> -->
     <br>
-    <textarea class="fc_back" rows="2" cols="20" placeholder="Back text."></textarea>
-    <button class="addImg_back">Add Image</button><br>
-    <button class="add">Add New Card</button>
+    <textarea class="fc_back" rows="2" cols="20" placeholder="Back text." name="fc_back_text"></textarea>
+    <!-- <button class="addImg_back">Add Image</button> --><br>
+    <button class="add" type="submit">Add New Card</button>
+    <!--<?php 
+
+        print_r($_POST);
+        // echo "back_text : ".$_POST['back_text']."<br>";
+      ?>-->
+
+    </form>
     <!-- <button class="submit">Done</button> -->
   </div>
   <!-- Card Deck-->

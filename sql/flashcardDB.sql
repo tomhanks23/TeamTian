@@ -1,3 +1,6 @@
+CREATE DATABASE teamtian;
+
+
 CREATE TABLE user (
  user_id int(11) NOT NULL AUTO_INCREMENT,
  first_name varchar(50) DEFAULT NULL,
@@ -16,17 +19,18 @@ CREATE TABLE flashcard_deck (
 
 
 
-CREATE TABLE IF NOT EXISTS `flashcard` (
-`flashcard_id` int(11) NOT NULL,
-  `flashcard_deck_id` int(11) DEFAULT NULL,
-  `front_text` text,
-  `back_text` text,
-  `front_image` text,
-  `back_image` text NOT NULL,
-  `front_bg_color` varchar(20) DEFAULT NULL,
-  `back_bg_color` varchar(20) DEFAULT NULL,
-  `right_answer` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+CREATE TABLE flashcard (
+  flashcard_id int(11) NOT NULL AUTO_INCREMENT,
+  flashcard_deck_id int(11) DEFAULT NULL,
+  front_text text,
+  back_text text,
+  front_image text,
+  back_image text,
+  front_bg_color varchar(20) DEFAULT NULL,
+  back_bg_color varchar(20) DEFAULT NULL,
+  right_answer varchar(255) DEFAULT NULL,
+  PRIMARY KEY (flashcard_id)
+);
 
 
 

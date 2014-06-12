@@ -22,8 +22,6 @@ $(function() {
         $('.side2').hide();
         $('.side1').show();
 
-
-
         $('  .side1   ').html(
            '   <p class="side1-text">   '
           + card.front_text
@@ -41,38 +39,28 @@ $(function() {
           );
 
         // --------------------------------------
-
-        // function to create the wrong answer randomly from 
-        // the right answers provided by the deck (can't randomly pick the right answer)
-
-        var randomNumber = Math.floor( Math.random() * (max - min + 1) + min );
-        console.log(randomNumber + " Is a random number between " + min + " and " + max);
-
-        // console.log(deck[0].right_answer);
-        // console.log(deck[1].right_answer);
-        // console.log(deck[2].right_answer);
-
-
-
-        // --------------------------------------
         $(function() {
             var headsOrTails = Math.random();
             
-            // randomly select answer1 or answer2 to place the 
+            // randomly select .answer1 or .answer2 to place the 
             // right answer content.
             if (headsOrTails<0.5) {
-              console.log("tails!");
+              // set the right answer to .answer1
+              // set the wrong answer to .answer2
               $('.answer1').html(card.right_answer);
               var r_answerClicked = '.answer1';
               $('.answer2').html(card.wrong_answer);
               var w_answerClicked = '.answer2';
 
             } else {
-              console.log("heads");
+
+              // set the right answer to .answer2
+              // set the wrong answer to .answer1
               $('.answer2').html(card.right_answer);
               var r_answerClicked = '.answer2';
               $('.answer1').html(card.wrong_answer);
               var w_answerClicked = '.answer1';
+
             }
 
             // ---------------------------------------
@@ -84,10 +72,12 @@ $(function() {
             // });
 
             $(w_answerClicked).click(function(){
+              $(w_answerClicked).effect('shake', 'slow');
               answerArray.push(0);
+              console.log(answerArray);
             });
 
-            $('body').one('click', r_answerClicked, function() {
+            $(r_answerClicked).click(function(){
               answerArray.push(1);
               console.log(answerArray);
               //$('.side1').hide(200);
@@ -95,11 +85,6 @@ $(function() {
             });
 
           });
-
-
-
-
-
 
         // ----------------------------------------
   

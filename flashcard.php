@@ -7,7 +7,6 @@
 
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
-    <!-- script src="js/database.js"></script -->
 
     <script type="text/javascript">
       var deck =  <?php echo $jsonDoc; ?> ;

@@ -15,15 +15,19 @@ CREATE TABLE flashcard_deck (
 );
 
 
-CREATE TABLE flashcard (
- flashcard_id int(11) NOT NULL AUTO_INCREMENT,
- flashcard_deck_id int(11) DEFAULT NULL,
- front_text varchar(100) DEFAULT NULL,
- back_text varchar(100) DEFAULT NULL,
- front_image TEXT NULL, 
- back_image TEXT NULL, 
- PRIMARY KEY (flashcard_id)
-);
+
+CREATE TABLE IF NOT EXISTS `flashcard` (
+`flashcard_id` int(11) NOT NULL,
+  `flashcard_deck_id` int(11) DEFAULT NULL,
+  `front_text` text,
+  `back_text` text,
+  `front_image` text,
+  `back_image` text NOT NULL,
+  `front_bg_color` varchar(20) DEFAULT NULL,
+  `back_bg_color` varchar(20) DEFAULT NULL,
+  `right_answer` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
 
 
 -- cat dumps a file

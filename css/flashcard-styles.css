@@ -87,7 +87,7 @@ body {
 }
 
 .indexCard {
-  /*background-image: url(../img/indexCard.jpg);*/
+  background-image: url(../img/indexCard.jpg);
   width: 50%;
   top: 0;
   left: 0;

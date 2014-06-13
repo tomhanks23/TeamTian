@@ -14,16 +14,36 @@
         headsOrTails = Math.random(),
         max = Object.keys(deck).length;
 
-    // ***********************************************
 
         // loadpage initializes the page with nextCard(0)
-        function loadPage () {
+        function loadPage() {
             nextCard(0);
+        };
+
+        function arrPushOne() {
+            answerArray.push(1);
         }
 
-        // The nextCard function takes the parameter count, adds 1
-        // to the card count and selects the appropriate card. 
-        var nextCard = function (count) {
+        function arrPushZero() {
+            answerArray.push(0);
+        }
+
+        function clickedThisButton (r_answerClicked, w_answerClicked) {
+            console.log('Right answer is ' + r_answerClicked + '-- The Wrong answer is ' + w_answerClicked);
+
+                $(r_answerClicked).one('click', function(){
+                    arrPushOne();
+                    console.log(answerArray);
+                });
+
+                $(w_answerClicked).one('click', function(){
+                    arrPushZero();
+                    console.log(answerArray);
+                });
+
+        }
+
+        function nextCard(count) {
             card = deck[count];
             $('.side2').hide();
             $('.side1').show();
@@ -48,16 +68,9 @@
 
           };
 
-    // ***********************************************
-        // randomly select .answer1 or .answer2 to place the 
-        // right answer content.
         function placeAnswerOn (card) {
 
-            //determine wrong_answer by selecting a random 
-            // right answer from the same deck as long as it is not 
-            // the same answer
-
-            var createWrongAnswer = function () {
+            function createWrongAnswer() {
                 wrong_answer = deck[Math.floor(Math.random() * max)].right_answer;
                 // console.log(wrong_answer);
                 // console.log(card.right_answer);
@@ -72,20 +85,21 @@
                 // set the wrong answer to .answer2
                 $('.answer1').html(card.right_answer);
                 r_answerClicked = '.answer1';
-                $('.answer2').html(card.wrong_answer);
+                $('.answer2').html(wrong_answer);
                 w_answerClicked = '.answer2';
             } else {
                 // set the right answer to .answer2
                 // set the wrong answer to .answer1
                 $('.answer2').html(card.right_answer);
                 r_answerClicked = '.answer2';
-                $('.answer1').html(card.wrong_answer);
+                $('.answer1').html(wrong_answer);
                 w_answerClicked = '.answer1';
             }
+
             clickedThisButton(r_answerClicked,w_answerClicked);
         }
 
-    // ***********************************************
+        loadPage();
 
         $('body').on('click', '.go', function() {
             if (count == max -1) {
@@ -96,31 +110,10 @@
             nextCard(count);
         });
 
-        var arrPushOne = function() {
-                answerArray.push(1);
-        }
-
-        var arrPushZero = function() {
-            answerArray.push(0);
-        }
-
-    function clickedThisButton (r_answerClicked, w_answerClicked) {
-        console.log('Right answer is ' + r_answerClicked + '-- The Wrong answer is ' + w_answerClicked);
-
-            $(r_answerClicked).one('click', function(){
-                arrPushOne();
-                console.log(answerArray);
-            });
-
-            $(w_answerClicked).one('click', function(){
-                arrPushZero();
-                console.log(answerArray);
-            });
-
-    }
-
-        loadPage();
 
     });
+
+
+
 
 })(jQuery);

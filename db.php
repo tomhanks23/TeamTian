@@ -11,6 +11,15 @@ class DB {
   public function __construct() {
 
     // Connect to the database
+<<<<<<< HEAD
+
+    // host: rockit.ccyd2ljjwzet.us-east-1.rds.amazonaws.com
+    // username: YOUR-TEAM-NAME
+    // password: THE-SAME-OLE-ONE
+    // database name: 
+
+=======
+>>>>>>> e4a2d9473d1383ccfe915f1cbb85a7ed61fd27af
     $this->link = new mysqli('rockit.ccyd2ljjwzet.us-east-1.rds.amazonaws.com', 'teamtian', 'rockit', 'teamtian');
 
     // If the connection had problem, output that now

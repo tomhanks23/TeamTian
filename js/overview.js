@@ -27,6 +27,25 @@ $(function() {
     });
 
 
+    $('#imgform_front').on('change',function(){ //submit the form when image is selected
+      $('#imgform_front').ajaxForm({target: '#view',
+       beforeSend: function(){//show the loader
+        $('#imageloader').show();
+        $('#view').html('');
+        // $('#imagebutton').hide();
+
+       },success: function(){ //show the file button
+        $('#imageloader').hide();
+        // $('#imagebutton').show();
+
+       },error: function() {
+        $('#imageloader').hide();
+        // $('#imagebutton').show();
+
+       }
+      }).submit();
+     });
+
     //Run this function when you click on the class='test'
       // SUPPOSEDLY you can load an image file and place it in the 
       // specified area...

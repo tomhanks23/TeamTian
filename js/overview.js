@@ -27,44 +27,41 @@ $(function() {
     });
 
 
-    $('#imgform_front').on('change',function(){ //submit the form when image is selected
-      $('#imgform_front').ajaxForm({target: '#view',
-       beforeSend: function(){//show the loader
-        $('#imageloader').show();
-        $('#view').html('');
-        // $('#imagebutton').hide();
+    // submit the form when image is selected
+    // front
+    $('.fc_front #imgform_front').on('change',function(){
+      $('.fc_front #imgform_front').ajaxForm({target: '.fc_front #view',
+       beforeSend: function(){
+        $('.fc_front #imageloader').show();
+        $('.fc_front #view').html('');
 
-       },success: function(){ //show the file button
-        $('#imageloader').hide();
-        // $('#imagebutton').show();
+       },success: function(){ 
+        $('.fc_front #imageloader').hide();
 
        },error: function() {
-        $('#imageloader').hide();
-        // $('#imagebutton').show();
+        $('.fc_front #imageloader').hide();
 
        }
       }).submit();
      });
 
-    //Run this function when you click on the class='test'
-      // SUPPOSEDLY you can load an image file and place it in the 
-      // specified area...
-    // $(".test").on("click", function() {
-    //   var reader = new FileReader();
-    //   reader.onload = (function(e){
-    //     var img = new Image();
-    //     img.src = e.target.result;
-    //     var c = $("#canvas");
-    //     var ctx = c[0].getContext("2d");
-    //     ctx.drawImage(img, 0,0);
-    //   });
+    // back
+    $('.fc_back #imgform_front').on('change',function(){
+      $('.fc_back #imgform_front').ajaxForm({
+        target: '.fc_back #view',
+        beforeSend: function(){
+          $('.fc_back #imageloader').show();
+          $('.fc_back #view').html('');
 
-    //   reader.readAsDataURL(document.getElementById('addImg_front').files[0]);
+         },success: function(){ 
+          $('.fc_back #imageloader').hide();
 
-    //   // $("#addImg_front").files[0].appendTo($(".fc_front"));
-    //   $(".fc_front").css("background-image", document.getElementById('addImg_front').files[0]);
-      
-    // });
+         },error: function() {
+          $('.fc_back #imageloader').hide();
+
+         }
+      }).submit();
+     });
 
     $( document ).ready(function() {
       // Handler for .ready() called.
@@ -81,19 +78,25 @@ $(function() {
     })
 
 
-    $(".color").on("change", function() {
+    $("#front_color").on("change", function() {
       $(".fc_front").css("background-color", "#" + this.color.toString());
+    });
+
+    $("#back_color").on("change", function() {
+      $(".fc_back").css("background-color", "#" + this.color.toString());
     });
 
     $(".add").on("click", function() {
       // get the item info prepared
-      var flashcard_deck_id = 1;
+      var flashcard_deck_id = 100;
+      var user_id = 100;
       var front_text = $(".fc_front textarea").val();
-      var back_text = $(".fc_back").val();
-      var front_image =$(".fc_front img").prop('src');
-      var back_image = $(".fc_front img").prop('src');
+      var back_text = $(".fc_back textarea").val();
+      var front_image =$(".fc_front #view img").prop('src');
+      var back_image = $(".fc_back #view img").prop('src');
       var front_bg_color = $(".fc_front").css("background-color");
       var back_bg_color = $(".fc_back").css("background-color");
+      var right_answer = $("#right_answer").val();
 
 
       $.ajax({
@@ -103,20 +106,21 @@ $(function() {
           cache: false,
           data: {
             flashcard_deck_id: flashcard_deck_id,
+            user_id: user_id,
             front_text: front_text,
             back_text: back_text,
             front_image: front_image,
             back_image: back_image,
             front_bg_color: front_bg_color,
-            back_bg_color: back_bg_color
+            back_bg_color: back_bg_color,
+            right_answer: right_answer
           },
           success: function(data) {
-             alert(JSON.stringify(data));
+             1;
           },
           error: function(a, b, c) {
-            alert(a);
-            alert(b);
-            alert(c);
+            console.log(b);
+            console.log(c);
           }
       });
 

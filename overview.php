@@ -39,7 +39,7 @@
     </select>
     <br>
     Card name(Right answer):
-    <input type="input" value="" style="width:90px">
+    <input type="input" id="right_answer" value="" style="width:90px">
 
   <!-- Text Area Card Content -->
     <!-- <textarea class="fc_front" rows="2" cols="20" placeholder="Front text."></textarea>
@@ -57,18 +57,22 @@
     </div>
 
     Background color:
-    <input class="color" value="" style="width:90px"><br>
+    <input class="color" id="front_color" value="" style="width:90px"><br>
 
     <div  class="fc_back">
-      
+      <form action="upload.php" id="imgform_front" method="post" enctype="multipart/form-data">
+        <div id="imageloader" style="height:auto">
+          <img src="http://imgs.tuts.dragoart.com/how-to-draw-a-river_1_000000007978_5.jpg" style="height:100px; width:160px">
+        </div>
+        <div id="view" style="height:auto"></div>
+        <input type="file" name="file" id="file" style="width:90px"><br>
+      </form>
       <textarea rows="2" cols="20" placeholder="Back text." name="fc_back_text"></textarea>
-      
     </div>
-    <input class="color" value=""><br>
-    
-    <input type="file" name="file" id="file"><br>
-    <input type="submit" name="submit" value="Submit">
-    <!-- <button class="addImg_back">Add Image</button> --><br>
+
+    Background color:
+    <input class="color" id="back_color" value="" style="width:90px"><br>
+
     <button class="add" type="submit">Add New Card</button>
     
     <!-- <button class="submit">Done</button> -->

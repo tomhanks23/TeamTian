@@ -1,6 +1,5 @@
 *{
   font-family: 'Graduate', cursive;
-  /*font-family: 'Unkempt', cursive;*/
   font-size: 24px;
   
 }
@@ -25,6 +24,7 @@ h1, footer {
   text-align: center;
   font-size: 48px;
   padding: 20px;
+  max-height: 125px; 
   background-image:url('../img/header-white-c-paper.jpg');
 }
 

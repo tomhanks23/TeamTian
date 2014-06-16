@@ -1,7 +1,5 @@
 <?php
 include ("db.php");
-// include ("header.php");
-// include ("footer.php");
 
 $db = new DB();
 $errors = [];
@@ -53,14 +51,7 @@ if($_POST){
 
 <body>
 
- <h1>Welcome to Fun Flash!
-    <div class = "flip-container" ontouchstart="this.classList.toggle('hover');">
-     <div class = "flipper">
-      <a class="front">Fun</a>
-      <a class="back">Flash</a>
-     </div>
-    </div>
-  </h1>
+  <?php include('header.php'); ?>
 
   <div class = "mediaObject">
     <div class="about">What is Fun Flash? 

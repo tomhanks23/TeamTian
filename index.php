@@ -1,4 +1,5 @@
 <?php
+session_start();
 include ("db.php");
 
 $db = new DB();
@@ -6,33 +7,23 @@ $errors = [];
 
 //Checking the database to see if the username exists for Login
 if($_POST){
+
   if($_POST['action']=='login'){
     $select = "select * from user where email = '{$_POST['email']}'";
     $results = $db->execute($select);
+
     if($results->num_rows > 0) {
-      array_push($errors, "username already exists");
+      while ($row = $results->fetch_assoc()) {
+        $_SESSION["user_id"] = $row['user_id'];
+        header('Location: http://localhost/TeamTian/overview.php');
+      }
     }else{
-      echo "user doesn't exist";
+      echo "username not found";
     }
   }else{
     echo "sent from login";
   }
 }
-// Check the database to see if the password matches the username
-// if($_POST){
-//   if($_POST['action']=='login'){
-//     $select = "select * from user where password = '{$_POST['password']}'";
-//     $results = $db->execute($select);
-//     if($results->num_rows > 0) {
-//       array_push($errors, "username and/or password not found");
-//       echo "username and/or password not found";
-//     }else{
-//       echo "";
-//     }
-//   }else{
-//     echo "sent from login";
-//   }
-// }
 
 ?>
 <!DOCTYPE html>
@@ -41,15 +32,26 @@ if($_POST){
   <title>Fun Flash!</title>
   <!-- fonts-->
   <link href='http://fonts.googleapis.com/css?family=Unkempt:700' rel='stylesheet' type='text/css'>
+  <!-- Graduate Font -->
+  <link href='http://fonts.googleapis.com/css?family=Graduate' rel='stylesheet' type='text/css'>
   <!-- fonts end -->
   <script src="js/jquery-2.1.1.min.js"></script>
   <!--<script src="js/main.js"></script> -->
   <script src="js/index.js"></script>
   <link rel="stylesheet" type="text/css" href="css/index-styles.css">
+   <!--  <link rel="stylesheet" type="text/css" href="flip.css"> -->
+
 </head>
 
 <body>
-  <h1>Welcome to Fun Flash!</h1>
+  <h1>Welcome to Fun Flash!
+    <div class = "flip-container" ontouchstart="this.classList.toggle('hover');">
+     <div class = "flipper">
+      <a class="front">Fun</a>
+      <a class="back">Flash</a>
+     </div>
+    </div>
+  </h1>
 
   <div class = "mediaObject">
     <div class="about">What is Fun Flash? 
@@ -60,11 +62,10 @@ if($_POST){
     <div class = "logIn">
         <p>Log In</p>
         <form action="" method="POST">
-          <input type="text" name="email" placeholder ="Email Address"><br>
-          <input type="password" name="password" placeholder = "Password"><br><br>
+          <input type="text" name="email" placeholder ="Email Address" class='email'><br>
+          <input type="password" name="password" placeholder = "Password" class='password'><br><br>
           <input type="hidden" name="action" value="login">
           <button type="submit">Submit</button>
-          <a href="overview.php">Log In</a>
         </form>
     </div>
 
@@ -80,6 +81,8 @@ if($_POST){
         </form>
     </div>
   </div>
+
+  <footer>Contact Us</footer>
 
 </body>
 

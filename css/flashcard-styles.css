@@ -13,7 +13,7 @@ body {
 .page-container {}
 
 .navigation {
-  background: url(img/greenSmall.jpg);
+  background: url(../img/greenSmall.jpg);
   /*background-color: rgba(255, 255, 255, .7);*/
   padding: 15px;
 }
@@ -101,6 +101,7 @@ body {
 }
 
 .side1, .side2 {
+  background-color: white;
   padding: 20px;
   border-radius: 35px;
   margin: 20px;

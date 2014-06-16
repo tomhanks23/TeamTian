@@ -1,3 +1,10 @@
+<?php
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,29 +34,30 @@
 
   <div class = "mediaObject">
     <div class="about">What is Fun Flash? 
-      <p>Welcome to Fun Flash, the single-most important educational product to hit since the
-        chalkboard. With this wonderful product you will see your child's intelligence blossom.  We use state of the art educational algorithms to practice the problem areas and reward perceptivity. With Fun Flash, you can be assured that your child will only see educational content.
+      <p>Welcome to Fun Flash, the single-most important educational product to hit since the chalkboard. With this wonderful product you will see your child's intelligence blossom.  We use state of the art educational algorithms to practice the problem areas and reward perceptivity. With Fun Flash, you can be assured that your child will only see educational content.
     </div>
 
     <div class = "logIn">
         <p>Log In</p>
-        <form>
-          <input type="text" name="email" placeholder ="Email"><br>
-          <input type="password" name="password" placeholder = "Password"><br><br>
-          <a href="overview.php">Log In</a>
-        </form>
-    </div>
-
-    <div class = "Register">
-        <p>Register</p>
-        <form method="POST" name="register">
-          <input type="text" name="firstName" placeholder="First Name"><br>
-          <input type="text" name="lastName" placeholder="Last Name"><br>
-          <input type="text" name="email" placeholder="Email"><br>
-          <input type="password" name="password" placeholder="Password"><br>
+        <form method="POST" action="overview.php" name="login">
+          <input type="text" class="email" name="email" placeholder ="Email"><br>
+          <input type="password" class="password" name="password" placeholder = "Password"><br><br>
           <button class="submit">Submit</button>
         </form>
+
+      <div class = "Register">
+          <p>Register</p>
+          <form method="POST" name="register">
+            <input type="text" name="firstName" placeholder="First Name"><br>
+            <input type="text" name="lastName" placeholder="Last Name"><br>
+            <input type="text" name="email" placeholder="Email"><br>
+            <input type="password" name="password" placeholder="Password"><br>
+            <button class="submit">Submit</button>
+          </form>
+      </div>
+
     </div>
+
   </div>
 
   <footer>Contact Us</footer>

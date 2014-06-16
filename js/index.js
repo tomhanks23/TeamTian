@@ -7,7 +7,7 @@ $(function(){
 
 
 //-----------------Register Validation----------
-    function validate(form){
+    function validateRegister(form){
         var firstName = $("[name='firstName']").val();
         var lastName = document.register.lastName.value;
         var email = document.register.email.value;
@@ -33,7 +33,7 @@ $(function(){
         }
 
         function checkLength(text, min, max){
-            min = min || 1;
+            min = min || 5;
             max = max || 50;
             if (text.length < min || text.length > max){
                 return false;
@@ -52,8 +52,58 @@ $(function(){
         }
     }
 
-    $(".submit").on('click', function(){
-        validate(this);
+    $(".Register").on('submit', function(){
+        validateRegister(this);
+    });
+//----------------Log In Validation-------------    
+function validateLogin(login){
+        var email  = $('.logIn input.email').val();
+        var password = $('.logIn input.password').val();
+        var errors = [];
+
+        if(!checkLength(email)){
+            errors.push("You must enter an email.");
+        }
+        if(!checkLength(password)){
+            errors.push("You must enter a password.");
+        }
+
+        if(errors.length > 0){
+            reportErrors(errors);
+            return false;
+        }
+        return true;
+
+        function checkLength(text, min, max){
+            if (text == undefined) {
+                return false; 
+            }
+            min = min || 5;
+            max = max || 50;
+            if (text.length < min || text.length > max){
+                return false;
+            }
+            return true;
+        }
+
+        function reportErrors(errors){
+            var msg = "There were some problems...\n";
+            var numError;
+            for(var i=0; i<errors.length; i++){
+                numError = i + 1;
+                msg +="\n" + numError + "." + errors[i];
+            }
+            alert(msg);
+        }
+    }
+
+    $(".logIn").on('submit', function(){
+        var valid = validateLogin(this);
+
+        if(!valid){
+            return false;
+        }
+
     });
 //-----------------End Reigster Validation------    
 
@@ -84,7 +134,7 @@ $(function(){
     var flashCard1 = new FlashCard({
         id : 1,
         front : 'cat',
-        back : '喵'
+        back : 'å–µ'
     });
 
     // console .log(flashCard1);

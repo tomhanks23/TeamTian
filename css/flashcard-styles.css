@@ -153,3 +153,9 @@ body {
   float: left;
 }
 
+footer {
+  text-align: center;
+  font-size: 48px;
+  padding: 20px;
+  background-image:url('../img/header-white-c-paper.jpg');
+}

@@ -19,3 +19,5 @@
   // Bring in the html for the page
   require 'flashcard.php';
   // echo "flashcard.php loaded and operational";
+
+  require 'footer.php';

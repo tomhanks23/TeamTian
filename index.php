@@ -71,8 +71,6 @@ if($_POST){
           <input type="password" name="password" placeholder = "Password" class='password'><br><br>
           <input type="hidden" name="action" value="login">
           <button type="submit">Submit</button>
-          <!-- <button type="submit">Log In</button> -->
-          <a href="overview.php">Log In</a>
         </form>
     
       <div>
@@ -93,9 +91,6 @@ if($_POST){
     </div>
 
   </div>
-
-  <footer>Contact Us</footer>
-
 </body>
 
 <?php include('footer.php'); ?>

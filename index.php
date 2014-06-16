@@ -46,21 +46,9 @@ if($_POST){
 </head>
 
 <body>
-<<<<<<< HEAD
 
   <?php include('header.php'); ?>
-=======
  
- <h1>Welcome to Fun Flash!
-    <div class = "flip-container" ontouchstart="this.classList.toggle('hover');">
-     <div class = "flipper">
-      <a class="front">Fun</a>
-      <a class="back">Flash</a>
-     </div>
-    </div>
-  </h1>
->>>>>>> cb304bd09c2f6168f7b4ddb9625f345c3be58650
-
   <div class = "mediaObject">
     <div class="about">What is Fun Flash? 
       <p>Welcome to Fun Flash, the single-most important educational product to hit since the
@@ -86,7 +74,7 @@ if($_POST){
             <input type="password" name="password" placeholder="Password"><br>
             <input type="password2" name="password2" placeholder="Re-enter Password"><br>
             <input type="hidden" name="action" value="register"> <br>
-            <button type="submit">Submit</button>
+            <button type="submit">Register</button>
           </form>
 
       </div>
@@ -94,6 +82,7 @@ if($_POST){
     </div>
 
   </div>
+  
 </body>
 
 <?php include('footer.php'); ?>

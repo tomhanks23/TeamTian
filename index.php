@@ -46,18 +46,6 @@ if($_POST){
 </head>
 
 <body>
-<<<<<<< HEAD
- 
- <h1>Welcome to Fun Flash!</h1>
-
-  <div class = "flip-container" ontouchstart="this.classList.toggle('hover');">
-   <div class = "flipper">
-    <a class="front">Fun</a>
-    <a class="back">Flash</a>
-   </div>
-  </div>
-=======
->>>>>>> 200755415da8aac487168a710ea0ef29a979507e
 
   <?php include('header.php'); ?>
  
@@ -68,53 +56,20 @@ if($_POST){
     </div>  
 
     <div class = "logIn">
-  
-    
-  <div>
-    <button class="loginButton">Log In</button>
-  </div>  
+      <p>Login</p>
+    <form action="" method="POST">
+      <input type="text" name="email" placeholder ="Email Address" class='email'><br>
+      <input type="password" name="password" placeholder = "Password" class='password'><br><br>
+      <input type="hidden" name="action" value="login">
+      <button type="submit">Submit</button>
+    </form>      
 
   <div>
-    <button class="registerButton">Register</button>
+    <p>Not a member?</p>
+    <button class="registerButton">Register!</button>
   </div>  
+ </div>  
 
-
-     <!-- Login Modal -->
-<div class="overlay">
-  <div class="loginModal">
-    <div class="loginContent">
-      <h3>Login</h3>
-      <div>
-        <p>Welcome Back! Log in to Get Started:</p>
-        <form action="" method="POST">
-          <input type="text" name="email" placeholder ="Email Address" class='email'><br>
-          <input type="password" name="password" placeholder = "Password" class='password'><br><br>
-          <input type="hidden" name="action" value="login">
-          <button type="submit">Submit</button>
-<<<<<<< HEAD
-          <button id="register">Register</button>
-          <button class="close">Close</button>
-=======
-        </form>
-    
-      <div>
-
-          <p>Register</p>
-          <form method="POST" action="" name="register">
-            <input type="text" name="firstName" placeholder="First Name"><br>
-            <input type="text" name="lastName" placeholder="Last Name"><br>
-            <input type="text" name="email" placeholder="Email"><br>
-            <input type="password" name="password" placeholder="Password"><br>
-            <input type="password2" name="password2" placeholder="Re-enter Password"><br>
-            <input type="hidden" name="action" value="register"> <br>
-            <button type="submit">Register</button>
->>>>>>> 200755415da8aac487168a710ea0ef29a979507e
-          </form>
-      </div>    
-    </div>
-  </div>
-<<<<<<< HEAD
-</div>  
 
 <!-- Register Modal -->
 <div class="overlay">
@@ -136,9 +91,7 @@ if($_POST){
 </div>  
 
 
-=======
-  
->>>>>>> 200755415da8aac487168a710ea0ef29a979507e
+</div>
 </body>
 
 <?php include('footer.php'); ?>

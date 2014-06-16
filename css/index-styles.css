@@ -121,7 +121,7 @@ a, button {
 }
 
 /*-----------Modals--------------*/
-.loginModal, .registerModal{
+.registerModal{
     background-color: lightblue;
     height: 300px;
     width: 400px;
@@ -131,7 +131,7 @@ a, button {
     z-index: 1000;
 }
 
-.loginContent, .registerContent{
+.registerContent{
     text-align: center;
     color: #FFF;
     font-size: 25px;
@@ -142,16 +142,6 @@ h3{
     height: 50px;
     color: gray;
     border-radius: 15px 15px 0 0 ;
-}
-
-button{
-    background-color: #7CFC00;
-    height: 40px;
-    width: 80px;
-    color: #000;
-    font-size: 19px;
-    font-family: 'Graduate', cursive;
-    border-radius: 15px;
 }
 
 .overlay{

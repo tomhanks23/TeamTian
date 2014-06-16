@@ -6,12 +6,6 @@ $(function(){
     // })
 
 //-----------------Login/Register Modal Windows--------
-    $('.loginButton').on('click', function(){
-        $('.overlay').css('display','inline');
-        $('.loginModal').show();
-        console.log("login button clicked");  
-    });
-
     $('.registerButton').on('click', function(){
         $('.overlay').css('display','inline');
         $('.registerModal').show();

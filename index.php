@@ -1,8 +1,6 @@
 <?php
 session_start();
 include ("db.php");
-// include ("header.php");
-// include ("footer.php");
 
 $db = new DB();
 $errors = [];
@@ -48,6 +46,7 @@ if($_POST){
 </head>
 
 <body>
+<<<<<<< HEAD
  
  <h1>Welcome to Fun Flash!</h1>
 
@@ -57,7 +56,11 @@ if($_POST){
     <a class="back">Flash</a>
    </div>
   </div>
+=======
+>>>>>>> 200755415da8aac487168a710ea0ef29a979507e
 
+  <?php include('header.php'); ?>
+ 
   <div class = "mediaObject">
     <div class="about">What is Fun Flash? 
       <p>Welcome to Fun Flash, the single-most important educational product to hit since the
@@ -88,12 +91,29 @@ if($_POST){
           <input type="password" name="password" placeholder = "Password" class='password'><br><br>
           <input type="hidden" name="action" value="login">
           <button type="submit">Submit</button>
+<<<<<<< HEAD
           <button id="register">Register</button>
           <button class="close">Close</button>
+=======
+        </form>
+    
+      <div>
+
+          <p>Register</p>
+          <form method="POST" action="" name="register">
+            <input type="text" name="firstName" placeholder="First Name"><br>
+            <input type="text" name="lastName" placeholder="Last Name"><br>
+            <input type="text" name="email" placeholder="Email"><br>
+            <input type="password" name="password" placeholder="Password"><br>
+            <input type="password2" name="password2" placeholder="Re-enter Password"><br>
+            <input type="hidden" name="action" value="register"> <br>
+            <button type="submit">Register</button>
+>>>>>>> 200755415da8aac487168a710ea0ef29a979507e
           </form>
       </div>    
     </div>
   </div>
+<<<<<<< HEAD
 </div>  
 
 <!-- Register Modal -->
@@ -116,6 +136,9 @@ if($_POST){
 </div>  
 
 
+=======
+  
+>>>>>>> 200755415da8aac487168a710ea0ef29a979507e
 </body>
 
 <?php include('footer.php'); ?>

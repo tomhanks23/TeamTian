@@ -1,21 +1,22 @@
 *{
 
-    font-family: 'Unkempt', cursive;
+    font-family: 'Graduate', cursive;
     font-size: 24px;
 }
 
 body {
-    width: 960px;
-    background-image: url("../img/congruent_pentagon.png");
+    background-image: url('../img/white-c-paper-blue.jpg');
 }
 
-h1 {
+h1, footer {
   text-align: center;
-  font-size: 56px;
-  background-color:rgba(255, 255, 255, .7);
+  font-size: 48px;
+  padding: 20px;
+  max-height: 125px; 
+  background-image:url('../img/header-white-c-paper.jpg');
 }
 
-div h1 span{
+div h1 span {
     font-size: 56px;
 }
 

@@ -20,25 +20,32 @@
             nextCard(0);
         };
 
+        // activated when the right answer is clicked
         function arrPushOne() {
             answerArray.push(1);
         }
 
+        // activated when the wrong answer is clicked
         function arrPushZero() {
             answerArray.push(0);
         }
 
+        // this is fired on page load and ...
         function clickedThisButton (r_answerClicked, w_answerClicked) {
-            console.log('Right answer is ' + r_answerClicked + '-- The Wrong answer is ' + w_answerClicked);
+            //console.log('Right answer is ' + r_answerClicked + '-- The Wrong answer is ' + w_answerClicked);
 
-                $(r_answerClicked).one('click', function(){
-                    arrPushOne();
-                    console.log(answerArray);
+                $(r_answerClicked).click( function(){
+                    $(this).css('background-color', 'green');
+                    $('.side1').hide(300);
+                    $('.side2').show(300);
+                    // arrPushOne();
+                    // console.log(answerArray);
                 });
 
-                $(w_answerClicked).one('click', function(){
-                    arrPushZero();
-                    console.log(answerArray);
+                $(w_answerClicked).click( function(){
+                    $(this).css('background-color', 'red');
+                    // arrPushZero();
+                    // console.log(answerArray);
                 });
 
         }
@@ -68,16 +75,17 @@
 
           };
 
+        function createWrongAnswer() {
+            wrong_answer = deck[Math.floor(Math.random() * max)].right_answer;
+            // console.log(wrong_answer);
+            // console.log(card.right_answer);
+                if (wrong_answer == card.right_answer ) {
+                    createWrongAnswer();
+                }
+            }
+
         function placeAnswerOn (card) {
 
-            function createWrongAnswer() {
-                wrong_answer = deck[Math.floor(Math.random() * max)].right_answer;
-                // console.log(wrong_answer);
-                // console.log(card.right_answer);
-                    if (wrong_answer == card.right_answer ) {
-                        createWrongAnswer();
-                    }
-                }
             createWrongAnswer();
 
             if (headsOrTails<0.5) {
@@ -99,9 +107,11 @@
             clickedThisButton(r_answerClicked,w_answerClicked);
         }
 
-        loadPage();
 
-        $('body').on('click', '.go', function() {
+        // $('body').on('click', '.go', function() {
+            $('.go').click( function() {
+                $('.answer1').css('background-color', 'white');
+                $('.answer2').css('background-color', 'white');
             if (count == max -1) {
               count = 0;
             } else {
@@ -110,6 +120,7 @@
             nextCard(count);
         });
 
+        loadPage();
 
     });
 

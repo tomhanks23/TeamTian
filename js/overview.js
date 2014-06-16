@@ -23,7 +23,7 @@ $(function() {
     //When you click on the button run this function
       //open the linked page (flashcard.html)
     $(".container").on("click", "button", function() {
-        window.location.href = "flashcard.php";
+        window.location.href = "fc_ctrl.php";
     });
 
 

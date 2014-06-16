@@ -8,13 +8,13 @@ if($_POST){
 
  ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
   <title></title>
-    <link href='http://fonts.googleapis.com/css?family=Unkempt:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Graduate' rel='stylesheet' type='text/css'>
+ <!--    <link href='http://fonts.googleapis.com/css?family=Unkempt:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'> -->
     <link rel="stylesheet" type="text/css" href="css/overview-styles.css">
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/overview.js"></script>
@@ -24,16 +24,13 @@ if($_POST){
 
 <body>
 
+  <?php include('header.php'); ?>
 
   <!-- link to flashcard.html -->
   <div class="main">
   <!--     Title  -->
   <div class="cardCreator">
-    <h1 id="h1">
-        Card Creator
-    </h1>
-    <script src="js/rainbow.js">
-    </script>
+  
   </div>
 
   <!-- Card Creator Section with Drop Down Menu -->
@@ -96,5 +93,7 @@ if($_POST){
   </div>
 
 </body>
+
+<?php include('footer.php'); ?>
 
 </html>

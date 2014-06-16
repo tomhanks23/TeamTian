@@ -34,11 +34,9 @@ if($_POST){
 <head>
   <title>Fun Flash!</title>
   <!-- fonts-->
-<<<<<<< HEAD
   <link href='http://fonts.googleapis.com/css?family=Unkempt:700' rel='stylesheet' type='text/css'>
   <!-- Graduate Font -->
-=======
->>>>>>> 7dcc0ef8367a359c5cb689d1fc32592dcaa9fcb9
+
   <link href='http://fonts.googleapis.com/css?family=Graduate' rel='stylesheet' type='text/css'>
   <!-- fonts end -->
   <script src="js/jquery-2.1.1.min.js"></script>

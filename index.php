@@ -49,48 +49,73 @@ if($_POST){
 
 <body>
  
- <h1>Welcome to Fun Flash!
-    <div class = "flip-container" ontouchstart="this.classList.toggle('hover');">
-     <div class = "flipper">
-      <a class="front">Fun</a>
-      <a class="back">Flash</a>
-     </div>
-    </div>
-  </h1>
+ <h1>Welcome to Fun Flash!</h1>
+
+  <div class = "flip-container" ontouchstart="this.classList.toggle('hover');">
+   <div class = "flipper">
+    <a class="front">Fun</a>
+    <a class="back">Flash</a>
+   </div>
+  </div>
 
   <div class = "mediaObject">
     <div class="about">What is Fun Flash? 
       <p>Welcome to Fun Flash, the single-most important educational product to hit since the
-        chalkboard. With this wonderful product you will see your child's intelligence blossom.  We use state of the art educational algorithms to practice the problem areas and reward perceptivity. With Fun Flash, you can be assured that your child will only see educational content.
-    </div>
+        chalkboard. With this wonderful product you will see your child's intelligence blossom.  We use state of the art educational algorithms to practice the problem areas and reward perceptivity. With Fun Flash, you can be assured that your child will only see educational content.</p>
+    </div>  
 
     <div class = "logIn">
-        <p>Log In</p>
+  
+    
+  <div>
+    <button class="loginButton">Log In</button>
+  </div>  
+
+  <div>
+    <button class="registerButton">Register</button>
+  </div>  
+
+
+     <!-- Login Modal -->
+<div class="overlay">
+  <div class="loginModal">
+    <div class="loginContent">
+      <h3>Login</h3>
+      <div>
+        <p>Welcome Back! Log in to Get Started:</p>
         <form action="" method="POST">
           <input type="text" name="email" placeholder ="Email Address" class='email'><br>
           <input type="password" name="password" placeholder = "Password" class='password'><br><br>
           <input type="hidden" name="action" value="login">
           <button type="submit">Submit</button>
-        </form>
-    
-      <div>
-
-          <p>Register</p>
-          <form method="POST" action="" name="register">
-            <input type="text" name="firstName" placeholder="First Name"><br>
-            <input type="text" name="lastName" placeholder="Last Name"><br>
-            <input type="text" name="email" placeholder="Email"><br>
-            <input type="password" name="password" placeholder="Password"><br>
-            <input type="password2" name="password2" placeholder="Re-enter Password"><br>
-            <input type="hidden" name="action" value="register"> <br>
-            <button type="submit">Submit</button>
+          <button id="register">Register</button>
+          <button class="close">Close</button>
           </form>
-
-      </div>
-
+      </div>    
     </div>
-
   </div>
+</div>  
+
+<!-- Register Modal -->
+<div class="overlay">
+  <div class="registerModal">
+    <div class="registerContent">
+      <h3>Register</h3>
+      <form method="POST" action="" name="register">
+        <input type="text" name="firstName" placeholder="First Name"><br>
+        <input type="text" name="lastName" placeholder="Last Name"><br>
+        <input type="text" name="email" placeholder="Email"><br>
+        <input type="password" name="password" placeholder="Password"><br>
+        <input type="password2" name="password2" placeholder="Re-enter Password"><br>
+        <input type="hidden" name="action" value="register"> <br>
+        <button type="submit">Submit</button>
+        <button class="close">Close</button>
+      </form>
+    </div>  
+  </div>  
+</div>  
+
+
 </body>
 
 <?php include('footer.php'); ?>

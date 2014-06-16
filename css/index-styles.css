@@ -119,3 +119,48 @@ a, button {
   background-color: #7CFC00;
   color: black;
 }
+
+/*-----------Modals--------------*/
+.loginModal, .registerModal{
+    background-color: lightblue;
+    height: 300px;
+    width: 400px;
+    margin: 100px auto;
+    border-radius: 15px;
+    display: none;
+    z-index: 1000;
+}
+
+.loginContent, .registerContent{
+    text-align: center;
+    color: #FFF;
+    font-size: 25px;
+}
+
+h3{
+    background-color: #EEE;
+    height: 50px;
+    color: gray;
+    border-radius: 15px 15px 0 0 ;
+}
+
+button{
+    background-color: #7CFC00;
+    height: 40px;
+    width: 80px;
+    color: #000;
+    font-size: 19px;
+    font-family: 'Graduate', cursive;
+    border-radius: 15px;
+}
+
+.overlay{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0, 0.50);
+}

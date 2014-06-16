@@ -1,5 +1,7 @@
 <?php
 include ("db.php");
+// include ("header.php");
+// include ("footer.php");
 
 $db = new DB();
 $errors = [];
@@ -35,12 +37,13 @@ if($_POST){
 // }
 
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Fun Flash!</title>
   <!-- fonts-->
-  <link href='http://fonts.googleapis.com/css?family=Unkempt:700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Graduate' rel='stylesheet' type='text/css'>
   <!-- fonts end -->
   <script src="js/jquery-2.1.1.min.js"></script>
   <!--<script src="js/main.js"></script> -->
@@ -49,7 +52,15 @@ if($_POST){
 </head>
 
 <body>
-  <h1>Welcome to Fun Flash!</h1>
+
+ <h1>Welcome to Fun Flash!
+    <div class = "flip-container" ontouchstart="this.classList.toggle('hover');">
+     <div class = "flipper">
+      <a class="front">Fun</a>
+      <a class="back">Flash</a>
+     </div>
+    </div>
+  </h1>
 
   <div class = "mediaObject">
     <div class="about">What is Fun Flash? 
@@ -63,24 +74,31 @@ if($_POST){
           <input type="text" name="email" placeholder ="Email Address"><br>
           <input type="password" name="password" placeholder = "Password"><br><br>
           <input type="hidden" name="action" value="login">
-          <button type="submit">Submit</button>
+          <!-- <button type="submit">Log In</button> -->
           <a href="overview.php">Log In</a>
         </form>
+    
+      <div>
+
+          <p>Register</p>
+          <form method="POST" action="" name="register">
+            <input type="text" name="firstName" placeholder="First Name"><br>
+            <input type="text" name="lastName" placeholder="Last Name"><br>
+            <input type="text" name="email" placeholder="Email"><br>
+            <input type="password" name="password" placeholder="Password"><br>
+            <input type="password2" name="password2" placeholder="Re-enter Password"><br>
+            <input type="hidden" name="action" value="register"> <br>
+            <button type="submit">Submit</button>
+          </form>
+
+      </div>
+
     </div>
 
-    <div>
-        <p>Register</p>
-        <form method="POST" action="" name="register">
-          <input type="text" name="firstName" placeholder="First Name"><br>
-          <input type="text" name="lastName" placeholder="Last Name"><br>
-          <input type="text" name="email" placeholder="Email"><br>
-          <input type="password" name="password" placeholder="Password"><br>
-          <input type="hidden" name="action" value="register">
-          <button type="submit">Submit</button>
-        </form>
-    </div>
   </div>
 
 </body>
+
+<?php include('footer.php'); ?>
 
 </html>

@@ -50,12 +50,8 @@ if($_POST){
 </head>
 
 <body>
-<<<<<<< HEAD
-  <h1>Welcome to Fun Flash!
-=======
-
+ 
  <h1>Welcome to Fun Flash!
->>>>>>> 7dcc0ef8367a359c5cb689d1fc32592dcaa9fcb9
     <div class = "flip-container" ontouchstart="this.classList.toggle('hover');">
      <div class = "flipper">
       <a class="front">Fun</a>
@@ -76,12 +72,9 @@ if($_POST){
           <input type="text" name="email" placeholder ="Email Address" class='email'><br>
           <input type="password" name="password" placeholder = "Password" class='password'><br><br>
           <input type="hidden" name="action" value="login">
-<<<<<<< HEAD
           <button type="submit">Submit</button>
-=======
           <!-- <button type="submit">Log In</button> -->
           <a href="overview.php">Log In</a>
->>>>>>> 7dcc0ef8367a359c5cb689d1fc32592dcaa9fcb9
         </form>
     
       <div>

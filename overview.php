@@ -1,3 +1,13 @@
+<?php 
+
+if($_POST){
+
+  include('getUserId.php');
+
+}
+
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>

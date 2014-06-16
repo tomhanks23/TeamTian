@@ -1,20 +1,18 @@
 <?php 
 
-if($_POST){
-
-  include('getUserId.php');
-
-}
+session_start();
+// store session data
+$user_id = $_SESSION['user_id'];
 
  ?>
+
 
 <!DOCTYPE html>
 <html>
 <head>
   <title></title>
-    <link href='http://fonts.googleapis.com/css?family=Graduate' rel='stylesheet' type='text/css'>
- <!--    <link href='http://fonts.googleapis.com/css?family=Unkempt:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'> -->
+    <link href='http://fonts.googleapis.com/css?family=Unkempt:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/overview-styles.css">
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/overview.js"></script>
@@ -24,20 +22,24 @@ if($_POST){
 
 <body>
 
-  <?php include('header.php'); ?>
-
+  <!-- user_id -->
+  <input type="hidden" id="user_id" value="<?php echo $user_id ?>">
   <!-- link to flashcard.html -->
   <div class="main">
   <!--     Title  -->
   <div class="cardCreator">
-  
+    <h1 id="h1">
+        Card Creator
+    </h1>
+    <script src="js/rainbow.js">
+    </script>
   </div>
 
   <!-- Card Creator Section with Drop Down Menu -->
   <div class="left">
 
     Choose your deck:
-    <select name="cardDeck">
+    <select name="cardDeck" class="cardDeck">
       <?php 
         include ('getdeck.php');
        ?>
@@ -89,11 +91,11 @@ if($_POST){
     </h1>
   </div>
 
+
+
   </div>
   </div>
 
 </body>
-
-<?php include('footer.php'); ?>
 
 </html>

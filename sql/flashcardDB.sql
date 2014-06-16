@@ -11,16 +11,16 @@ CREATE TABLE user (
 
 
 CREATE TABLE flashcard_deck (
- flashcard_deck_id int(11) NOT NULL AUTO_INCREMENT,
- flashcard_deck_name varchar(50) DEFAULT NULL,
- user_id int(11) DEFAULT NULL,
- PRIMARY KEY (flashcard_deck_id)
+  flashcard_deck_id int(11) NOT NULL AUTO_INCREMENT,
+  flashcard_deck_name varchar(50) DEFAULT NULL,
+  PRIMARY KEY (flashcard_deck_id)
 );
 
 
 
 CREATE TABLE flashcard (
   flashcard_id int(11) NOT NULL AUTO_INCREMENT,
+  user_id int(11) DEFAULT NULL,
   flashcard_deck_id int(11) DEFAULT NULL,
   front_text text,
   back_text text,
@@ -33,6 +33,8 @@ CREATE TABLE flashcard (
 );
 
 
+
+mysql -h rockit.ccyd2ljjwzet.us-east-1.rds.amazonaws.com -u teamtian -p teamtian
 
 -- cat dumps a file
 cat /Library/WebServer/Documents/TeamTian/sql/flashcardDB.sql | mysql -h rockit.ccyd2ljjwzet.us-east-1.rds.amazonaws.com -u teamtian -p teamtian

@@ -11,15 +11,15 @@ class Db {
 
     // Try and connect to the db
     if ( !isset (self::$connection) ) {
-      self::$connection = new mysqli_connect('localhost', 'root', '', teamtian);
+      // self::$connection = new mysqli_connect('localhost', 'root', '', teamtian);
 
       //Load configuration as an array. Use the actual location of your
       // configuration file
-      // $config = parse_ini_file('../local_config.ini');
-      // self::$connection = new mysqli_connect('rockit.ccyd2ljjwzet.us-east-1.rds.amazonaws.com',
-        // $config['username'],
-        // $config['password'],
-        // $config['dbname'] );
+      $config = parse_ini_file('../config.ini');
+      self::$connection = new mysqli_connect('rockit.ccyd2ljjwzet.us-east-1.rds.amazonaws.com',
+        $config['username'],
+        $config['password'],
+        $config['dbname'] );
 
     }
 

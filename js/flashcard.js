@@ -11,46 +11,21 @@
         min = 0,
         r_answerClicked,
         w_answerClicked,
-        headsOrTails = Math.random(),
         max = Object.keys(deck).length;
 
-
+        // this is fired on page load and ...
         // loadpage initializes the page with nextCard(0)
         function loadPage() {
             nextCard(0);
         };
 
         // activated when the right answer is clicked
-        function arrPushOne() {
-            answerArray.push(1);
-        }
-
-        // activated when the wrong answer is clicked
-        function arrPushZero() {
-            answerArray.push(0);
-        }
-
-        // this is fired on page load and ...
-        function clickedThisButton (r_answerClicked, w_answerClicked) {
-            //console.log('Right answer is ' + r_answerClicked + '-- The Wrong answer is ' + w_answerClicked);
-
-                $(r_answerClicked).click( function(){
-                    $(this).css('background-color', 'green');
-                    $('.side1').hide(300);
-                    $('.side2').show(300);
-                    // arrPushOne();
-                    // console.log(answerArray);
-                });
-
-                $(w_answerClicked).click( function(){
-                    $(this).css('background-color', 'red');
-                    // arrPushZero();
-                    // console.log(answerArray);
-                });
-
+        function answerPerformanceArr(n) {
+            return answerArray.push(n);
         }
 
         function nextCard(count) {
+            console.log(deck);
             card = deck[count];
             $('.side2').hide();
             $('.side1').show();
@@ -71,22 +46,25 @@
               + '</p></div> ' 
               );
 
+            $('.motivation').hide();
+
             placeAnswerOn(card);
 
           };
 
         function createWrongAnswer() {
             wrong_answer = deck[Math.floor(Math.random() * max)].right_answer;
-            // console.log(wrong_answer);
-            // console.log(card.right_answer);
                 if (wrong_answer == card.right_answer ) {
                     createWrongAnswer();
                 }
             }
 
-        function placeAnswerOn (card) {
+        function placeAnswerOn(card) {
 
             createWrongAnswer();
+            headsOrTails = Math.random();
+            console.log(headsOrTails);
+
 
             if (headsOrTails<0.5) {
                 // set the right answer to .answer1
@@ -107,9 +85,41 @@
             clickedThisButton(r_answerClicked,w_answerClicked);
         }
 
+        function setCard () {
+            $('.side1').hide(300);
+            $('.side2').show(300);
+            $(r_answerClicked).hide();
+            $(w_answerClicked).hide();
+            $('.motivation').show();
+        }
+
+        function showAnswerButtons () {
+            $(r_answerClicked).show();
+            $(w_answerClicked).show();
+        }
+
+        function clickedThisButton (r_answerClicked, w_answerClicked) {
+            // remove all previous click events from these elements 
+            $(r_answerClicked).off();
+            $(w_answerClicked).off();
+            showAnswerButtons();
+
+                $(r_answerClicked).click( function(){
+                    $('.motivation').css('background-color', 'green');
+                    setCard();
+                    answerPerformanceArr(1);
+                });
+
+                $(w_answerClicked).click( function(){
+                    $('.motivation').css('background-color', 'red');
+                    setCard();
+                    answerPerformanceArr(0);
+                });
+            console.log(answerArray);
+        }
 
         // $('body').on('click', '.go', function() {
-            $('.go').click( function() {
+            $('.motivation').click( function() {
                 $('.answer1').css('background-color', 'white');
                 $('.answer2').css('background-color', 'white');
             if (count == max -1) {
@@ -123,8 +133,5 @@
         loadPage();
 
     });
-
-
-
 
 })(jQuery);

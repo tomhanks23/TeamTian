@@ -5,6 +5,17 @@ $(function(){
     // direction:'tb'
     // })
 
+//-----------------Login/Register Modal Windows--------
+    $('.registerButton').on('click', function(){
+        $('.overlay').css('display','inline');
+        $('.registerModal').show();
+        console.log("register button clicked");  
+    });
+    $('.close').on('click', function(){
+         window.location.href='index.php';  
+     });
+
+
 
 //-----------------Register Validation----------
     function validateRegister(form){

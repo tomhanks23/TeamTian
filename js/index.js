@@ -38,6 +38,10 @@ $(function(){
             errors.push("You must enter a password.");
         }
 
+        if("['name='password']!=['name=password2]"){
+            errors.push("your passwords don't match");
+        }
+
         if(errors.length > 0){
             reportErrors(errors);
             return false;
@@ -116,7 +120,10 @@ function validateLogin(login){
         }
 
     });
-//-----------------End Reigster Validation------    
+//-----------------End Reigster Validation------  
+
+
+  
 
 
     // you're hiding the flash card.

@@ -25,6 +25,7 @@
         }
 
         function nextCard(count) {
+            console.log(deck);
             card = deck[count];
             $('.side2').hide();
             $('.side1').show();
@@ -44,6 +45,8 @@
               + card.back_text
               + '</p></div> ' 
               );
+
+            $('.motivation').hide();
 
             placeAnswerOn(card);
 
@@ -82,29 +85,41 @@
             clickedThisButton(r_answerClicked,w_answerClicked);
         }
 
+        function setCard () {
+            $('.side1').hide(300);
+            $('.side2').show(300);
+            $(r_answerClicked).hide();
+            $(w_answerClicked).hide();
+            $('.motivation').show();
+        }
+
+        function showAnswerButtons () {
+            $(r_answerClicked).show();
+            $(w_answerClicked).show();
+        }
+
         function clickedThisButton (r_answerClicked, w_answerClicked) {
             // remove all previous click events from these elements 
             $(r_answerClicked).off();
             $(w_answerClicked).off();
+            showAnswerButtons();
 
                 $(r_answerClicked).click( function(){
-                    $(this).css('background-color', 'green');
-                    $('.side1').hide(300);
-                    $('.side2').show(300);
+                    $('.motivation').css('background-color', 'green');
+                    setCard();
                     answerPerformanceArr(1);
                 });
 
                 $(w_answerClicked).click( function(){
-                    $(this).css('background-color', 'red');
-                    $('.side1').hide(300);
-                    $('.side2').show(300);
+                    $('.motivation').css('background-color', 'red');
+                    setCard();
                     answerPerformanceArr(0);
                 });
             console.log(answerArray);
         }
 
         // $('body').on('click', '.go', function() {
-            $('.go').click( function() {
+            $('.motivation').click( function() {
                 $('.answer1').css('background-color', 'white');
                 $('.answer2').css('background-color', 'white');
             if (count == max -1) {

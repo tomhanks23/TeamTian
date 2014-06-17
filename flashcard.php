@@ -40,13 +40,9 @@
       <div class="answer1">
       </div>
       <div class="motivation">
-          <button class="go">NEXT!</button>
       </div>
       <div class="answer2">
       </div>
       <div class="clear"></div>
     </div>
   </div>
-
-</body>
-</html>

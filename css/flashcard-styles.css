@@ -7,7 +7,7 @@ body * {
 
 
 body {
-    background-image: url("../img/congruent_pentagon.png");
+    background-color: gray;
 }
 
 .page-container {}
@@ -16,6 +16,7 @@ body {
   background: url(../img/greenSmall.jpg);
   /*background-color: rgba(255, 255, 255, .7);*/
   padding: 15px;
+  margin-bottom: 40px;
 }
 
 .title {
@@ -79,34 +80,13 @@ body {
 }
 
 .flashcard {
-  /*border: solid 2px green;*/
+}
+
+.flashcard, .side1, .side2 {
+  background-color: white;
+  border-radius: 40px 40px 0px 0px;
   width: 600px; 
-  margin-left: auto;
-  margin-right: auto;
-  background-color: white;
-}
-
-.indexCard {
-  background-image: url(../img/indexCard.jpg);
-  width: 50%;
-  top: 0;
-  left: 0;
-}
-
-.flashcard-content {
-  /*background-color: white;*/
-  border-radius: 40px;
-  margin-left: auto;
-  margin-right: auto; 
-}
-
-.side1, .side2 {
-  background-color: white;
-  padding: 20px;
-  border-radius: 35px;
-  margin: 20px;
-  width: 560px;
-  height: 350px;
+  margin: auto;
   text-align: center;
 }
 
@@ -120,7 +100,7 @@ body {
 .small {
   margin-top: 30px;
   max-width: 250px;
-  max-height: 150px;
+  max-height: 200px;
   border-radius: 20px;
 }
 
@@ -134,26 +114,39 @@ body {
   margin-left: auto;
 }
 .answer1, .answer2, .motivation {
+  margin-top: 2px;
   padding-top: 50px;
-  width: 150px;
+  width: 299px;
   height: 60px;
-  border-radius: 20px;
-  margin-left: 30px;
   text-align: center;
 }
 .answer1 {
+  margin-right: 1px;
   background-color: white;
   float: left;
-}
-.motivation {
-  float: left;
-}
-.answer2 {
-  background-color: white;
-  float: left;
+  border-radius: 0 0 0 40px;
 }
 
+.answer2 {
+  background-color: white;
+  margin-left: 1px;
+  float: left;
+  border-radius: 0 0 40px 0;
+}
+
+.motivation {
+  background-color: white;
+  width: 600px;
+  margin: auto;
+  border-radius: 0 0 40px 40px;
+  margin-top: 2px;
+}
+
+
 footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   text-align: center;
   font-size: 48px;
   padding: 20px;

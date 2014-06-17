@@ -6,7 +6,6 @@
   require ('db_functions-FMD.php');
   // echo "db_functions-FMD loaded and operational <br>";
 
-
   $rows = db_select('SELECT *  FROM flashcard');
   if($rows == false) {
     $error = db_error();
@@ -14,10 +13,9 @@
   }
 
   $jsonDoc =  json_encode ( $rows, JSON_FORCE_OBJECT );
-  // echo $jsonDoc;
+  //echo $jsonDoc;
 
   // Bring in the html for the page
   require 'flashcard.php';
   // echo "flashcard.php loaded and operational";
-
   require 'footer.php';

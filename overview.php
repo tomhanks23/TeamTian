@@ -10,9 +10,16 @@ $user_id = $_SESSION['user_id'];
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
+  <title>Fun Flash!</title>
+    <link href='http://fonts.googleapis.com/css?family=Graduate' rel='stylesheet' type='text/css'>
+    <!--<link href='http://fonts.googleapis.com/css?family=Unkempt:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'> -->
+=======
   <title></title>
     <link href='http://fonts.googleapis.com/css?family=Unkempt:700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
+>>>>>>> 6ec3083e02e5aa41ab1145e1e87d9dff0acfc542
     <link rel="stylesheet" type="text/css" href="css/overview-styles.css">
     <script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/overview.js"></script>
@@ -22,6 +29,10 @@ $user_id = $_SESSION['user_id'];
 
 <body>
 
+<<<<<<< HEAD
+  <?php include('header.php'); ?>
+ 
+=======
   <!-- user_id -->
   <input type="hidden" id="user_id" value="<?php echo $user_id ?>">
   <!-- link to flashcard.html -->
@@ -34,6 +45,7 @@ $user_id = $_SESSION['user_id'];
     <script src="js/rainbow.js">
     </script>
   </div>
+>>>>>>> 6ec3083e02e5aa41ab1145e1e87d9dff0acfc542
 
   <!-- Card Creator Section with Drop Down Menu -->
   <div class="left">
@@ -84,17 +96,22 @@ $user_id = $_SESSION['user_id'];
     
     <!-- <button class="submit">Done</button> -->
   </div>
+
+
   <div class="container">
-    <h1>
+    <h2>
       Your Deck
       <button>PLAY</button>
-    </h1>
+    </h2>
   </div>
 
+<<<<<<< HEAD
+=======
 
 
   </div>
   </div>
+>>>>>>> 6ec3083e02e5aa41ab1145e1e87d9dff0acfc542
 
 </body>
 

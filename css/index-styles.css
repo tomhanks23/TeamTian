@@ -4,7 +4,7 @@
   
 }
 
-div .container {
+/*div .container {
     float : right;
     width: 500px;
     min-height: 500px;
@@ -12,7 +12,7 @@ div .container {
     background-color: white;
     border-radius: 30px;
     float: right;
-}
+}*/
 
 body {
   background-color: #6e6e6e;
@@ -27,66 +27,6 @@ h1, footer {
   max-height: 125px; 
   background-image:url('../img/header-white-c-paper.jpg');
 }
-
-/* entire container, keeps perspective */
-.flip-container {
-    perspective: 1000;
-}
-    /* flip the pane when hovered */
-.flip-container:hover .flipper, .flip-container.hover .flipper {
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-}
-.flip-container, .front, .back {
-    width: 200px;
-    height: 100px;
-    -ms-transform: rotate(-10deg); /* IE 9 */
-    -webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
-    transform: rotate(-10deg);
-}
-
-/* flip speed goes here */
-.flipper {
-    transition: 0.6s;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-
-    position: relative;
-}
-
-/* hide back of pane during swap */
-.front, .back {
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    width: 200px;
-    height: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    font-size: 84px;
-    border-radius: 25px;
-    font-family: 'Graduate', cursive;
-}
-
-/* front pane, placed above back */
-.front {
-    z-index: 2;
-    background-color: #7CFC00;
-}
-
-/* back, initially hidden pane */
-.back {
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-    background-color: magenta;
-}
-
-/*///////////////////////////////////////////////////*/
-
 
 .mediaObject {
   overflow: hidden;
@@ -119,3 +59,88 @@ a, button {
   background-color: #7CFC00;
   color: black;
 }
+
+.fc_front {
+    width: 300px;
+    height: 200px;
+    padding: 30px;
+    text-align:center;
+
+    background-color: lightblue;
+}
+
+.fc_back {
+    width: 300px;
+    height: 200px;
+    padding: 30px;
+    text-align:center;
+    background-color: #F75454;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/*///////////////////////////////////////////////////*/
+
+/* entire container, keeps perspective */
+.flip-container {
+    perspective: 1000;
+}
+    /* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+.flip-container, .front, .back {
+    width: 200px;
+    height: 100px;
+    -ms-transform: rotate(-10deg); /* IE 9 */
+    -webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
+    transform: rotate(-10deg);
+    margin-top: -55px;
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 25px;
+    font-family: 'Graduate', cursive;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+    background-color: #7CFC00;
+    font-size: 84px;
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    background-color: magenta;
+    font-size: 60px;
+}
+
+/*///////////////////////////////////////////////////*/

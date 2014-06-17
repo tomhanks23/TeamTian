@@ -11,9 +11,9 @@ if($_POST){
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Fun Flash!</title>
     <link href='http://fonts.googleapis.com/css?family=Graduate' rel='stylesheet' type='text/css'>
- <!--    <link href='http://fonts.googleapis.com/css?family=Unkempt:700' rel='stylesheet' type='text/css'>
+    <!--<link href='http://fonts.googleapis.com/css?family=Unkempt:700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'> -->
     <link rel="stylesheet" type="text/css" href="css/overview-styles.css">
     <script src="js/jquery-2.1.1.min.js"></script>
@@ -25,13 +25,7 @@ if($_POST){
 <body>
 
   <?php include('header.php'); ?>
-
-  <!-- link to flashcard.html -->
-  <div class="main">
-  <!--     Title  -->
-  <div class="cardCreator">
-  
-  </div>
+ 
 
   <!-- Card Creator Section with Drop Down Menu -->
   <div class="left">
@@ -82,15 +76,15 @@ if($_POST){
     
     <!-- <button class="submit">Done</button> -->
   </div>
+
+
   <div class="container">
-    <h1>
+    <h2>
       Your Deck
       <button>PLAY</button>
-    </h1>
+    </h2>
   </div>
 
-  </div>
-  </div>
 
 </body>
 

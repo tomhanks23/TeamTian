@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 include ("db.php");
 
@@ -16,6 +17,7 @@ if($_POST){
       while ($row = $results->fetch_assoc()) {
         $_SESSION["user_id"] = $row['user_id'];
         header('Location: http://localhost/TeamTian/overview.php');
+        exit();
       }
     }else{
       echo "username not found";

@@ -57,7 +57,7 @@ if($_POST){
     </div>  
 
     <div class = "logIn">
-<<<<<<< HEAD
+
         <p>Log In</p>
         <form action="" method="POST">
           <input type="text" name="email" placeholder ="Email Address" class='email'><br>
@@ -83,7 +83,6 @@ if($_POST){
 
   </div>
   
-=======
       <p>Login</p>
     <form action="" method="POST">
       <input type="text" name="email" placeholder ="Email Address" class='email'><br>
@@ -120,7 +119,6 @@ if($_POST){
 
 
 </div>
->>>>>>> 6ec3083e02e5aa41ab1145e1e87d9dff0acfc542
 </body>
 
 <?php include('footer.php'); ?>

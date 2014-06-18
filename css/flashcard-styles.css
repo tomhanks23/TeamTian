@@ -142,6 +142,16 @@ body {
   margin-top: 2px;
 }
 
+.motWrong {
+  background: url(../img/redx.png) no-repeat center center;
+  background-color: white;
+}
+
+.motRight {
+  background: url(../img/green-check.png) no-repeat center center;
+  background-color: white;
+}
+
 
 footer {
   position: fixed;

@@ -60,11 +60,9 @@
             }
 
         function placeAnswerOn(card) {
-
             createWrongAnswer();
             headsOrTails = Math.random();
             console.log(headsOrTails);
-
 
             if (headsOrTails<0.5) {
                 // set the right answer to .answer1
@@ -88,9 +86,10 @@
         function setCard () {
             $('.side1').hide(300);
             $('.side2').show(300);
-            $(r_answerClicked).hide();
-            $(w_answerClicked).hide();
-            $('.motivation').show();
+            $(r_answerClicked).hide(2000);
+            $(w_answerClicked).hide(2000, function() {
+                $('.motivation').slideDown(2000);
+            });
         }
 
         function showAnswerButtons () {
@@ -104,24 +103,20 @@
             $(w_answerClicked).off();
             showAnswerButtons();
 
-                $(r_answerClicked).click( function(){
-                    $('.motivation').css('background', 'url(green-check.png) no-repeat center center fixed');
-                    setCard();
-                    answerPerformanceArr(1);
-                });
+            $(r_answerClicked).click( function(){
+                setCard();
+                answerPerformanceArr(1);
+            });
 
-                $(w_answerClicked).click( function(){
-                    $('.motivation').css('background', 'url(redx.png) no-repeat center center fixed');
-                    setCard();
-                    answerPerformanceArr(0);
+            $(w_answerClicked).click( function(){
+                $(this).effect('shake', 500, function() {
+                answerPerformanceArr(0);
                 });
+            });
             console.log(answerArray);
         }
 
-        // $('body').on('click', '.go', function() {
-            $('.motivation').click( function() {
-                $('.answer1').css('background-color', 'white');
-                $('.answer2').css('background-color', 'white');
+        $('.motivation').click( function() {
             if (count == max -1) {
               count = 0;
             } else {

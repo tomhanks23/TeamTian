@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 include ("db.php");
 
@@ -16,6 +17,7 @@ if($_POST){
       while ($row = $results->fetch_assoc()) {
         $_SESSION["user_id"] = $row['user_id'];
         header('Location: http://localhost/TeamTian/overview.php');
+        exit();
       }
     }else{
       echo "username not found";
@@ -74,14 +76,14 @@ if($_POST){
 <!-- Register Modal -->
 <div class="overlay">
   <div class="registerModal">
-    <div class="registerContent">
+    <div class="registerContent Register">
       <h3>Register</h3>
       <form method="POST" action="" name="register">
         <input type="text" name="firstName" placeholder="First Name"><br>
         <input type="text" name="lastName" placeholder="Last Name"><br>
         <input type="text" name="email" placeholder="Email"><br>
         <input type="password" name="password" placeholder="Password"><br>
-        <input type="password2" name="password2" placeholder="Re-enter Password"><br>
+        <input type="password" name="password2" placeholder="Re-enter Password"><br>
         <input type="hidden" name="action" value="register"> <br>
         <button type="submit">Submit</button>
         <button class="close">Close</button>

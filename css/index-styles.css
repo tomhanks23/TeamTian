@@ -4,7 +4,7 @@
   
 }
 
-div .container {
+/*div .container {
     float : right;
     width: 500px;
     min-height: 500px;
@@ -12,7 +12,7 @@ div .container {
     background-color: white;
     border-radius: 30px;
     float: right;
-}
+}*/
 
 body {
   background-color: #6e6e6e;
@@ -27,6 +27,62 @@ h1, footer {
   max-height: 125px; 
   background-image:url('../img/header-white-c-paper.jpg');
 }
+
+.mediaObject {
+  overflow: hidden;
+  padding: 20px;
+}
+
+.about {
+  float: left;
+  max-width: 440px;
+  background-color:rgba(255, 255, 255, .7); 
+  border-radius: 15px;
+  padding: 15px;
+}  
+
+.logIn {
+  margin-left: 640px;
+  max-width: 440px;
+  background-color:rgba(255, 255, 255, .7);
+  min-height: 300px;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+}
+
+a, button {
+  border: 2px solid #ccc;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #7CFC00;
+  color: black;
+}
+
+.fc_front {
+    width: 300px;
+    height: 200px;
+    padding: 30px;
+    text-align:center;
+
+    background-color: lightblue;
+}
+
+.fc_back {
+    width: 300px;
+    height: 200px;
+    padding: 30px;
+    text-align:center;
+    background-color: #F75454;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/*///////////////////////////////////////////////////*/
 
 /* entire container, keeps perspective */
 .flip-container {
@@ -43,6 +99,7 @@ h1, footer {
     -ms-transform: rotate(-10deg); /* IE 9 */
     -webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
     transform: rotate(-10deg);
+    margin-top: -55px;
 }
 
 /* flip speed goes here */
@@ -67,7 +124,6 @@ h1, footer {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-    font-size: 84px;
     border-radius: 25px;
     font-family: 'Graduate', cursive;
 }
@@ -76,6 +132,7 @@ h1, footer {
 .front {
     z-index: 2;
     background-color: #7CFC00;
+    font-size: 84px;
 }
 
 /* back, initially hidden pane */
@@ -83,8 +140,12 @@ h1, footer {
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
     background-color: magenta;
+    font-size: 60px;
 }
 
+<<<<<<< HEAD
+/*///////////////////////////////////////////////////*/
+=======
 /*///////////////////////////////////////////////////*/
 
 
@@ -154,3 +215,4 @@ h3{
     z-index: 100;
     background-color: rgba(0,0,0, 0.50);
 }
+>>>>>>> 6ec3083e02e5aa41ab1145e1e87d9dff0acfc542

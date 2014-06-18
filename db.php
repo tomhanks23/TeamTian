@@ -65,6 +65,10 @@ class DB {
     return $this->execute($sql);
   }
 
+
+  /**
+   * get the current insert_id after inserting
+   */
   public function insert_id() {
     return $this->link->insert_id;
   }

@@ -65,4 +65,8 @@ class DB {
     return $this->execute($sql);
   }
 
+  public function insert_id() {
+    return $this->link->insert_id;
+  }
+
 }

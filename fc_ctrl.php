@@ -1,7 +1,7 @@
 <?php
 
   // Establish a connection with the database
-  require ( 'connector-FMD.php' );  //database
+  //require ( 'connector-FMD.php' );  //database
   // echo "connector-FMD.php loaded and operational <br>";
   require ('db_functions-FMD.php');
   // echo "db_functions-FMD loaded and operational <br>";

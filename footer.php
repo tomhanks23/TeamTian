@@ -1,5 +1,5 @@
 
-<footer>Contact Us</footer>
+<footer>Fun Flash </footer>
 
 </body>
 </html>

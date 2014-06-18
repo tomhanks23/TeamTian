@@ -79,13 +79,16 @@ body {
   clear: both;
 }
 
-.flashcard {
+.fc-container {
+  height: 500px;
+  border: solid 1px white;
 }
 
 .flashcard, .side1, .side2 {
-  background-color: white;
+  background: url(../img/white-c-paper.jpg);
   border-radius: 40px 40px 0px 0px;
-  width: 600px; 
+  width: 600px;
+  height: 350px;
   margin: auto;
   text-align: center;
 }
@@ -100,7 +103,7 @@ body {
 .small {
   margin-top: 30px;
   max-width: 250px;
-  max-height: 200px;
+  max-height: 250px;
   border-radius: 20px;
 }
 
@@ -122,40 +125,40 @@ body {
 }
 .answer1 {
   margin-right: 1px;
-  background-color: white;
+  background: url(../img/white-c-paper.jpg);
   float: left;
   border-radius: 0 0 0 40px;
 }
 
 .answer2 {
-  background-color: white;
+  background: url(../img/white-c-paper.jpg);
   margin-left: 1px;
   float: left;
   border-radius: 0 0 40px 0;
 }
 
 .motivation {
-  background-color: white;
+  background: url(../img/white-c-paper.jpg);
   width: 600px;
   margin: auto;
   border-radius: 0 0 40px 40px;
   margin-top: 2px;
 }
 
-.motWrong {
-  background: url(../img/redx.png) no-repeat center center;
-  background-color: white;
-}
-
-.motRight {
-  background: url(../img/green-check.png) no-repeat center center;
-  background-color: white;
+.finish {
+  clear: both;
+  background: url(../img/white-c-paper-yellow.jpg);
+  padding: 20px;
+  width: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
 }
 
 
 footer {
-  position: fixed;
-  bottom: 0;
   width: 100%;
   text-align: center;
   font-size: 48px;

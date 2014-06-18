@@ -16,6 +16,7 @@
 
 <body>
   <div class="page-container">
+
     <div class="navigation">
       <div class="title">
         <h1>
@@ -26,24 +27,22 @@
       <div class="clear"></div>
     </div>
 
-    <div class="flashcard">
-      <div class="flashcard-content">
-        <div class="indexCard">
-          <div class="side1">
+    <div class="fc-container">
+          <div class="flashcard">
+            <div class="indexCard">
+              <div class="side1"></div>
+              <div class="side2"></div>
+            </div>
           </div>
-          <div class="side2">
-          </div>
+
+        <div class="answer-block">
+          <div class="answer1"></div>
+          <div class="motivation"></div>
+          <div class="answer2"></div>
+          <div class="clear"></div>
         </div>
-      </div>
     </div>
 
-    <div class="answer-block">
-      <div class="answer1">
-      </div>
-      <div class="motivation">
-      </div>
-      <div class="answer2">
-      </div>
-      <div class="clear"></div>
-    </div>
+    <div class="finish"></div>
+
   </div>

@@ -13,16 +13,43 @@
         w_answerClicked,
         max = Object.keys(deck).length;
 
+        // activated when the right answer is clicked
+        function answerPerformanceArr(n) {
+            return answerArray.push(n);
+        }
+
+        function clickedThisButton (r_answerClicked, w_answerClicked) {
+            // remove all previous click events from these elements 
+            $(r_answerClicked).off();
+            $(w_answerClicked).off();
+            showAnswerButtons();
+
+            $(r_answerClicked).click( function(){
+                setCard();
+                answerPerformanceArr(1);
+            });
+
+            $(w_answerClicked).click( function(){
+                $(this).effect('shake', 500, function() {
+                setCard();
+                answerPerformanceArr(0);
+                });
+            });
+            console.log(answerArray);
+        }
+
+        function createWrongAnswer() {
+            wrong_answer = deck[Math.floor(Math.random() * max)].right_answer;
+                if (wrong_answer == card.right_answer ) {
+                    createWrongAnswer();
+                }
+            }
+
         // this is fired on page load and ...
         // loadpage initializes the page with nextCard(0)
         function loadPage() {
             nextCard(0);
         };
-
-        // activated when the right answer is clicked
-        function answerPerformanceArr(n) {
-            return answerArray.push(n);
-        }
 
         function nextCard(count) {
             console.log(deck);
@@ -51,13 +78,6 @@
             placeAnswerOn(card);
 
           };
-
-        function createWrongAnswer() {
-            wrong_answer = deck[Math.floor(Math.random() * max)].right_answer;
-                if (wrong_answer == card.right_answer ) {
-                    createWrongAnswer();
-                }
-            }
 
         function placeAnswerOn(card) {
             createWrongAnswer();
@@ -88,32 +108,13 @@
             $('.side2').show(300);
             $(r_answerClicked).hide(2000);
             $(w_answerClicked).hide(2000, function() {
-                $('.motivation').slideDown(2000);
+                $('.motivation').slideDown(2000).text(card.right_answer);
             });
         }
 
         function showAnswerButtons () {
             $(r_answerClicked).show();
             $(w_answerClicked).show();
-        }
-
-        function clickedThisButton (r_answerClicked, w_answerClicked) {
-            // remove all previous click events from these elements 
-            $(r_answerClicked).off();
-            $(w_answerClicked).off();
-            showAnswerButtons();
-
-            $(r_answerClicked).click( function(){
-                setCard();
-                answerPerformanceArr(1);
-            });
-
-            $(w_answerClicked).click( function(){
-                $(this).effect('shake', 500, function() {
-                answerPerformanceArr(0);
-                });
-            });
-            console.log(answerArray);
         }
 
         $('.motivation').click( function() {

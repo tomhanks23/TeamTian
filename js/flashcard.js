@@ -105,13 +105,13 @@
             showAnswerButtons();
 
                 $(r_answerClicked).click( function(){
-                    $('.motivation').css('background-color', 'green');
+                    $('.motivation').css('background', 'url(green-check.png) no-repeat center center fixed');
                     setCard();
                     answerPerformanceArr(1);
                 });
 
                 $(w_answerClicked).click( function(){
-                    $('.motivation').css('background-color', 'red');
+                    $('.motivation').css('background', 'url(redx.png) no-repeat center center fixed');
                     setCard();
                     answerPerformanceArr(0);
                 });

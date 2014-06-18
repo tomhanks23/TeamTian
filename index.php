@@ -63,7 +63,13 @@ if($_POST){
 </head>
 
 <body>
+<<<<<<< HEAD
   <?php print_r($errors); ?>
+=======
+
+  <div class="page">
+
+>>>>>>> 573a8006311cbb51f462203dc814b40bc454bf30
   <?php include('header.php'); ?>
  
   <div class = "mediaObject">
@@ -73,21 +79,20 @@ if($_POST){
     </div>  
 
     <div class = "logIn">
-      <p>Login</p>
-    <form action="" method="POST">
-      <input type="text" name="email" placeholder ="Email Address" class='email'><br>
-      <input type="password" name="password" placeholder = "Password" class='password'><br><br>
-      <input type="hidden" name="action" value="login">
-      <button type="submit">Submit</button>
-    </form>      
 
-  <div>
-    <p>Not a member?</p>
-    <button class="registerButton">Register!</button>
-  </div>  
- </div>  
+        <p>Log In</p>
+        <form action="" method="POST">
+          <input type="text" name="email" placeholder ="Email Address" class='email'><br>
+          <input type="password" name="password" placeholder = "Password" class='password'><br><br>
+          <input type="hidden" name="action" value="login">
+          <button type="submit">Log In</button>
+        </form>
 
-
+    <div>
+        <p>Not a member?</p>
+        <button class="registerButton">Register!</button>
+    </div> 
+ 
 <!-- Register Modal -->
 <div class="overlay">
   <div class="registerModal">
@@ -107,10 +112,14 @@ if($_POST){
   </div>  
 </div>  
 
-
-</div>
-</body>
+<!--  End of mediaObject -->
+</div> 
 
 <?php include('footer.php'); ?>
+
+<!-- End of page div -->
+</div>
+
+</body>
 
 </html>

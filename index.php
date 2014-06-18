@@ -63,13 +63,11 @@ if($_POST){
 </head>
 
 <body>
-<<<<<<< HEAD
   <?php print_r($errors); ?>
-=======
+
 
   <div class="page">
 
->>>>>>> 573a8006311cbb51f462203dc814b40bc454bf30
   <?php include('header.php'); ?>
  
   <div class = "mediaObject">
@@ -105,7 +103,7 @@ if($_POST){
         <input type="password" name="password" placeholder="Password"><br>
         <input type="password" name="password2" placeholder="Re-enter Password"><br>
         <input type="hidden" name="action" value="register"> <br>
-        <button type="submit">Submit</button>
+        <button type="submit" id="registerSubmit">Submit</button>
         <button class="close">Close</button>
       </form>
     </div>  

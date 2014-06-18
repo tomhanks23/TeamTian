@@ -6,9 +6,11 @@ if (!is_numeric($_SESSION['user_id'])) {
   die('Youre not logged in');
 }
 
+
 // store session data
 $user_id = $_SESSION['user_id'];
 
+include ("index.php");
 
 
 
@@ -34,6 +36,7 @@ $user_id = $_SESSION['user_id'];
  
   <!-- user_id -->
   <input type="hidden" id="user_id" value="<?php echo $user_id ?>">
+  <div> Welcome <?php {$_POST['user_id']}; ?></div>
 
   <!-- Card Creator Section with Drop Down Menu -->
   <div class="left">

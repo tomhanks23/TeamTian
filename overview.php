@@ -1,10 +1,19 @@
 <?php 
 
 session_start();
+
+if (!is_numeric($_SESSION['user_id'])) {
+  die('Youre not logged in');
+}
+
 // store session data
 $user_id = $_SESSION['user_id'];
 
- ?>
+
+
+
+
+?>
 
 
 <!DOCTYPE html>

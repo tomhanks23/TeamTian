@@ -63,13 +63,11 @@ if($_POST){
 </head>
 
 <body>
-<<<<<<< HEAD
+
   <?php print_r($errors); ?>
-=======
 
   <div class="page">
 
->>>>>>> 573a8006311cbb51f462203dc814b40bc454bf30
   <?php include('header.php'); ?>
  
   <div class = "mediaObject">

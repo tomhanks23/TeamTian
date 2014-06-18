@@ -32,9 +32,11 @@ $(function() {
     });
 
     // delete item
-    $(".container li").on("click", "button", function() {
+    $(".container").on("click", "li div button",  function() {
       
-      $(this).parent().remove();
+      var flashcard_id = $(this).attr("class");
+
+      $(this).parent().parent().remove();
 
       $.ajax({
           url: "./deleteitem.php",
@@ -42,7 +44,7 @@ $(function() {
           dataType: "json",
           cache: false,
           data: {
-            deck_id: $(".cardDeck").find(':selected').val()
+            flashcard_id: flashcard_id
           },
           success: function(data) {
              1;
@@ -107,7 +109,7 @@ $(function() {
 
     $(".add").on("click", function() {
       // get the item info prepared
-      var flashcard_deck_id = 100;
+      var flashcard_deck_id = $(".cardDeck").find(':selected').val();
       var user_id = $("#user_id").val();
       var front_text = $(".fc_front textarea").val();
       var back_text = $(".fc_back textarea").val();
@@ -135,8 +137,7 @@ $(function() {
             right_answer: right_answer
           },
           success: function(data) {
-            var flashcard_id = 0;
-            //flashcard_id = 
+            var flashcard_id = data;
             addItem(flashcard_id);
           },
           error: function(a, b, c) {
@@ -163,12 +164,24 @@ $(function() {
       $("#right_answer").focus();
     } else {
 
-      $("<li>").append("<span style=\"background-color:" + front_bg_color + ";" 
-                                                         + "padding-right: 200px;"
-                                                         + "\">" 
-                                                         + right_answer 
-                                                         + "</span>")
-               .append("<button class='" + flashcard_id + "'>Delete</button>")
+      $("<li style='margin:4px'>").append("<div style=\"background:" 
+                                          // + front_bg_color + ";" 
+                                          + "linear-gradient(to right,"
+                                          +  front_bg_color 
+                                          + "0%, "
+                                          +  back_bg_color
+                                          + " 100%);"
+                                          + "margin-left: 20px;"
+                                          + "height: 38px;"
+                                          + "border-radius: 5px;"
+                                          + "width: 380px;\">"
+                                          + right_answer 
+                                          + " <button style=\"float: right;\" "
+                                          + "class='" 
+                                          + flashcard_id 
+                                          + "'>Delete</button>"
+                                          + "</div>"
+                                          )
                .appendTo(".container");
     }
 

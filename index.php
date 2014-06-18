@@ -20,12 +20,27 @@ if($_POST){
         exit();
       }
     }else{
-      echo "username not found";
+      echo "username not found"; 
     }
-  }else{
-    echo "sent from login";
-  }
-}
+
+  } else { 
+      $firstName = $_POST['firstName'];
+      $email = $_POST['email'];
+      $password = $_POST['password'];
+
+      $emailex = "select * from user where email = '$email'";
+      $results = $db->execute($emailex);
+
+      if($results->num_rows > 0){
+         array_push($errors, "username already exists");
+      } else {
+
+        $insertuser = "INSERT INTO user(first_name, email, password) VALUES ('$firstName', '$email', '$password')";
+        $db->execute($insertuser);
+        // ("Thanks for registering. Please log in");
+      }
+    }
+}  
 
 ?>
 
@@ -48,7 +63,7 @@ if($_POST){
 </head>
 
 <body>
-
+  <?php print_r($errors); ?>
   <?php include('header.php'); ?>
  
   <div class = "mediaObject">

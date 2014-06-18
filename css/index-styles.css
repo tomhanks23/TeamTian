@@ -29,6 +29,7 @@ h1, footer {
   padding: 20px;
   max-height: 125px; 
   background-image:url('../img/header-white-c-paper.jpg');
+  clear: both;
 }
 
 .mediaObject {
@@ -83,6 +84,7 @@ a, button {
     -webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
     transform: rotate(-10deg);
     margin-top: -55px;
+    margin-left: -25px;
 }
 
 /* flip speed goes here */

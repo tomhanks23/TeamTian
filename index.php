@@ -47,6 +47,8 @@ if($_POST){
 
 <body>
 
+  <div class="page"></div>
+
   <?php include('header.php'); ?>
  
   <div class = "mediaObject">
@@ -57,7 +59,7 @@ if($_POST){
     </div>  
 
     <div class = "logIn">
-<<<<<<< HEAD
+
         <p>Log In</p>
         <form action="" method="POST">
           <input type="text" name="email" placeholder ="Email Address" class='email'><br>
@@ -65,38 +67,16 @@ if($_POST){
           <input type="hidden" name="action" value="login">
           <button type="submit">Log In</button>
         </form>
-    
-      <div>
-          <p>Register</p>
-          <form method="POST" action="" name="register">
-            <input type="text" name="firstName" placeholder="First Name"><br>
-            <input type="text" name="lastName" placeholder="Last Name"><br>
-            <input type="text" name="email" placeholder="Email"><br>
-            <input type="password" name="password" placeholder="Password"><br>
-            <input type="password2" name="password2" placeholder="Re-enter Password"><br>
-            <input type="hidden" name="action" value="register"> <br>
-            <button type="submit">Register</button>
-          </form>
-      </div>
+
+    <div>
+        <p>Not a member?</p>
+        <button class="registerButton">Register!</button>
+    </div> 
 
     </div>
 
-  </div>
-  
-=======
-      <p>Login</p>
-    <form action="" method="POST">
-      <input type="text" name="email" placeholder ="Email Address" class='email'><br>
-      <input type="password" name="password" placeholder = "Password" class='password'><br><br>
-      <input type="hidden" name="action" value="login">
-      <button type="submit">Submit</button>
-    </form>      
-
-  <div>
-    <p>Not a member?</p>
-    <button class="registerButton">Register!</button>
-  </div>  
- </div>  
+ </div>
+<!--  End of mediaObject -->
 
 
 <!-- Register Modal -->
@@ -118,11 +98,11 @@ if($_POST){
   </div>  
 </div>  
 
-
-</div>
->>>>>>> 6ec3083e02e5aa41ab1145e1e87d9dff0acfc542
 </body>
 
 <?php include('footer.php'); ?>
+
+</div>
+<!-- End of page div -->
 
 </html>

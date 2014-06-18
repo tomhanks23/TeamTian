@@ -9,6 +9,9 @@
 		},
 		{
 			"path": "/var/www/deserae/htdocs/php-db-forms"
+		},
+		{
+			"path": "/var/www/deserae/htdocs/Ajax"
 		}
 	]
 }

@@ -34,5 +34,6 @@ $sql = "
 //echo $sql;
 
 // Execute SQL Statement
-$results = $db->execute($sql);
-echo json_encode($results);
+if ($db->execute($sql)) {
+      print_r($db->insert_id());
+}

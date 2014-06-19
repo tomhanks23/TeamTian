@@ -17,7 +17,7 @@
 
     <div class="fc-nav-buttons">
         <div class="fc-finish">Get your results!</div>
-        <div class="fc-overview">Fun Flash Editor</div>
+        <div class="fc-overview">Editor</div>
         <div class="clear"></div>
     </div>
 

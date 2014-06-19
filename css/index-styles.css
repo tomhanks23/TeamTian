@@ -168,15 +168,14 @@ h3{
     -webkit-box-sizing: border-box;
   box-sizing: border-box; 
 }*/
-
+  
 .clear {
   clear: both;
 }
 
 .fc-container {
   height: 800 px;
-  border: solid 3px yellow;
-}
+  }
 
 .flashcard {
   border: solid 1px #666;
@@ -224,7 +223,7 @@ h3{
 }
 
 .fc-answer1, .fc-answer2, .fc-motivation {
-  font-family: Verdana, sans-serif;
+  font-family: 'Nunito', sans-serif;
   margin-top: 2px;
   padding-top: 25px;
   width: 297px;
@@ -248,6 +247,7 @@ h3{
 }
 
 .fc-motivation {
+  font-family: 'Nunito', sans-serif;
   background: url(../img/white-c-paper.jpg);
   width: 600px;
   margin: auto;
@@ -256,19 +256,30 @@ h3{
 }
 
 .fc-nav-buttons {
-  width: 450px;
+  width: 600px;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 10px;
   text-align: center;
-  border: solid green 1px;
 }
 
 .fc-finish, .fc-overview {
+      -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  box-sizing: border-box; 
   float: left;
   font-family: Verdana, sans-serif;
   border: solid black 1px;
   background: url(../img/white-c-paper-yellow.jpg);
   padding: 20px;
-  width: 198px;
-  border-radius: 10px;
+
+  width: 290px;
+  border-radius: 20px;
+}
+
+.fc-overview {
+  margin-left: 5px;
+}
+
+.fc-finish {
+    margin-left: 5px;
 }

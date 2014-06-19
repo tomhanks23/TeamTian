@@ -1,13 +1,14 @@
 *{
-
     font-family: 'Graduate', cursive;
     font-size: 24px;
+    margin: 0px;
 }
 
 body {
     background-color: #6e6e6e;
-    margin: 30px;
+    margin: auto;
     background-image: url('../img/white-c-paper-blue.jpg');
+    width: 960px;
 }
 
 h1, footer {
@@ -16,6 +17,13 @@ h1, footer {
   padding: 20px;
   max-height: 125px; 
   background-image:url('../img/header-white-c-paper.jpg');
+  clear: both;
+  margin-top: 30px;
+}
+
+.mediaObj {
+    overflow: hidden;
+    margin: auto;
 }
 
 div .cardCreator {

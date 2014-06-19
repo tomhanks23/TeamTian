@@ -1,7 +1,7 @@
 <?php
 
 // Include Database Class
-include('db.php');
+include_once('db.php');
 
 // Start Database Object
 $db = new DB();

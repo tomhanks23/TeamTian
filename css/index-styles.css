@@ -1,23 +1,15 @@
 *{
   font-family: 'Graduate', cursive;
   font-size: 24px;
-  
+  margin: 0px;
 }
-
-/*div .container {
-    float : right;
-    width: 500px;
-    min-height: 500px;
-    margin-right: 50px;
-    background-color: white;
-    border-radius: 30px;
-    float: right;
-}*/
 
 body {
   background-color: #6e6e6e;
-  margin: 30px;
+  margin: auto;
   background-image:url('../img/white-c-paper-blue.jpg');
+  width: 960px;
+
 }
 
 h1, footer {
@@ -26,29 +18,40 @@ h1, footer {
   padding: 20px;
   max-height: 125px; 
   background-image:url('../img/header-white-c-paper.jpg');
+  clear: both;
+  margin-top: 30px;
 }
 
 .mediaObject {
   overflow: hidden;
-  padding: 20px;
+  margin: auto;
 }
 
 .about {
   float: left;
   max-width: 440px;
+  min-height: 425px;
   background-color:rgba(255, 255, 255, .7); 
   border-radius: 15px;
   padding: 15px;
 }  
 
+h4 {
+  padding: 10px;
+}
+
 .logIn {
-  margin-left: 640px;
+  margin-left: 570px;
   max-width: 440px;
   background-color:rgba(255, 255, 255, .7);
-  min-height: 300px;
+  min-height: 425px;
   border-radius: 15px;
   padding: 15px;
   text-align: center;
+}
+
+.register {
+  padding: 50px;
 }
 
 a, button {
@@ -59,28 +62,6 @@ a, button {
   background-color: #7CFC00;
   color: black;
 }
-
-.fc_front {
-    width: 300px;
-    height: 200px;
-    padding: 30px;
-    text-align:center;
-
-    background-color: lightblue;
-}
-
-.fc_back {
-    width: 300px;
-    height: 200px;
-    padding: 30px;
-    text-align:center;
-    background-color: #F75454;
-}
-
-.hidden {
-  display: none;
-}
-
 
 /*///////////////////////////////////////////////////*/
 
@@ -100,6 +81,7 @@ a, button {
     -webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
     transform: rotate(-10deg);
     margin-top: -55px;
+    margin-left: -25px;
 }
 
 /* flip speed goes here */
@@ -143,47 +125,9 @@ a, button {
     font-size: 60px;
 }
 
-<<<<<<< HEAD
-/*///////////////////////////////////////////////////*/
-=======
-/*///////////////////////////////////////////////////*/
-
-
-.mediaObject {
-  overflow: hidden;
-  padding: 20px;
-}
-
-.about {
-  float: left;
-  max-width: 440px;
-  background-color:rgba(255, 255, 255, .7); 
-  border-radius: 15px;
-  padding: 15px;
-}  
-
-.logIn {
-  margin-left: 640px;
-  max-width: 440px;
-  background-color:rgba(255, 255, 255, .7);
-  min-height: 300px;
-  border-radius: 15px;
-  padding: 15px;
-  text-align: center;
-}
-
-a, button {
-  border: 2px solid #ccc;
-  text-decoration: none;
-  border-radius: 10px;
-  padding: 5px;
-  background-color: #7CFC00;
-  color: black;
-}
-
 /*-----------Modals--------------*/
 .registerModal{
-    background-color: lightblue;
+    background-color: #8ED0E8;
     height: 300px;
     width: 400px;
     margin: 100px auto;
@@ -199,10 +143,11 @@ a, button {
 }
 
 h3{
-    background-color: #EEE;
+    background-color: #D6D9D2;
     height: 50px;
-    color: gray;
+    color: black;
     border-radius: 15px 15px 0 0 ;
+    padding: 5px;
 }
 
 .overlay{
@@ -215,4 +160,88 @@ h3{
     z-index: 100;
     background-color: rgba(0,0,0, 0.50);
 }
->>>>>>> 6ec3083e02e5aa41ab1145e1e87d9dff0acfc542
+
+/*FLASHCARD PAGE CSS  ***********************************/
+
+.clear {
+  clear: both;
+}
+
+.fc-container {
+  height: 500px;
+  border: solid 1px white;
+}
+
+.flashcard, .fc-side1, .fc-side2 {
+  background: url(../img/white-c-paper.jpg);
+  border-radius: 40px 40px 0px 0px;
+  width: 600px;
+  height: 350px;
+  margin: auto;
+  text-align: center;
+}
+
+.fc-big {
+  margin-top: 10px;
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 30px;
+}
+
+.fc-small {
+  margin-top: 30px;
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 20px;
+}
+
+.fc-side2-text {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.fc-answer-block{
+  width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.fc-answer1, .fc-answer2, .fc-motivation {
+  margin-top: 2px;
+  padding-top: 50px;
+  width: 299px;
+  height: 60px;
+  text-align: center;
+}
+.fc-answer1 {
+  margin-right: 1px;
+  background: url(../img/white-c-paper.jpg);
+  float: left;
+  border-radius: 0 0 0 40px;
+}
+
+.fc-answer2 {
+  background: url(../img/white-c-paper.jpg);
+  margin-left: 1px;
+  float: left;
+  border-radius: 0 0 40px 0;
+}
+
+.fc-motivation {
+  background: url(../img/white-c-paper.jpg);
+  width: 600px;
+  margin: auto;
+  border-radius: 0 0 40px 40px;
+  margin-top: 2px;
+}
+
+.fc-finish {
+  clear: both;
+  background: url(../img/white-c-paper-yellow.jpg);
+  padding: 20px;
+  width: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}

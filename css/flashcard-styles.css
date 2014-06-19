@@ -1,10 +1,8 @@
 body * {
-    /*background-color: #ccc;*/
-    /*border: solid black 1px;*/
     margin: 0;
     padding: 0;
+    font-family: 'Graduate', serif;
 }
-
 
 body {
     background-color: gray;
@@ -20,72 +18,23 @@ body {
 }
 
 .title {
-  font-family: 'Unkempt', cursive;
   text-align: center;
-}
-
-.nav {
-  position: absolute;
-  right: 30px;
-  top: 20px;
-  -moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
-  -webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
-  box-shadow:inset 0px 1px 0px 0px #fce2c1;
-  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25) );
-  background:-moz-linear-gradient( center top, #ffc477 5%, #fb9e25 100% );
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25');
-  background-color:#ffc477;
-  -webkit-border-top-left-radius:20px;
-  -moz-border-radius-topleft:20px;
-  border-top-left-radius:20px;
-  -webkit-border-top-right-radius:20px;
-  -moz-border-radius-topright:20px;
-  border-top-right-radius:20px;
-  -webkit-border-bottom-right-radius:20px;
-  -moz-border-radius-bottomright:20px;
-  border-bottom-right-radius:20px;
-  -webkit-border-bottom-left-radius:20px;
-  -moz-border-radius-bottomleft:20px;
-  border-bottom-left-radius:20px;
-  text-indent:0;
-  border:1px solid #eeb44f;
-  display:inline-block;
-  color:#ffffff;
-  font-family:Verdana;
-  font-size:15px;
-  font-weight:bold;
-  font-style:normal;
-  height:40px;
-  line-height:40px;
-  width:86px;
-  text-decoration:none;
-  text-align:center;
-  text-shadow:2px 2px 0px #cc9f52;
-}
-
-.home:hover {
-  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffc477) );
-  background:-moz-linear-gradient( center top, #fb9e25 5%, #ffc477 100% );
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffc477');
-  background-color:#fb9e25;
-}
-
-.home:active {
-  position:relative;
-  top:1px;
 }
 
 .clear {
   clear: both;
 }
 
-.flashcard {
+.fc-container {
+  height: 500px;
+  border: solid 1px white;
 }
 
 .flashcard, .side1, .side2 {
-  background-color: white;
+  background: url(../img/white-c-paper.jpg);
   border-radius: 40px 40px 0px 0px;
-  width: 600px; 
+  width: 600px;
+  height: 350px;
   margin: auto;
   text-align: center;
 }
@@ -100,7 +49,7 @@ body {
 .small {
   margin-top: 30px;
   max-width: 250px;
-  max-height: 200px;
+  max-height: 250px;
   border-radius: 20px;
 }
 
@@ -122,30 +71,40 @@ body {
 }
 .answer1 {
   margin-right: 1px;
-  background-color: white;
+  background: url(../img/white-c-paper.jpg);
   float: left;
   border-radius: 0 0 0 40px;
 }
 
 .answer2 {
-  background-color: white;
+  background: url(../img/white-c-paper.jpg);
   margin-left: 1px;
   float: left;
   border-radius: 0 0 40px 0;
 }
 
 .motivation {
-  background-color: white;
+  background: url(../img/white-c-paper.jpg);
   width: 600px;
   margin: auto;
   border-radius: 0 0 40px 40px;
   margin-top: 2px;
 }
 
+.finish {
+  clear: both;
+  background: url(../img/white-c-paper-yellow.jpg);
+  padding: 20px;
+  width: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
 
 footer {
-  position: fixed;
-  bottom: 0;
   width: 100%;
   text-align: center;
   font-size: 48px;

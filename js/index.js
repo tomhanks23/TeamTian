@@ -12,17 +12,26 @@ $(function(){
         console.log("register button clicked");  
     });
     $('.close').on('click', function(){
-         window.location.href='index.php';  
+        console.log("close clicked");
+        $('.overlay').css('display','none');
+        $('.registerModal').hide();
+        return false; 
      });
+
+    // $(".Register").on('submit', function(){
+        // $(document).append(<div><?php echo $errors ?></div>);
+    // }
+    
 
 
 
 //-----------------Register Validation----------
-    function validateRegister(form){
+    function validateRegister(form, evt){
         var firstName = $("[name='firstName']").val();
         var lastName = document.register.lastName.value;
         var email = document.register.email.value;
         var password = document.register.password.value;
+        var password2 = document.register.password2.value;
         var errors = [];
 
         if(!checkLength(firstName)){
@@ -38,17 +47,17 @@ $(function(){
             errors.push("You must enter a password.");
         }
 
-        if("['name='password']!=['name=password2]"){
+        if(password != password2){
             errors.push("your passwords don't match");
         }
 
         if(errors.length > 0){
             reportErrors(errors);
-            return false;
+            evt.preventDefault();
         }
 
         function checkLength(text, min, max){
-            min = min || 5;
+            min = min || 2;
             max = max || 50;
             if (text.length < min || text.length > max){
                 return false;
@@ -67,11 +76,14 @@ $(function(){
         }
     }
 
-    $(".Register").on('submit', function(){
-        validateRegister(this);
+    $(".Register").on('submit', function(evt){
+        var valid= validateRegister(this, evt);
+         if(!valid){
+            return false;
+        }
     });
 //----------------Log In Validation-------------    
-function validateLogin(login){
+function validateLogin(login, evt){
         var email  = $('.logIn input.email').val();
         var password = $('.logIn input.password').val();
         var errors = [];

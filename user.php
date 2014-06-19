@@ -15,3 +15,14 @@ function getUserById($user_id){
   $results = $db->execute($select);
   return $results->fetch_assoc();
 }
+
+
+function insertUser($first_name, $last_name, $email, $password){
+    $insertuser = "
+    INSERT INTO user(first_name, last_name, email, password) 
+    VALUES ('$first_name','$last_name','$email', '$password')
+    ";
+    $db = new DB();
+    $db->execute($insertuser);
+    
+}

@@ -95,9 +95,36 @@ $(function() {
         });
     });
 
+    $("#front_link").on("blur", function() {
+      var link = $(this).val();
+      if (link) {
+        $('.fc_front #imgform_front img').attr("src", link);
+
+      } else {
+        $('.fc_front #imgform_front img').attr("src", "http://imgs.tuts.dragoart.com/how-to-draw-a-river_1_000000007978_5.jpg");
+      }
+    })
+
+    $("#back_link").on("blur", function() {
+      var link = $(this).val();
+      if (link) {
+        $('.fc_back #imgform_front img').attr("src", link);
+
+      } else {
+        $('.fc_back #imgform_front img').attr("src", "http://imgs.tuts.dragoart.com/how-to-draw-a-river_1_000000007978_5.jpg");
+      }
+    })
+
     // submit the form when image is selected
     // front
     $('.fc_front #imgform_front').on('change',function(){
+      
+      if ($("#front_link").val()) {
+
+        return;
+      }
+
+
       $('.fc_front #imgform_front').ajaxForm({target: '.fc_front #view',
        beforeSend: function(){
         $('.fc_front #imageloader').show();
@@ -115,6 +142,13 @@ $(function() {
 
     // back
     $('.fc_back #imgform_front').on('change',function(){
+      
+
+      if ($("#back_link").val()) {
+
+        return;
+      }
+
       $('.fc_back #imgform_front').ajaxForm({
         target: '.fc_back #view',
         beforeSend: function(){

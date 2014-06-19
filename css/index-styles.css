@@ -164,20 +164,28 @@ h3{
 
 /*FLASHCARD PAGE CSS  ***********************************/
 
+/*[class*= 'fc-'] {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  box-sizing: border-box; 
+}*/
+
 .clear {
   clear: both;
 }
 
 .fc-container {
-  height: 500px;
-  border: solid 1px white;
+  height: 800 px;
+  border: solid 3px yellow;
 }
 
-.flashcard, .fc-side1, .fc-side2 {
+.flashcard {
+  border: solid 1px #666;
+  font-family: Arial, sans-serif;
   background: url(../img/white-c-paper.jpg);
   border-radius: 40px 40px 0px 0px;
   width: 600px;
-  height: 350px;
+  height: 400px;
   margin: auto;
   text-align: center;
 }
@@ -196,25 +204,38 @@ h3{
   border-radius: 20px;
 }
 
+.fc-side1-text {
+  font-family: Verdana, sans-serif;
+}
+
 .fc-side2-text {
+  font-family: Verdana, sans-serif;
+  font-size: 14px;  
   margin-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
   font-size: 14px;
 }
 
 .fc-answer-block{
   width: 600px;
+  font-family: Verdana, sans-serif;
   margin-right: auto;
   margin-left: auto;
 }
+
 .fc-answer1, .fc-answer2, .fc-motivation {
+  font-family: Verdana, sans-serif;
   margin-top: 2px;
-  padding-top: 50px;
-  width: 299px;
-  height: 60px;
+  padding-top: 25px;
+  width: 297px;
+  height: 75px;
   text-align: center;
+  border: solid 1px #666;
 }
+
 .fc-answer1 {
-  margin-right: 1px;
+  margin-right: 0px;
   background: url(../img/white-c-paper.jpg);
   float: left;
   border-radius: 0 0 0 40px;
@@ -235,14 +256,20 @@ h3{
   margin-top: 2px;
 }
 
-.fc-finish {
-  clear: both;
+.fc-nav-buttons {
+  width: 450px;
+  margin: auto;
+  margin-top: 30px;
+  text-align: center;
+  border: solid green 1px;
+}
+
+.fc-finish, .fc-overview {
+  float: left;
+  font-family: Verdana, sans-serif;
+  border: solid black 1px;
   background: url(../img/white-c-paper-yellow.jpg);
   padding: 20px;
-  width: 200px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 198px;
   border-radius: 10px;
 }

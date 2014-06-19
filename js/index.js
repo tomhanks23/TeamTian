@@ -1,5 +1,4 @@
 $(function(){
-
     //homepage card flip demo
     // $("#flipbox").flip({
     // direction:'tb'
@@ -17,14 +16,18 @@ $(function(){
         $('.registerModal').hide();
         return false; 
      });
-
-    // $(".Register").on('submit', function(){
-        // $(document).append(<div><?php echo $errors ?></div>);
-    // }
-    
-
-
-
+//--------------Checks Login and Register-------
+    function checkLength(text, min, max){
+        if (text == undefined) {
+            return false; 
+        }
+        min = min || 2;
+        max = max || 50;
+        if (text.length < min || text.length > max){
+            return false;
+        }
+        return true;
+    }
 //-----------------Register Validation----------
     function validateRegister(form, evt){
         var firstName = $("[name='firstName']").val();
@@ -54,16 +57,9 @@ $(function(){
         if(errors.length > 0){
             reportErrors(errors);
             evt.preventDefault();
+            return false;
         }
-
-        function checkLength(text, min, max){
-            min = min || 2;
-            max = max || 50;
-            if (text.length < min || text.length > max){
-                return false;
-            }
-            return true;
-        }
+        return true;
 
         function reportErrors(errors){
             var msg = "There were some problems...\n";
@@ -82,7 +78,7 @@ $(function(){
             return false;
         }
     });
-//----------------Log In Validation-------------    
+//----------------Begin Log In Validation-------------    
 function validateLogin(login, evt){
         var email  = $('.logIn input.email').val();
         var password = $('.logIn input.password').val();
@@ -97,21 +93,10 @@ function validateLogin(login, evt){
 
         if(errors.length > 0){
             reportErrors(errors);
+            evt.preventDefault();
             return false;
         }
         return true;
-
-        function checkLength(text, min, max){
-            if (text == undefined) {
-                return false; 
-            }
-            min = min || 5;
-            max = max || 50;
-            if (text.length < min || text.length > max){
-                return false;
-            }
-            return true;
-        }
 
         function reportErrors(errors){
             var msg = "There were some problems...\n";
@@ -124,15 +109,15 @@ function validateLogin(login, evt){
         }
     }
 
-    $(".logIn").on('submit', function(){
-        var valid = validateLogin(this);
+    $(".logIn").on('submit', function(evt){
+        var valid = validateLogin(this, evt);
 
         if(!valid){
             return false;
         }
 
     });
-//-----------------End Reigster Validation------  
+//-----------------End Login Validation------  
 
 
   

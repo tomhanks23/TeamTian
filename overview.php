@@ -50,7 +50,7 @@ $first_name= $user['first_name'];
         </select>
         <br>
         Card name(Right answer):
-        <input type="input" id="right_answer" value="" style="width:90px">
+        <input type="input" id="right_answer" placeholder="apple" value="" style="width:90px">
 
       <!-- Text Area Card Content -->
         <!-- <textarea class="fc_front" rows="2" cols="20" placeholder="Front text."></textarea>
@@ -64,7 +64,7 @@ $first_name= $user['first_name'];
             <div id="view" style="height:auto"></div>
             <input type="file" name="file" id="file" style="width:90px"><br>
           </form>
-          <textarea rows="2" cols="20" placeholder="Front text." name="fc_front_text"></textarea>
+          <textarea rows="2" cols="20" placeholder="What's this?" name="fc_front_text"></textarea>
         </div>
 
         Background color:
@@ -78,7 +78,7 @@ $first_name= $user['first_name'];
             <div id="view" style="height:auto"></div>
             <input type="file" name="file" id="file" style="width:90px"><br>
           </form>
-          <textarea rows="2" cols="20" placeholder="Back text." name="fc_back_text"></textarea>
+          <textarea rows="2" cols="20" placeholder="Rockit?" name="fc_back_text"></textarea>
         </div>
 
         Background color:

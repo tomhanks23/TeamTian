@@ -63,22 +63,21 @@ if($_POST){
 </head>
 
 <body>
-  <?php print_r($errors); ?>
-
 
   <div class="page">
 
   <?php include('header.php'); ?>
  
   <div class = "mediaObject">
-    <div class="about">What is Fun Flash? 
+    <div class="about">
+      <h4>What is Fun Flash?</h4><br>
       <p>Welcome to Fun Flash, the single-most important educational product to hit since the
         chalkboard. With this wonderful product you will see your child's intelligence blossom.  We use state of the art educational algorithms to practice the problem areas and reward perceptivity. With Fun Flash, you can be assured that your child will only see educational content.</p>
     </div>  
 
     <div class = "logIn">
 
-        <p>Log In</p>
+        <h4>Log In</h4>
         <form action="" method="POST">
           <input type="text" name="email" placeholder ="Email Address" class='email'><br>
           <input type="password" name="password" placeholder = "Password" class='password'><br><br>
@@ -86,8 +85,8 @@ if($_POST){
           <button type="submit">Log In</button>
         </form>
 
-    <div>
-        <p>Not a member?</p>
+    <div class="register">
+        <h4>Not a member?</h4>
         <button class="registerButton">Register!</button>
     </div> 
  

@@ -10,11 +10,6 @@ if (!is_numeric($_SESSION['user_id'])) {
 // store session data
 $user_id = $_SESSION['user_id'];
 
-include ("index.php");
-
-
-
-
 ?>
 
 

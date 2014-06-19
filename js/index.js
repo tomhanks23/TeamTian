@@ -18,6 +18,11 @@ $(function(){
         return false; 
      });
 
+    // $(".Register").on('submit', function(){
+        // $(document).append(<div><?php echo $errors ?></div>);
+    // }
+    
+
 
 
 //-----------------Register Validation----------

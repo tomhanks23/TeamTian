@@ -217,14 +217,13 @@ h3{
 
 .fc-answer-block{
   width: 600px;
-  font-family: Verdana, sans-serif;
   margin-right: auto;
   margin-left: auto;
 }
 
 .fc-answer1, .fc-answer2, .fc-motivation {
   font-family: 'Nunito', sans-serif;
-  margin-top: 2px;
+  margin-top: 10px;
   padding-top: 25px;
   width: 297px;
   height: 75px;

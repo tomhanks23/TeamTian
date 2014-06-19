@@ -30,7 +30,7 @@
             });
 
             $(w_answerClicked).click( function(){
-                $(this).effect('shake', 300, function() {
+                $(this).effect('shake', 400, function() {
                 setCard();
                 answerPerformanceArr(0);
                 });
@@ -104,11 +104,11 @@
         }
 
         function setCard () {
-            $('.fc-side1').hide(200);
-            $('.fc-side2').show(500);
-            $(r_answerClicked).hide(200);
-            $(w_answerClicked).hide(200, function() {
-                $('.fc-motivation').slideDown(800).text(card.right_answer);
+            $('.fc-side1').hide(400);
+            $('.fc-side2').show(400);
+            $(r_answerClicked).hide(400);
+            $(w_answerClicked).hide(400, function() {
+                $('.fc-motivation').slideDown(400).text(card.right_answer);
             });
         }
 

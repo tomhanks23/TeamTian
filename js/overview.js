@@ -1,12 +1,13 @@
 $(function() {
 
-  // create an empty card object
-  var card = {};
-
-
   // set deck_id to session
   $(".cardDeck").on("change", function() {
     
+    if ( $(".cardDeck").find(':selected').val() == "-" ) {
+      clearContainer();
+      return;
+    }
+
     $.ajax({
           url: "./savedeckid.php",
           type: "POST",
@@ -16,7 +17,10 @@ $(function() {
             deck_id: $(".cardDeck").find(':selected').val()
           },
           success: function(data) {
-             1;
+              clearContainer();
+              for (i in data) {
+                 fillContainer(data[i]);
+              }
           },
           error: function(a, b, c) {
             console.log(b);
@@ -25,10 +29,45 @@ $(function() {
         });
   });
 
+  var clearContainer = function() {
+      $(".container li").remove();
+  }
+
+  // set variables and collect their values
+  var fillContainer = function(card) {
+
+    var right_answer = card.right_answer;
+
+    var front_bg_color = card.front_bg_color;
+    var back_bg_color = card.back_bg_color;
+
+    var flashcard_id = card.flashcard_id;
+
+    $("<li style='margin:4px'>").append("<div style=\"background:" 
+                                          // + front_bg_color + ";" 
+                                          + "linear-gradient(to right,"
+                                          +  front_bg_color 
+                                          + "0%, "
+                                          +  back_bg_color
+                                          + " 100%);"
+                                          + "margin-left: 20px;"
+                                          + "height: 38px;"
+                                          + "border-radius: 5px;"
+                                          + "width: 380px;\">"
+                                          + right_answer 
+                                          + " <button style=\"float: right;\" "
+                                          + "class='" 
+                                          + flashcard_id 
+                                          + "'>Delete</button>"
+                                          + "</div>"
+                                          )
+               .appendTo(".container");
+  }  
+
     //When you click on the button run this function
       //open the linked page (flashcard.html)
     $(".container h1").on("click", "button", function() {
-        window.location.href = "flashcard.php";
+        window.location.href = "fc_ctrl.php";
     });
 
     // delete item

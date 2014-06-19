@@ -1,15 +1,16 @@
 <?php 
-
+error_reporting(E_ALL);
+ini_set('display_errors', 'on');
 session_start();
-
+include_once("user.php");
 if (!is_numeric($_SESSION['user_id'])) {
   die('Youre not logged in');
 }
 
-
 // store session data
 $user_id = $_SESSION['user_id'];
-
+$user = getUserById($user_id);
+$first_name= $user['first_name'];
 ?>
 
 
@@ -31,7 +32,7 @@ $user_id = $_SESSION['user_id'];
  
   <!-- user_id -->
   <input type="hidden" id="user_id" value="<?php echo $user_id ?>">
-  <div> Welcome <?php {$_POST['user_id']}; ?></div>
+  <div> Welcome <?php echo $first_name; ?></div>
 
   <!-- Card Creator Section with Drop Down Menu -->
   <div class="left">
@@ -91,13 +92,8 @@ $user_id = $_SESSION['user_id'];
     </h2>
   </div>
 
-<<<<<<< HEAD
-=======
-
-
   </div>
   </div>
->>>>>>> 6ec3083e02e5aa41ab1145e1e87d9dff0acfc542
 
 </body>
 

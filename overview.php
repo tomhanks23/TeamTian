@@ -1,17 +1,16 @@
 <?php 
+// error_reporting(E_ALL);
+// ini_set('display_errors', 'on');
+// session_start();
+// include_once("user.php");
+// if (!is_numeric($_SESSION['user_id'])) {
+//   die('Youre not logged in');
+// }
 
-error_reporting(E_ALL);
-ini_set('display_errors', 'on');
-session_start();
-include_once("user.php");
-if (!is_numeric($_SESSION['user_id'])) {
-  die('Youre not logged in');
-}
-
-// store session data
-$user_id = $_SESSION['user_id'];
-$user = getUserById($user_id);
-$first_name= $user['first_name'];
+// // store session data
+// $user_id = $_SESSION['user_id'];
+// $user = getUserById($user_id);
+// $first_name= $user['first_name'];
 ?>
 
 
@@ -28,12 +27,12 @@ $first_name= $user['first_name'];
 </head>
 
 <body>
-
-  <?php include('header.php'); ?>
   
     <!-- user_id -->
   <input type="hidden" id="user_id" value="<?php echo $user_id ?>">
-  <div> Welcome <?php echo $first_name; ?></div>
+  <div class="greeting"> Welcome <?php echo $first_name; ?></div>
+
+  <?php include('header.php'); ?>
 
   <div class="page">
 
@@ -91,14 +90,14 @@ $first_name= $user['first_name'];
       </div> <!-- End of .left-->
 
       <div class="container">
-        <h2>
-          Your Deck
-          <button>PLAY</button>
-        </h2>
+          <h4>Your Deck</h4>
+          <button class = "play">PLAY</button>
       </div>
 
     </div> <!-- End of .mediaObj -->
 
+  <?php include('footer.php'); ?>
+  
   </div> <!-- End of .page -->
 
 </body>

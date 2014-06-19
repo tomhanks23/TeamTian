@@ -11,6 +11,10 @@ body {
     width: 960px;
 }
 
+.greeting {
+    text-align: right;
+}
+
 h1, footer {
   text-align: center;
   font-size: 48px;
@@ -26,34 +30,16 @@ h1, footer {
     margin: auto;
 }
 
-div .cardCreator {
-    margin: auto;
-}
-
-div .main {
-    margin: auto;
-}
-
-.container {
-    width: 450px;
-    min-height: 500px;
-    margin-left: 500px;
-    background-color: white;
-    border-radius: 30px;
-}
-
-.deckdd select{
-    border-radius: 5px;
-    background-color: lightblue;
-    font-weight: bold;
-    width: 300px;
-    margin-bottom: 10px;
-}
-
 .left {
     float: left;
-    margin-left: 10px;
-    margin-top: 0px;
+    background-color:rgba(255, 255, 255, .7); 
+    border-radius: 15px;
+    padding: 15px;
+    max-width: 440px;
+}
+
+div .cardCreator {
+    margin: auto;
 }
 
 textarea {
@@ -61,6 +47,9 @@ textarea {
     font-size: 20pt;
     font-weight: bold;
     text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    padding: 5px;
     font-family: 'Unkempt', cursive;
 }
 
@@ -69,7 +58,7 @@ textarea {
     height: 200px;
     padding: 30px;
     text-align:center;
-
+    margin: auto;
     background-color: lightblue;
 }
 
@@ -79,11 +68,41 @@ textarea {
     padding: 30px;
     text-align:center;
     background-color: #F75454;
+    margin: auto;
 }
 
 .hidden {
     display: none;
 }
+
+
+.container {
+    max-width: 440px;
+    min-height: 500px;
+    margin-left: 500px;
+    background-color:rgba(255, 255, 255, .7);
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+    padding: 10px;
+}
+
+button, select, input {
+    margin: auto;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #7CFC00;
+}
+
+/*input {
+    margin: auto;
+    border-radius: 10px;
+    padding: 5px;
+}*/
 
 /*////////////////////////////////////////////////*/
 
@@ -103,6 +122,7 @@ textarea {
     -webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
     transform: rotate(-10deg);
     margin-top: -55px;
+    margin-left: -25px;
 }
 
 /* flip speed goes here */
@@ -144,6 +164,7 @@ textarea {
     -webkit-transform: rotateY(180deg);
     background-color: magenta;
     font-size: 60px;
+    margin-left: 30px;
 }
 
 /*///////////////////////////////////////////////////*/

@@ -16,6 +16,8 @@
   //echo $jsonDoc;
 
   // Bring in the html for the page
+  require 'fc_head.php';
+  require 'header.php';
   require 'flashcard.php';
   // echo "flashcard.php loaded and operational";
   require 'footer.php';

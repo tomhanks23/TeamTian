@@ -12,8 +12,16 @@ $(function(){
         console.log("register button clicked");  
     });
     $('.close').on('click', function(){
-         window.location.href='index.php';  
+        console.log("close clicked");
+        $('.overlay').css('display','none');
+        $('.registerModal').hide();
+        return false; 
      });
+
+    // $(".Register").on('submit', function(){
+        // $(document).append(<div><?php echo $errors ?></div>);
+    // }
+    
 
 
 
@@ -69,10 +77,13 @@ $(function(){
     }
 
     $(".Register").on('submit', function(evt){
-        validateRegister(this, evt);
+        var valid= validateRegister(this, evt);
+         if(!valid){
+            return false;
+        }
     });
 //----------------Log In Validation-------------    
-function validateLogin(login){
+function validateLogin(login, evt){
         var email  = $('.logIn input.email').val();
         var password = $('.logIn input.password').val();
         var errors = [];

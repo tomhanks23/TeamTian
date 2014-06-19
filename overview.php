@@ -1,14 +1,17 @@
 <?php 
 
-//session_start();
+error_reporting(E_ALL);
+ini_set('display_errors', 'on');
+session_start();
+include_once("user.php");
+if (!is_numeric($_SESSION['user_id'])) {
+  die('Youre not logged in');
+}
 
-//f (!is_numeric($_SESSION['user_id'])) {
-//   die('Youre not logged in');
-// }
-
-// // store session data
-// $user_id = $_SESSION['user_id'];
-
+// store session data
+$user_id = $_SESSION['user_id'];
+$user = getUserById($user_id);
+$first_name= $user['first_name'];
 ?>
 
 
@@ -30,6 +33,7 @@
   
     <!-- user_id -->
   <input type="hidden" id="user_id" value="<?php echo $user_id ?>">
+  <div> Welcome <?php echo $first_name; ?></div>
 
   <div class="page">
 

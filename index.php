@@ -1,7 +1,9 @@
 <?php
-
+error_reporting(E_ALL);
+ini_set('display_errors', 'on');
 session_start();
-include ("db.php");
+include_once("db.php");
+include_once("user.php");
 
 $db = new DB();
 $errors = [];
@@ -10,28 +12,23 @@ $errors = [];
 if($_POST){
 
   if($_POST['action']=='login'){
-    $select = "select * from user where email = '{$_POST['email']}'";
-    $results = $db->execute($select);
-
-    if($results->num_rows > 0) {
-      while ($row = $results->fetch_assoc()) {
-        $_SESSION["user_id"] = $row['user_id'];
+    $user = getUserByEmail($_POST['email']);
+    if($user){
+        $_SESSION["user_id"] = $user['user_id'];
         header('Location: http://localhost/TeamTian/overview.php');
         exit();
-      }
+
     }else{
-      echo "username not found"; 
+      echo "username not found";   
     }
 
   } else { 
       $firstName = $_POST['firstName'];
       $email = $_POST['email'];
       $password = $_POST['password'];
+      $user = getUserByEmail($email);
 
-      $emailex = "select * from user where email = '$email'";
-      $results = $db->execute($emailex);
-
-      if($results->num_rows > 0){
+      if($user){
          array_push($errors, "username already exists");
       } else {
 
@@ -63,8 +60,6 @@ if($_POST){
 </head>
 
 <body>
-
-  <?php print_r($errors); ?>
 
   <div class="page">
 
@@ -104,7 +99,7 @@ if($_POST){
         <input type="password" name="password" placeholder="Password"><br>
         <input type="password" name="password2" placeholder="Re-enter Password"><br>
         <input type="hidden" name="action" value="register"> <br>
-        <button type="submit">Submit</button>
+        <button type="submit" id="registerSubmit">Submit</button>
         <button class="close">Close</button>
       </form>
     </div>  

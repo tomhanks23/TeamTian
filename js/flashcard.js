@@ -54,26 +54,26 @@
         function nextCard(count) {
             console.log(deck);
             card = deck[count];
-            $('.side2').hide();
-            $('.side1').show();
+            $('.fc-side2').hide();
+            $('.fc-side1').show();
 
-            $('  .side1   ').html(
-               '   <p class="side1-text">   '
+            $('  .fc-side1   ').html(
+               '   <p class="fc-side1-text">   '
               + card.front_text
-              + '   </p><img class="big" src="   '
+              + '   </p><img class="fc-big" src="   '
               + card.front_image
               + '  " alt=""></div>    '
               );
 
-            $('.side2').html('<img class="small" src="'
+            $('.fc-side2').html('<img class="fc-small" src="'
               + card.back_image
               + '  " alt="">'
-              + ' <div><p class="side2-text">'
+              + ' <div><p class="fc-side2-text">'
               + card.back_text
               + '</p></div> ' 
               );
 
-            $('.motivation').hide();
+            $('.fc-motivation').hide();
 
             placeAnswerOn(card);
 
@@ -87,28 +87,28 @@
             if (headsOrTails<0.5) {
                 // set the right answer to .answer1
                 // set the wrong answer to .answer2
-                $('.answer1').html(card.right_answer);
-                r_answerClicked = '.answer1';
-                $('.answer2').html(wrong_answer);
-                w_answerClicked = '.answer2';
+                $('.fc-answer1').html(card.right_answer);
+                r_answerClicked = '.fc-answer1';
+                $('.fc-answer2').html(wrong_answer);
+                w_answerClicked = '.fc-answer2';
             } else {
                 // set the right answer to .answer2
                 // set the wrong answer to .answer1
-                $('.answer2').html(card.right_answer);
-                r_answerClicked = '.answer2';
-                $('.answer1').html(wrong_answer);
-                w_answerClicked = '.answer1';
+                $('.fc-answer2').html(card.right_answer);
+                r_answerClicked = '.fc-answer2';
+                $('.fc-answer1').html(wrong_answer);
+                w_answerClicked = '.fc-answer1';
             }
 
             clickedThisButton(r_answerClicked,w_answerClicked);
         }
 
         function setCard () {
-            $('.side1').hide(300);
-            $('.side2').show(300);
-            $(r_answerClicked).hide(2000);
-            $(w_answerClicked).hide(2000, function() {
-                $('.motivation').slideDown(2000).text(card.right_answer);
+            $('.fc-side1').hide(300);
+            $('.fc-side2').show(300);
+            $(r_answerClicked).hide(200);
+            $(w_answerClicked).hide(200, function() {
+                $('.fc-motivation').slideDown(200).text(card.right_answer);
             });
         }
 
@@ -117,7 +117,7 @@
             $(w_answerClicked).show();
         }
 
-        $('.motivation').click( function() {
+        $('.fc-motivation').click( function() {
             if (count == max -1) {
               count = 0;
             } else {

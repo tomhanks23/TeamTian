@@ -129,7 +129,7 @@ a, button {
 /*-----------Modals--------------*/
 .registerModal{
     background-color: #8ED0E8;
-    height: 300px;
+    min-height: 300px;
     width: 400px;
     margin: 100px auto;
     border-radius: 15px;
@@ -145,10 +145,11 @@ a, button {
 
 h3{
     background-color: #D6D9D2;
-    height: 50px;
+    height: 30px;
     color: black;
     border-radius: 15px 15px 0 0 ;
     padding: 5px;
+    margin-bottom: 23px;
 }
 
 .overlay{
@@ -162,6 +163,13 @@ h3{
     background-color: rgba(0,0,0, 0.50);
 }
 
+.Register p{
+  font-size: 16px;
+  padding: 3px;
+  color: #000;
+  margin-bottom: 13px;
+}
+
 /*FLASHCARD PAGE CSS  ***********************************/
 
 /*[class*= 'fc-'] {
@@ -169,15 +177,14 @@ h3{
     -webkit-box-sizing: border-box;
   box-sizing: border-box; 
 }*/
-
+  
 .clear {
   clear: both;
 }
 
 .fc-container {
   height: 800 px;
-  border: solid 3px yellow;
-}
+  }
 
 .flashcard {
   border: solid 1px #666;
@@ -219,14 +226,13 @@ h3{
 
 .fc-answer-block{
   width: 600px;
-  font-family: Verdana, sans-serif;
   margin-right: auto;
   margin-left: auto;
 }
 
 .fc-answer1, .fc-answer2, .fc-motivation {
-  font-family: Verdana, sans-serif;
-  margin-top: 2px;
+  font-family: 'Nunito', sans-serif;
+  margin-top: 10  px;
   padding-top: 25px;
   width: 297px;
   height: 75px;
@@ -249,6 +255,7 @@ h3{
 }
 
 .fc-motivation {
+  font-family: 'Nunito', sans-serif;
   background: url(../img/white-c-paper.jpg);
   width: 600px;
   margin: auto;
@@ -257,19 +264,30 @@ h3{
 }
 
 .fc-nav-buttons {
-  width: 450px;
+  width: 600px;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 10px;
   text-align: center;
-  border: solid green 1px;
 }
 
 .fc-finish, .fc-overview {
+      -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  box-sizing: border-box; 
   float: left;
   font-family: Verdana, sans-serif;
   border: solid black 1px;
   background: url(../img/white-c-paper-yellow.jpg);
   padding: 20px;
-  width: 198px;
-  border-radius: 10px;
+
+  width: 290px;
+  border-radius: 20px;
+}
+
+.fc-overview {
+  margin-left: 5px;
+}
+
+.fc-finish {
+    margin-left: 5px;
 }

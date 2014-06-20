@@ -66,7 +66,7 @@ $(function() {
 
     //When you click on the button run this function
       //open the linked page (flashcard.html)
-    $(".container h1").on("click", "button", function() {
+    $(".container h2").on("click", "button", function() {
         window.location.href = "fc_ctrl.php";
     });
 
@@ -118,12 +118,6 @@ $(function() {
     // submit the form when image is selected
     // front
     $('.fc_front #imgform_front').on('change',function(){
-      
-      if ($("#front_link").val()) {
-
-        return;
-      }
-
 
       $('.fc_front #imgform_front').ajaxForm({target: '.fc_front #view',
        beforeSend: function(){
@@ -142,12 +136,6 @@ $(function() {
 
     // back
     $('.fc_back #imgform_front').on('change',function(){
-      
-
-      if ($("#back_link").val()) {
-
-        return;
-      }
 
       $('.fc_back #imgform_front').ajaxForm({
         target: '.fc_back #view',
@@ -181,6 +169,19 @@ $(function() {
     });
 
     $(".add").on("click", function() {
+
+      if ($(".cardDeck").find(':selected').val() == "-") {
+        alert("Please choose your deck, honey!");
+        $(".cardDeck").focus();
+        return;
+      }
+
+      if (!$("#right_answer").val()) {
+        alert("Please input cart name, honey!");
+        $("#right_answer").focus();
+        return;
+      }
+
       // get the item info prepared
       var flashcard_deck_id = $(".cardDeck").find(':selected').val();
       var user_id = $("#user_id").val();

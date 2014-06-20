@@ -1,6 +1,12 @@
 
   <div class="fc-page-container">
 
+    <div class="fc-nav-buttons">
+          <a href="fc_results.php">Get your results!</a>
+          <a href="overview.php">Back to Editor</a>
+        <div class="clear"></div>
+    </div>
+
     <div class="fc-container">
           <div class="flashcard">
               <div class="fc-side1"></div>
@@ -13,12 +19,6 @@
           <div class="fc-answer2"></div>
           <div class="clear"></div>
         </div>
-    </div>
-
-    <div class="fc-nav-buttons">
-        <div class="fc-finish">Get your results!</div>
-        <div class="fc-overview">Editor</div>
-        <div class="clear"></div>
     </div>
 
   </div>

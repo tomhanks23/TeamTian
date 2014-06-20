@@ -36,6 +36,7 @@ h1, footer {
     border-radius: 15px;
     padding: 15px;
     max-width: 440px;
+    text-align: center;
 }
 
 div .cardCreator {
@@ -54,21 +55,28 @@ textarea {
 }
 
 .fc_front {
-    width: 300px;
-    height: 200px;
+    width: 350px;
+    min-height: 350px;
     padding: 30px;
     text-align:center;
     margin: auto;
-    background-color: lightblue;
+    background-color: rgba(153, 223, 249, .7);
+    border-radius: 15px;
+}
+
+p {
+    margin: 15px;
 }
 
 .fc_back {
-    width: 300px;
-    height: 200px;
+    width: 350px;
+    min-height: 350px;
     padding: 30px;
     text-align:center;
-    background-color: #F75454;
+    /*background-color: rgba(189, 185, 174, .7);*/
+    background-color: rgba(153, 223, 249, .7);
     margin: auto;
+    border-radius: 15px;
 }
 
 .hidden {
@@ -91,18 +99,21 @@ h4 {
     padding: 10px;
 }
 
-button, select, input {
-    margin: auto;
+button, select {
+    margin-bottom: 10px;
     border-radius: 10px;
     padding: 5px;
+}
+
+button {
     background-color: #7CFC00;
 }
 
-/*input {
-    margin: auto;
+input {
+    margin-bottom: 10px;
     border-radius: 10px;
     padding: 5px;
-}*/
+}
 
 /*////////////////////////////////////////////////*/
 

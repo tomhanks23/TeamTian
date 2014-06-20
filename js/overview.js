@@ -66,7 +66,7 @@ $(function() {
 
     //When you click on the button run this function
       //open the linked page (flashcard.html)
-    $(".container h1").on("click", "button", function() {
+    $(".container h2").on("click", "button", function() {
         window.location.href = "fc_ctrl.php";
     });
 

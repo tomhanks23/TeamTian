@@ -128,7 +128,7 @@ a, button {
 /*-----------Modals--------------*/
 .registerModal{
     background-color: #8ED0E8;
-    height: 300px;
+    min-height: 300px;
     width: 400px;
     margin: 100px auto;
     border-radius: 15px;
@@ -144,10 +144,11 @@ a, button {
 
 h3{
     background-color: #D6D9D2;
-    height: 50px;
+    height: 30px;
     color: black;
     border-radius: 15px 15px 0 0 ;
     padding: 5px;
+    margin-bottom: 23px;
 }
 
 .overlay{
@@ -159,6 +160,13 @@ h3{
     height: 100%;
     z-index: 100;
     background-color: rgba(0,0,0, 0.50);
+}
+
+.Register p{
+  font-size: 16px;
+  padding: 3px;
+  color: #000;
+  margin-bottom: 13px;
 }
 
 /*FLASHCARD PAGE CSS  ***********************************/

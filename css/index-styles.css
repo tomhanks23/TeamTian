@@ -20,6 +20,7 @@ h1, footer {
   background-image:url('../img/header-white-c-paper.jpg');
   clear: both;
   margin-top: 30px;
+  border-radius: 15px;
 }
 
 .mediaObject {
@@ -271,8 +272,8 @@ h3{
 }
 
 .fc-finish, .fc-overview {
-      -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; 
   float: left;
   font-family: Verdana, sans-serif;

@@ -46,12 +46,13 @@
       <!-- Card Creator Section with Drop Down Menu -->
       <div class="left">
 
-        <h4>Choose your deck:</h4>
+        <h3>Choose your deck
         <select name="cardDeck" class="cardDeck">
           <?php 
             include ('getdeck.php');
            ?>
         </select>
+        </h3>
         <br>
         
 
@@ -66,19 +67,16 @@
             <div id="imageloader" style="height:auto">
               <img src="http://imgs.tuts.dragoart.com/how-to-draw-a-river_1_000000007978_5.jpg" style="height:100px; width:160px">
             </div>
-            <div id="view" style="height:auto"></div>
+            <div id="view"></div>
             <input type="file" name="file" id="file">
           </form>
-            <input type="input" id="front_link" style="width:130px" placeholder="Page link.">
-          <textarea rows="2" cols="20" placeholder="What's this?" name="fc_front_text"></textarea>
+            <input type="input" id="front_link" placeholder="Picture Link">
+          <textarea rows="2" cols="20" placeholder="Type prompt here" name="fc_front_text"></textarea>
 
           Background color:
-          <input class="color" id="front_color" value=""><br>
+          <input class="color" id="front_color" value="" placeholder="Click here"><br>
 
         </div>
-        
-        <p>Card name(Right answer):</p>
-        <input type="input" id="right_answer" placeholder="apple" value="">
 
         <div  class="fc_back">
           <h5>Back of Card</h5>
@@ -88,15 +86,19 @@
               <img src="http://imgs.tuts.dragoart.com/how-to-draw-a-river_1_000000007978_5.jpg" style="height:100px; width:160px">
             </div>
             <div id="view" style="height:auto"></div>
-            <input type="file" name="file" id="file" style="width:90px"><br>
+            <input type="file" name="file" id="file"><br>
           </form>
-            <input type="input" id="back_link" style="width:130px" placeholder="Page link.">
-          <textarea placeholder="Rockit?" name="fc_back_text"></textarea>
+            <input type="input" id="back_link" placeholder="Picture link">
+
+
+        <input type="input" id="right_answer" placeholder="Correct answer" value="">
+          <textarea placeholder="Details about Answer" name="fc_back_text"></textarea>
 
           Background color:
           <input class="color" id="back_color" value=""><br>
 
         </div>
+        
 
         <button class="add" type="submit">Add New Card</button>
         

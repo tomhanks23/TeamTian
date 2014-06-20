@@ -35,7 +35,7 @@
                 answerPerformanceArr(0);
                 });
             });
-            console.log(answerArray);
+            // console.log(answerArray);
         }
 
         function createWrongAnswer() {
@@ -52,7 +52,7 @@
         };
 
         function nextCard(count) {
-            console.log(deck);
+            // console.log(deck);
             card = deck[count];
             $('.fc-side2').hide();
             $('.fc-side1').show();
@@ -82,7 +82,7 @@
         function placeAnswerOn(card) {
             createWrongAnswer();
             headsOrTails = Math.random();
-            console.log(headsOrTails);
+            // console.log(headsOrTails);
 
             if (headsOrTails<0.5) {
                 // set the right answer to .answer1

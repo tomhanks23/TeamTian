@@ -283,10 +283,10 @@ h3{
   border-radius: 20px;
 }
 
-.fc-overview {
-  margin-left: 5px;
+.fc-congrats {
+  font-size: 60px;
+  text-align: center;
 }
 
-.fc-finish {
-    margin-left: 5px;
-}
+.results-container{}
+

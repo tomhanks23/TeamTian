@@ -18,6 +18,6 @@
   // Bring in the html for the page
   require 'includes-fc/fc_head.php';
   require 'header.php';
-  require 'includes-fc/flashcard.php';
+  require 'includes-fc/fc-results-window.php';
   // echo "flashcard.php loaded and operational";
   require 'footer.php';

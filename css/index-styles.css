@@ -123,6 +123,7 @@ a, button {
     -webkit-transform: rotateY(180deg);
     background-color: magenta;
     font-size: 60px;
+    margin-left: 30px;
 }
 
 /*-----------Modals--------------*/

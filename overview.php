@@ -33,6 +33,7 @@ $first_name= $user['first_name'];
   
     <!-- user_id -->
   <input type="hidden" id="user_id" value="<?php echo $user_id ?>">
+  <input type="hidden" id="cur_fl_id" vlaue="">
   <div> Welcome <?php echo $first_name; ?></div>
 
   <div class="page">
@@ -88,6 +89,10 @@ $first_name= $user['first_name'];
 
         <button class="add" type="submit">Add New Card</button>
         
+
+        <button class="update" type="submit" disabled="ture">Update Card</button>
+
+
         <!-- <button class="submit">Done</button> -->
 
       </div> <!-- End of .left-->

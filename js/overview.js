@@ -71,11 +71,13 @@ $(function() {
     });
 
     // delete item
-    $(".container").on("click", "li div button",  function() {
+    $(".container").on("click", "li div button",  function(e) {
       
       var flashcard_id = $(this).attr("class");
 
       $(this).parent().parent().remove();
+
+      e.stopPropagation();
 
       $.ajax({
           url: "./deleteitem.php",
@@ -259,6 +261,123 @@ $(function() {
                .appendTo(".container");
     }
 
-  }  
+  }
+
+  // click on the container item
+  $(".container").on("click", "li", function() {
+    var flashcard_id = $(this).find("button").attr("class");
+    $(".update").prop("disabled", false);
+
+    $.ajax({
+      url: "./getcard.php",
+        type: "POST",
+        dataType: "json",
+        cache: false,
+        data: {
+          flashcard_id: flashcard_id
+        },
+        success: function(data) {
+
+          $(".fc_front").css("background-color", data.front_bg_color);
+          $(".fc_back").css("background-color", data.back_bg_color);
+          
+          $('.fc_front #imgform_front img').attr("src", data.front_image);
+          $('.fc_back #imgform_front img').attr("src", data.back_image);
+
+          $('.fc_front textarea').val(data.front_text);
+          $('.fc_back textarea').val(data.back_text);
+
+          $("#right_answer").val(data.right_answer);
+          $('#cur_fl_id').val(data.flashcard_id);
+
+        },
+        error: function(a, b, c) {
+          console.log(b);
+          console.log(c);
+        }
+    })
+  })  
+
+  $(".update").on("click", function() {
+    $(this).prop("disabled", true);
+    
+    var flashcard_id = $('#cur_fl_id').val();
+    var flashcard_deck_id = $(".cardDeck").find(':selected').val();
+    var user_id = $("#user_id").val();
+    var front_text = $(".fc_front textarea").val();
+    var back_text = $(".fc_back textarea").val();
+    var front_image =$(".fc_front #view img").prop('src');
+    var back_image = $(".fc_back #view img").prop('src');
+    var front_bg_color = $(".fc_front").css("background-color");
+    var back_bg_color = $(".fc_back").css("background-color");
+    var right_answer = $("#right_answer").val();
+
+    $.ajax({
+      url: "./updatecard.php",
+        type: "POST",
+        dataType: "json",
+        cache: false,
+        data: {
+          flashcard_id: flashcard_id,
+          flashcard_deck_id: flashcard_deck_id,
+          user_id: user_id,
+          front_text: front_text,
+          back_text: back_text,
+          front_image: front_image,
+          back_image: back_image,
+          front_bg_color: front_bg_color,
+          back_bg_color: back_bg_color,
+          right_answer: right_answer
+        },
+        success: function(data) {
+
+          modifyItem(data);
+
+        },
+        error: function(a, b, c) {
+          console.log(b);
+          console.log(c);
+        }
+    })
+
+  })
+
+  // set variables and collect their values
+  var modifyItem = function(flashcard_id) {
+
+    var right_answer = $("#right_answer").val();
+
+    var front_bg_color = $(".fc_front").css("background-color");
+    var back_bg_color = $(".fc_back").css("background-color");
+
+    if (!right_answer) {
+      alert("Please input cart name, honey!");
+      $("#right_answer").focus();
+    } else {
+
+      $(".container li").find("button").attr("class", flashcard_id).parent().parent()[0].remove();
+
+      $("<li style='margin:4px'>").append("<div style=\"background:" 
+                                          // + front_bg_color + ";" 
+                                          + "linear-gradient(to right,"
+                                          +  front_bg_color 
+                                          + "0%, "
+                                          +  back_bg_color
+                                          + " 100%);"
+                                          + "margin-left: 20px;"
+                                          + "height: 38px;"
+                                          + "border-radius: 5px;"
+                                          + "width: 380px;\">"
+                                          + right_answer 
+                                          + " <button style=\"float: right;\" "
+                                          + "class='" 
+                                          + flashcard_id 
+                                          + "'>Delete</button>"
+                                          + "</div>"
+                                          )
+               .appendTo(".container");
+    }
+
+  }
 
 });

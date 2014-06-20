@@ -62,8 +62,9 @@ $first_name= $user['first_name'];
               <img src="http://imgs.tuts.dragoart.com/how-to-draw-a-river_1_000000007978_5.jpg" style="height:100px; width:160px">
             </div>
             <div id="view" style="height:auto"></div>
-            <input type="file" name="file" id="file" style="width:90px"><br>
+            <input type="file" name="file" id="file" style="width:90px">
           </form>
+            <input type="input" id="front_link" style="width:130px" placeholder="Page link.">
           <textarea rows="2" cols="20" placeholder="What's this?" name="fc_front_text"></textarea>
         </div>
 
@@ -78,6 +79,7 @@ $first_name= $user['first_name'];
             <div id="view" style="height:auto"></div>
             <input type="file" name="file" id="file" style="width:90px"><br>
           </form>
+            <input type="input" id="back_link" style="width:130px" placeholder="Page link.">
           <textarea rows="2" cols="20" placeholder="Rockit?" name="fc_back_text"></textarea>
         </div>
 

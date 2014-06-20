@@ -66,7 +66,7 @@ $(function() {
 
     //When you click on the button run this function
       //open the linked page (flashcard.html)
-    $(".container h1").on("click", "button", function() {
+    $(".container h2").on("click", "button", function() {
         window.location.href = "fc_ctrl.php";
     });
 
@@ -95,9 +95,30 @@ $(function() {
         });
     });
 
+    $("#front_link").on("blur", function() {
+      var link = $(this).val();
+      if (link) {
+        $('.fc_front #imgform_front img').attr("src", link);
+
+      } else {
+        $('.fc_front #imgform_front img').attr("src", "http://imgs.tuts.dragoart.com/how-to-draw-a-river_1_000000007978_5.jpg");
+      }
+    })
+
+    $("#back_link").on("blur", function() {
+      var link = $(this).val();
+      if (link) {
+        $('.fc_back #imgform_front img').attr("src", link);
+
+      } else {
+        $('.fc_back #imgform_front img').attr("src", "http://imgs.tuts.dragoart.com/how-to-draw-a-river_1_000000007978_5.jpg");
+      }
+    })
+
     // submit the form when image is selected
     // front
     $('.fc_front #imgform_front').on('change',function(){
+
       $('.fc_front #imgform_front').ajaxForm({target: '.fc_front #view',
        beforeSend: function(){
         $('.fc_front #imageloader').show();
@@ -115,6 +136,7 @@ $(function() {
 
     // back
     $('.fc_back #imgform_front').on('change',function(){
+
       $('.fc_back #imgform_front').ajaxForm({
         target: '.fc_back #view',
         beforeSend: function(){
@@ -147,6 +169,19 @@ $(function() {
     });
 
     $(".add").on("click", function() {
+
+      if ($(".cardDeck").find(':selected').val() == "-") {
+        alert("Please choose your deck, honey!");
+        $(".cardDeck").focus();
+        return;
+      }
+
+      if (!$("#right_answer").val()) {
+        alert("Please input cart name, honey!");
+        $("#right_answer").focus();
+        return;
+      }
+
       // get the item info prepared
       var flashcard_deck_id = $(".cardDeck").find(':selected').val();
       var user_id = $("#user_id").val();

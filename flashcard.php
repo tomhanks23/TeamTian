@@ -3,10 +3,8 @@
 
     <div class="fc-container">
           <div class="flashcard">
-            <div class="fc-indexCard">
               <div class="fc-side1"></div>
               <div class="fc-side2"></div>
-            </div>
           </div>
 
         <div class="fc-answer-block">
@@ -17,6 +15,10 @@
         </div>
     </div>
 
-    <div class="fc-finish"></div>
+    <div class="fc-nav-buttons">
+        <div class="fc-finish">Get your results!</div>
+        <div class="fc-overview">Editor</div>
+        <div class="clear"></div>
+    </div>
 
   </div>

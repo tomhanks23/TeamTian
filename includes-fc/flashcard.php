@@ -6,7 +6,7 @@
           <a href="overview.php">Back to Editor</a>
         <div class="clear"></div>
     </div>
-
+    <div id="modalBadge"></div>
     <div class="fc-container">
           <div class="flashcard">
               <div class="fc-side1"></div>

@@ -5,6 +5,7 @@
     // hide all flashcards except the first one
     $(function() {
         var count = 0,
+        totalCount = 0,
         answerArray = [],
         wrong_answer,
         card,
@@ -45,6 +46,28 @@
                 }
             }
 
+        function createModalPopup () {
+
+            if (totalCount == 4) {
+                $('#modalBadge').bPopup({
+                    position: [0,100],
+                    autoClose: [5000],
+                })
+                    .load('includes-fc/modal.php .modalPopUp1');
+            }
+
+            if (totalCount == 7) {
+                $('#modalBadge').bPopup({
+                    position: [0,100],
+                    autoClose: [5000],
+                })
+                    .load('includes-fc/modal.php .modalPopUp2');
+            }
+
+
+
+        }
+
         // this is fired on page load and ...
         // loadpage initializes the page with nextCard(0)
         function loadPage() {
@@ -76,7 +99,9 @@
             $('.fc-motivation').hide();
 
             placeAnswerOn(card);
-
+            totalCount++
+            console.log('totalCount is ' + totalCount);
+            createModalPopup();
           };
 
         function placeAnswerOn(card) {
@@ -127,6 +152,7 @@
         });
 
         loadPage();
+
 
     });
 

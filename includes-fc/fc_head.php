@@ -12,7 +12,6 @@
       var deck =  <?php echo $jsonDoc; ?> ;
     </script>
     <script src="js/flashcard.js"></script>
-    <script src="js/fc-modal.js"></script>
 
 </head>
 

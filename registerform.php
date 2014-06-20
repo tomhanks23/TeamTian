@@ -10,6 +10,7 @@
           <input type="password" name="password" placeholder="Password"><br>
           <input type="password" name="password2" placeholder="Re-enter Password"><br>
           <input type="hidden" name="action" value="register"> <br>
+          <p>*After submitting please log in*</p>
           <button type="submit" id="registerSubmit">Submit</button>
           <button class="close">Close</button>
         </form>

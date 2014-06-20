@@ -5,6 +5,7 @@
     // hide all flashcards except the first one
     $(function() {
         var count = 0,
+        totalCount = 0,
         answerArray = [],
         wrong_answer,
         card,
@@ -35,7 +36,7 @@
                 answerPerformanceArr(0);
                 });
             });
-            console.log(answerArray);
+            // console.log(answerArray);
         }
 
         function createWrongAnswer() {
@@ -45,6 +46,28 @@
                 }
             }
 
+        function createModalPopup () {
+
+            if (totalCount == 4) {
+                $('#modalBadge').bPopup({
+                    position: [0,100],
+                    autoClose: [5000],
+                })
+                    .load('includes-fc/modal.php .modalPopUp1');
+            }
+
+            if (totalCount == 7) {
+                $('#modalBadge').bPopup({
+                    position: [0,100],
+                    autoClose: [5000],
+                })
+                    .load('includes-fc/modal.php .modalPopUp2');
+            }
+
+
+
+        }
+
         // this is fired on page load and ...
         // loadpage initializes the page with nextCard(0)
         function loadPage() {
@@ -52,7 +75,7 @@
         };
 
         function nextCard(count) {
-            console.log(deck);
+            // console.log(deck);
             card = deck[count];
             $('.fc-side2').hide();
             $('.fc-side1').show();
@@ -76,13 +99,15 @@
             $('.fc-motivation').hide();
 
             placeAnswerOn(card);
-
+            totalCount++
+            console.log('totalCount is ' + totalCount);
+            createModalPopup();
           };
 
         function placeAnswerOn(card) {
             createWrongAnswer();
             headsOrTails = Math.random();
-            console.log(headsOrTails);
+            // console.log(headsOrTails);
 
             if (headsOrTails<0.5) {
                 // set the right answer to .answer1
@@ -127,6 +152,7 @@
         });
 
         loadPage();
+
 
     });
 

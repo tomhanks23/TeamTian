@@ -4,16 +4,32 @@
 		"selected_items":
 		[
 			[
-				"mar",
-				"margin-top"
-			],
-			[
-				"margi",
-				"margin"
+				"top",
+				"padding-top"
 			],
 			[
 				"marg",
+				"margin-left"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"mar",
 				"margin"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"margi",
+				"margin-top"
 			],
 			[
 				"max",
@@ -66,10 +82,6 @@
 			[
 				"bo",
 				"border-radius"
-			],
-			[
-				"bor",
-				"border"
 			],
 			[
 				"flash",
@@ -184,18 +196,10 @@
 	"buffers":
 	[
 		{
-			"file": "/var/www/deserae/htdocs/TeamTian/header.php",
-			"settings":
-			{
-				"buffer_size": 228,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "/var/www/deserae/htdocs/TeamTian/index.php",
 			"settings":
 			{
-				"buffer_size": 3740,
+				"buffer_size": 2492,
 				"line_ending": "Unix"
 			}
 		},
@@ -203,15 +207,7 @@
 			"file": "/var/www/deserae/htdocs/TeamTian/css/index-styles.css",
 			"settings":
 			{
-				"buffer_size": 3154,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/overview-styles.css",
-			"settings":
-			{
-				"buffer_size": 2602,
+				"buffer_size": 5488,
 				"line_ending": "Unix"
 			}
 		},
@@ -219,7 +215,23 @@
 			"file": "overview.php",
 			"settings":
 			{
-				"buffer_size": 2916,
+				"buffer_size": 3785,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/overview-styles.css",
+			"settings":
+			{
+				"buffer_size": 3485,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/overview.js",
+			"settings":
+			{
+				"buffer_size": 12428,
 				"line_ending": "Unix"
 			}
 		}
@@ -264,11 +276,12 @@
 	},
 	"file_history":
 	[
+		"/home/deserae/www/TeamTian/footer.php",
+		"/var/www/deserae/htdocs/TeamTian/header.php",
 		"/home/deserae/www/TeamTian/css/index-styles.css",
 		"/home/deserae/www/TeamTian/header.php",
 		"/home/deserae/www/TeamTian/index.php",
 		"/home/deserae/flip.css",
-		"/home/deserae/www/TeamTian/footer.php",
 		"/home/deserae/www/TeamTian/index.html",
 		"/home/deserae/brokenFlipStyle.css",
 		"/home/deserae/brokenFlip.html",
@@ -300,7 +313,7 @@
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -314,6 +327,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"choose",
 			"auto",
 			"file",
 			"scroll"
@@ -334,49 +348,23 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/var/www/deserae/htdocs/TeamTian/header.php",
-					"settings":
-					{
-						"buffer_size": 228,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								227,
-								227
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 20.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "/var/www/deserae/htdocs/TeamTian/index.php",
 					"settings":
 					{
-						"buffer_size": 3740,
+						"buffer_size": 2492,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1735,
-								1735
+								0,
+								0
 							]
 						],
 						"settings":
@@ -386,25 +374,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2210.0,
+						"translation.y": 1597.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "/var/www/deserae/htdocs/TeamTian/css/index-styles.css",
 					"settings":
 					{
-						"buffer_size": 3154,
+						"buffer_size": 5488,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								805,
-								805
+								414,
+								414
 							]
 						],
 						"settings":
@@ -414,7 +402,35 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 784.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "overview.php",
+					"settings":
+					{
+						"buffer_size": 3785,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1280,
+								1280
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1284.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -424,15 +440,15 @@
 					"file": "css/overview-styles.css",
 					"settings":
 					{
-						"buffer_size": 2602,
+						"buffer_size": 3485,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								902,
-								902
+								1648,
+								1648
 							]
 						],
 						"settings":
@@ -442,35 +458,35 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 894.0,
+						"translation.y": 1867.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "overview.php",
+					"file": "js/overview.js",
 					"settings":
 					{
-						"buffer_size": 2916,
+						"buffer_size": 12428,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								706,
-								706
+								2574,
+								2574
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 425.0,
+						"translation.y": 1167.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -538,6 +554,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 146.0,
+	"side_bar_width": 261.0,
 	"status_bar_visible": true
 }

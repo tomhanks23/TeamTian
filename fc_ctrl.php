@@ -6,7 +6,8 @@
   require ('includes-fc/db_functions-FMD.php');
   // echo "db_functions-FMD loaded and operational <br>";
 
-  $rows = db_select('SELECT *  FROM flashcard WHERE flashcard_deck_id = 13');
+  // $rows = db_select('SELECT *  FROM flashcard WHERE flashcard_deck_id = 13');
+  $rows = db_select('SELECT *  FROM flashcard');
   if($rows == false) {
     $error = db_error();
     echo "error retrieving row from flashcard";
